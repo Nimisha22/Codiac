@@ -87,3 +87,7 @@ def login_required(view):
         return view(**kwargs)
 
     return wrapped_view
+
+@bp.route('/contact')
+def contact():
+    return render_template('auth/contact.html')
