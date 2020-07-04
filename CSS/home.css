@@ -1,0 +1,108 @@
+body
+{
+	background-color: #C0C0C0;
+	background-image: url('../Icons/coding.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	 background-attachment: fixed;
+	 background-size: cover;
+}
+
+#head
+{
+	margin: auto;
+	width: 82.5%;
+	padding: 5%;
+}
+
+#navigation
+{
+	display: block;
+	text-align: center;
+	background: linear-gradient(#C1E1EC, #84E0FF);
+	margin-bottom: 30px;
+	width: 82.5%;
+	margin-top: 5%;
+}
+
+#head h1
+{
+	font-family: Courier;
+	font-weight: bold;
+	letter-spacing: 20px;
+	color: #A50000;
+}
+#head p
+{
+	color:#003B00;
+	letter-spacing: 5px;
+	font-size: 30px;
+
+}
+
+.top
+{
+	width: 20px;
+	text-decoration: none;
+	color: #480027;
+	text-align: center;
+	padding: 2%;
+	padding-left:10%;
+	padding-right:10%;
+	border: solid 2px #480027;
+}
+
+.top:hover
+{
+	color: #FFFFFF;
+	background-color: #480027;
+	text-decoration: none;
+}
+
+#blue
+{
+	color: #00004F ;
+	border: solid 2px #00004F;
+	border-radius: 25px;
+}
+
+#blue:hover
+{
+	color: #FFFFFF;
+	background-color: #00004F;
+	text-decoration: none;
+}
+.menu
+{
+	margin: 10%;
+}
+
+#Logo img
+{
+	width: 100%;
+	height: 100%;
+}
+
+#Logo
+{
+	margin: auto;
+}
+
+#information
+{
+	margin-top: 3%;
+	text-align: center;
+	color: #FFFFFF;
+	background: linear-gradient(#A7A758, #4E4EB1);
+	padding: 10%;
+}
+#copyright
+{
+	margin-top: 5%;
+	width: 100%;
+	text-align: center;
+	background-color: #000000;
+	padding: 1%;
+	padding-top:2%;
+	color: #FFFFFF;
+}
