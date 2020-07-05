@@ -1,7 +1,7 @@
 body
 {
 	background-color: #C0C0C0;
-	background-image: url('/Icons/coding.png');
+	background-image: url('./Icons/coding.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	 background-attachment: fixed;
