@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Register</title>
+	<link rel = "icon" type = "img/png" href = "https://cdn0.iconfinder.com/data/icons/programming-and-development-1/48/18-Code-512.png">
+
+	<style>
+
+	body
+{
+	background-image: url("https://static.vecteezy.com/system/resources/previews/000/523/309/original/web-development-and-programming-coding-concept-seo-optimization-modern-web-design-on-laptop-screen-vector.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	 background-attachment: fixed;
+	 background-size: cover;
+}
+
+header 
+{
+	text-align:center;
+	color: rgb(255, 255, 255);
+	height: 40%;
+	margin: auto;
+}
+
+header h1
+{
+	font-weight: bold;
+	letter-spacing: 3px;
+	color: #FFFFFF;
+	font-size: 50px;
+}
+
+form
+{
+	width: 50%;
+	height: 50%;
+	background: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	position: absolute;	
+	top: 20%;
+	left: 25%;
+	box-sizing: border-box;
+	margin: auto;
+}
+
+img
+{
+	width:100px;
+	height:100px;
+	border-radius:50%;
+	position:absolute;
+	top: -50px;
+	left: calc(50% - 50px);
+}
+
+form p
+{
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+form input
+{
+	text-align: center;
+	width:50%;
+	margin-bottom: 20px;
+	color: #FFFFFF;
+	font-size: 20px;
+}
+
+.first
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+}
+
+.input
+{
+  	padding-left: 32%;
+}
+
+#click
+{
+	border: none;
+	border-radius: 20px 20px 20px 20px;
+	height: 40px;
+	background: #0000D9;
+	color: #FFFFFF;
+	outline: none;
+}
+
+#click:hover
+{
+	background: #72BCD4;
+	color: #000000;
+}
+</style>
+</head>
+<body>
+	<header>
+		<h1>Register &nbspHere</h1>
+	</header>
+	<form>
+		<img src = "https://cdn2.iconfinder.com/data/icons/luchesa-part-3/128/Programming-512.png">
+		<br>
+		<br>
+		<br>
+		<p>User Name</p> 
+		<div class = "input">
+			<input type = "text" name = "firstname" placeholder = "Username" class = "first">
+		</div>
+		<p> Password</p> 
+		<div class = "input">
+			<input type="password" id="password-field" class = "first" placeholder = "Password">
+		</div>
+		<br>
+		<div class = "input">
+			<input type = "submit" value = "Register" id = "click" >
+		</div>
+	</form>
+</body>
