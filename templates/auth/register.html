@@ -1,14 +1,169 @@
-{% extends 'base.html' %}
-{% block header %}
-  <h1>{% block title %}Register{% endblock %}</h1>
-{% endblock %}
+<!doctype html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
 
-{% block content %}
-  <form method="post">
-    <label for="username">Username</label>
-    <input name="username" id="username" required>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" required>
-    <input type="submit" value="Register">
-  </form>
-{% endblock %}
+	<link rel = "icon" type = "img/png" href = "https://cdn0.iconfinder.com/data/icons/programming-and-development-1/48/18-Code-512.png">
+	<nav>
+	  <h1>CIPHER</h1>
+	  <ul>
+	    {% if g.user %}
+	      <li><span>{{ g.user['username'] }}</span>
+	      <li><a href="{{ url_for('auth.logout') }}">Log Out</a>
+	    {% else %}
+	      <li><a href="{{ url_for('auth.register') }}">Register</a>
+	      <li><a href="{{ url_for('auth.login') }}">Log In</a>
+	      <li><a href="{{ url_for('auth.contact') }}">Contact Us</a>
+	    {% endif %}
+	  </ul>
+	</nav>
+	<style>
+
+	<title>Register</title>
+	body
+{
+	background-image: url("https://static.vecteezy.com/system/resources/previews/000/523/309/original/web-development-and-programming-coding-concept-seo-optimization-modern-web-design-on-laptop-screen-vector.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	 background-attachment: fixed;
+	 background-size: cover;
+}
+
+header 
+{
+	text-align:center;
+	color: rgb(255, 255, 255);
+	height: 40%;
+	margin: auto;
+}
+
+header h1
+{
+	font-weight: bold;
+	letter-spacing: 3px;
+	color: #FFFFFF;
+	font-size: 50px;
+}
+
+form
+{
+	width: 50%;
+	height: 50%;
+	background: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	position: absolute;	
+	top: 20%;
+	left: 25%;
+	box-sizing: border-box;
+	margin: auto;
+}
+
+img
+{
+	width:100px;
+	height:100px;
+	border-radius:50%;
+	position:absolute;
+	top: -50px;
+	left: calc(50% - 50px);
+}
+
+form p
+{
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+form input
+{
+	text-align: center;
+	width:50%;
+	margin-bottom: 20px;
+	color: #000000;
+	font-size: 20px;
+}
+
+.first
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+}
+
+.input
+{
+  	padding-left: 32%;
+}
+
+#click
+{
+	border: none;
+	border-radius: 20px 20px 20px 20px;
+	height: 40px;
+	background: #0000D9;
+	color: #FFFFFF;
+	outline: none;
+}
+
+#click:hover
+{
+	background: #72BCD4;
+	color: #000000;
+}
+</style>
+</head>
+
+<body>
+	<header>
+		<h1>Register &nbspHere</h1>
+	</header>
+	<!--
+	<form method="post">
+		<img src = "https://cdn2.iconfinder.com/data/icons/luchesa-part-3/128/Programming-512.png">
+		<br>
+		<br>
+		<br>
+
+		<label for="username">Username</label><br>
+		<input name="username" id="username" required><br>
+		<label for="password">Password</label><br>
+		<input type="password" name="password" id="password" required><br>
+		<input type="submit" value="Register">
+	</form>
+	-->
+	<form method="post">
+		<img src = "https://cdn2.iconfinder.com/data/icons/luchesa-part-3/128/Programming-512.png">
+		<br>
+		<br>
+		<br>
+
+		<div class = "input">
+			<label for="username">Username</label><br>
+			<input name="username" id="username" required>
+		</div>
+		<div class = "input">
+			<label for="password">Password</label><br>
+			<input type="password" name="password" id="password" required>
+		</div>
+		<br>
+		<div class = "input">
+			<input type = "submit" value = "Register" id = "click" >
+		</div>
+	</form>
+
+	<section class="content">
+	  <header>
+	    {% block header %}{% endblock %}
+	  </header>
+	  {% for message in get_flashed_messages() %}
+	    <div class="flash">{{ message }}</div>
+	  {% endfor %}
+	  {% block content %}{% endblock %}
+	</section>
+
+
+</body>
+
