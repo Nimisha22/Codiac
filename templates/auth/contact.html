@@ -1,9 +1,110 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Contact Us</title>
+	<link rel = "icon" type = "img/png" href = "https://th.bing.com/th/id/OIP.lHeXjW6WKPKTE3VwNakMLAHaHa?pid=Api&rs=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		body
+		{
+			background-image: url("https://www.themarketingcommando.com/wp-content/uploads/2016/09/contact_us.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+	 		background-attachment: fixed;
+	 		background-size: cover;
+		}
+		header
+		{
 
-{% block header %}
-	<h1>Contact Info</h1>
-{% endblock %}
-{% block content %}
+			margin: auto;
+			margin-top: 10%;
+			text-align:center;
+			color: #FFFFFF;
+			background: rgba(0, 0, 0, 0.8);
+			width: 80%;
+		}
+		header a
+		{
+			text-decoration: none;
+		}
+		header a:hover
+		{
+			color: #72BCD4;
+		}
 
-	<p>This is the contact info!</p>
-{% endblock %}
+		footer h1
+		{
+			margin: auto;
+			text-align:center;
+			color: #FFFFFF;
+			background: rgba(0, 0, 0, 0.8);
+			width: 60%;
+		}
+		footer nav
+		{
+			display: block;
+  			margin-left: auto;
+  			margin-right: auto;
+  			width: 47.5%;
+  			margin-top: 5%;
+  			background: rgba(255, 255, 255, 0.8);
+  			padding: 2%;
+		}
+		footer a
+		{
+			padding: 2%;
+		}
+
+		.fa-facebook-official:hover
+		{
+			color: #43609C;
+		}
+		.fa-instagram:hover
+		{
+			color: #DD2A7B;
+		}
+		.fa-twitter-square:hover
+		{
+			color: #1DA1F2;
+		}
+		.fa-whatsapp:hover
+		{
+			color: #4FCE5D ;
+		}
+		.fa-snapchat-square:hover
+		{
+			color: #FFFC00;
+		}
+		.fa-linkedin-square:hover
+		{
+			color: #006192;
+		}
+		.fa-telegram:hover
+		{
+			color: #0088CC;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1> Want to Get in touch with us? Feel free to contact us at <a href = "mailto: [ciphersupport@gmail.com]"> ciphersupport@gmail.com</a></h1>
+	</header>
+	<footer>
+		<h1> You can also reach out to us at our social media handles</h1>
+		<nav>
+			<a href = ""><i class="fa fa-facebook-official fa-5x"></i></a>
+			<a href = ""><i class="fa fa-instagram fa-5x"></i></a>
+			<a href = ""><i class="fa fa-twitter-square fa-5x"></i></a>
+			<a href = ""><i class="fa fa-whatsapp fa-5x"></i></a>
+			<a href = ""><i class="fa fa-snapchat-square fa-5x"></i></a>
+			<a href = ""><i class="fa fa-linkedin-square fa-5x"></i></a>
+			<a href = ""><i class="fa fa-telegram fa-5x"></i></a>
+
+		</nav>
+	</footer>
+
+</body>
+
+</html>

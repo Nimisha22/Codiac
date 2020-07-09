@@ -1,143 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang = "en">
 <head>
 	<meta charset = "UTF-8">
-
-	<link rel = "icon" type = "img/png" href = "https://cdn0.iconfinder.com/data/icons/programming-and-development-1/48/18-Code-512.png">
-	<nav>
-	  <h1>CIPHER</h1>
-	  <ul>
-	    {% if g.user %}
-	      <li><span>{{ g.user['username'] }}</span>
-	      <li><a href="{{ url_for('auth.logout') }}">Log Out</a>
-	    {% else %}
-	      <li><a href="{{ url_for('auth.register') }}">Register</a>
-	      <li><a href="{{ url_for('auth.login') }}">Log In</a>
-	      <li><a href="{{ url_for('auth.contact') }}">Contact Us</a>
-	    {% endif %}
-	  </ul>
-	</nav>
-	<style>
-
 	<title>Register</title>
-	body
-{
-	background-image: url("https://static.vecteezy.com/system/resources/previews/000/523/309/original/web-development-and-programming-coding-concept-seo-optimization-modern-web-design-on-laptop-screen-vector.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-	 background-attachment: fixed;
-	 background-size: cover;
-}
+	<link rel = "icon" type = "img/png" href = "https://image.flaticon.com/icons/png/512/1127/1127745.png">
+	<style>
+		body
+		{
+			background-image: url("https://www.amarinfotech.com/wp-content/uploads/2018/12/programming-languages-2019.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+	 		background-attachment: fixed;
+	 		background-size: cover;
+		}
+		header
+		{
+			background: #C0C0C0;
+			width: 50%;
+			margin: auto;
+			margin-top: 5%;
+		}
+		header h1
+		{
+			display: inline-block;
+			width : 50%;
+			text-align: left;
+			padding-left: 10%;
+		}
+		header p
+		{
+			display: inline-block;
+			text-align: center;
+			width: 15%;
+			text-decoration: none;
+			color: #000000;
+			background-color: #FFFFFF;
+			border-radius: 25px;
+			padding-top: 2%;
+			padding-bottom: 2%;
+		}
 
-header 
-{
-	text-align:center;
-	color: rgb(255, 255, 255);
-	height: 40%;
-	margin: auto;
-}
+		header p:hover
+		{
+			color: #FFFFFF;
+			background-color: #000000;
+			border-radius: 25px;
+		}
+		form
+		{
+			width: 50%;
+			height: 50%;
+			background: rgba(0, 0, 0, 0.3);
+			color: #fff;
+			position: absolute;	
+			top: 20%;
+			left: 25%;
+			box-sizing: border-box;
+			margin: auto;
+			margin-top: 10%;
+		}
+		.first
+		{
+			border: none;
+			border-bottom: 1px solid #fff;
+			background: transparent;
+			outline: none;
+			height: 40px;
+			width: 50%;
+			margin-left: 25%;
+		}
+		input
+		{
+			text-align: center;
+			color: #FFFFFF;
+		}
+		#click
+		{
+			border: none;
+			border-radius: 20px 20px 20px 20px;
+			height: 40px;
+			width: 50%;
+			background: #0000D9;
+			color: #FFFFFF;
+			outline: none;
+			margin-top: 7%;
+			margin-left: 25%;
+			font-size: 20px;
+			letter-spacing: 1px;
+		}
 
-header h1
-{
-	font-weight: bold;
-	letter-spacing: 3px;
-	color: #FFFFFF;
-	font-size: 50px;
-}
+		#click:hover
+		{
+			background: #72BCD4;
+			color: #000000;
+		}
 
-form
-{
-	width: 50%;
-	height: 50%;
-	background: rgba(0, 0, 0, 0.8);
-	color: #fff;
-	position: absolute;	
-	top: 20%;
-	left: 25%;
-	box-sizing: border-box;
-	margin: auto;
-}
+		form p
+		{
+			text-align: center;
+			color: #FFFFFF;
+		}
 
-img
-{
-	width:100px;
-	height:100px;
-	border-radius:50%;
-	position:absolute;
-	top: -50px;
-	left: calc(50% - 50px);
-}
-
-form p
-{
-	text-align: center;
-	font-weight: bold;
-	font-size: 20px;
-}
-
-form input
-{
-	text-align: center;
-	width:50%;
-	margin-bottom: 20px;
-	color: #000000;
-	font-size: 20px;
-}
-
-.first
-{
-	border: none;
-	border-bottom: 1px solid #fff;
-	background: transparent;
-	outline: none;
-	height: 40px;
-}
-
-.input
-{
-  	padding-left: 32%;
-}
-
-#click
-{
-	border: none;
-	border-radius: 20px 20px 20px 20px;
-	height: 40px;
-	background: #0000D9;
-	color: #FFFFFF;
-	outline: none;
-}
-
-#click:hover
-{
-	background: #72BCD4;
-	color: #000000;
-}
-</style>
+	</style>
 </head>
-
 <body>
 	<header>
-		<h1>Register &nbspHere</h1>
+		<h1 id = "heading">Cipher</h1>
+		<a href = "{{ url_for('auth.login') }}"><p>Login</p></a>
+		&nbsp&nbsp
+		<a href = "{{ url_for('auth.contact') }}"><p>Contact Us</p></a>
 	</header>
-	<!--
-	<form method="post">
-		<img src = "https://cdn2.iconfinder.com/data/icons/luchesa-part-3/128/Programming-512.png">
-		<br>
-		<br>
-		<br>
 
-		<label for="username">Username</label><br>
-		<input name="username" id="username" required><br>
-		<label for="password">Password</label><br>
-		<input type="password" name="password" id="password" required><br>
-		<input type="submit" value="Register">
-	</form>
-	-->
+
 	<form method="post">
-		<img src = "https://cdn2.iconfinder.com/data/icons/luchesa-part-3/128/Programming-512.png">
-		<br>
-		<br>
 		<br>
 
 		<div class = "input">
@@ -154,16 +129,12 @@ form input
 		</div>
 	</form>
 
-	<section class="content">
-	  <header>
-	    {% block header %}{% endblock %}
-	  </header>
+	<section class = "content">
 	  {% for message in get_flashed_messages() %}
 	    <div class="flash">{{ message }}</div>
 	  {% endfor %}
-	  {% block content %}{% endblock %}
 	</section>
 
 
 </body>
-
+</html>
