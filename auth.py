@@ -101,7 +101,7 @@ def login():
             # store the user id in a new session and return to the index
             session.clear()
             session["user_id"] = user["id"]
-            return redirect(url_for("index"))
+            return redirect(url_for("auth.homepage"))
 
         flash(error)
 
@@ -118,3 +118,6 @@ def logout():
 def contact():
     return render_template('auth/contact.html')
 
+@bp.route('/homepage')
+def homepage():
+    return render_template('auth/homepage.html')

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Home</title>
+	<link rel = "icon"  href = "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX2375773.jpg">
+	<style>
+		body{
+background-image: url("https://images.wallpapersden.com/image/download/low-poly-blue_61416_2560x1600.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+background-size: cover;
+ }
+
+header {
+background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190828/pngtree-dark-vector-abstract-background-image_302715.jpg");
+box-sizing: border-box;
+width: 80%;
+margin: auto;
+padding: 2%;
+border-radius: 25px;
+}
+
+header h1 {
+text-align: center;
+color: #F0F8FF;
+letter-spacing: 2px;
+}
+
+header p {
+text-align: center;
+color: #F0F8FF;
+letter-spacing: 2px;
+background-color: rgba(0, 0, 0, 0.8);
+width: 40%;
+margin: auto;
+}
+	
+header a {
+text-decoration: none;
+text-align: center;
+color: #FFFFFF;
+}
+
+header a:link {
+background-color: #00BFFF;
+color: #FFFFFF;
+padding: 3px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 2%;
+width: 80%;
+}
+
+header a:hover {
+background-color: #FFFFFF;
+color:#00BFFF;
+}
+
+.lang {
+background-color: #00CDCD;
+color:#FFFFFF;
+border-radius: 25px;
+}
+
+.lang:hover {
+background-color: #FFFFFF;
+color:#00CDCD;
+}
+
+.Learn {
+display: inline-block;
+text-align: left;
+width: 20%;
+}
+
+.Start {
+display: inline-block;
+text-align:right;
+width: 80%;
+margin-top: 5%;
+}
+
+#quote {
+padding-top: 10%;
+color: #000000;
+width: 60%;
+margin: auto;
+background-image: url("https://free4kwallpapers.com/uploads/originals/2015/09/17/blue-bokeh-background.jpg");
+margin-top: 10%;
+padding: 5%;
+font-size: 20px;
+letter-spacing: 5px;
+}
+
+#author {
+display: block;
+text-align: center;
+margin-top: 20%;
+}
+
+.coma {
+	text-align: center;
+vertical-align: super;
+  font-size: 100px;
+}
+
+#down {
+display: inline-block;
+margin-left: 33%;
+text-align: right;
+}
+
+</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header>
+		<h1>Cipher</h1>
+		<p>Your One Stop Destination to Learn Coding</p>
+		<div class = "Learn">	
+		<a class = "lang" href = ""><i class="fa fa-code"></i>&nbsp Learn C</a>
+	</div>
+	<div class = "Learn">
+		<a class = "lang" href = ""><i class="fa fa-code"></i>&nbsp Learn Python</a>
+	</div>
+	<div id = "down">
+		<div class = "Start">
+		<a class = "contact" href = ""><i class="fa fa-home"></i>&nbsp Go Back to Start</a>
+		</div>
+		<div class = "Start">
+			<a class = "contact" href = "{{ url_for('auth.contact') }}"><i class = "fa fa-phone-square"></i>&nbsp Contact Us</a>
+		</div>
+	</div>
+	</header>
+	<div id = "quote">
+		<p id = "saying"><div class = "coma">&#x201C</div> Whether you want to uncover the secrets of the universe, or you just want to pursue a career in the 21st century, basic computer programming is an essential skill to learn.<div class = "coma">&#x201D</div><span id = "author"> - Stephen Hawking </span></p>
+	</div>
+</body>
+</html>
+
