@@ -120,4 +120,8 @@ def contact():
 
 @bp.route('/homepage')
 def homepage():
-    return render_template('auth/homepage.html')
+    return render_template("auth/C.html")
+
+@bp.route('/C')
+def cpage():
+    return render_template('auth/C.html')
