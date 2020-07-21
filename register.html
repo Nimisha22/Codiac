@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Register</title>
+	<link rel = "icon" type = "img/png" href = "https://image.flaticon.com/icons/png/512/1127/1127745.png">
+	<style>
+		body
+		{
+			background-color: #6699CC;
+			background-repeat: no-repeat;
+			background-position: center;
+	 		background-attachment: fixed;
+	 		background-size: cover;
+		}
+		header
+		{
+			background: #C0C0C0;
+			width: 50%;
+			margin: auto;
+			margin-top: 5%;
+		}
+
+		header h1
+		{
+			display: inline-block;
+			width : 50%;
+			text-align: left;
+			padding-left: 10%;
+		}
+		header p
+		{
+			display: inline-block;
+			text-align: center;
+			width: 15%;
+			text-decoration: none;
+			color: #000000;
+			background-color: #FFFFFF;
+			border-radius: 25px;
+			padding-top: 2%;
+			padding-bottom: 2%;
+		}
+
+		header p:hover
+		{
+			color: #FFFFFF;
+			background-color: #000000;
+			border-radius: 25px;
+		}
+		form
+		{
+			width: 50%;
+			height: 70%;
+			background: rgba(0, 0, 0, 0.3);
+			color: #fff;
+			position: absolute;	
+			top: 20%;
+			left: 25%;
+			box-sizing: border-box;
+			margin: auto;
+			margin-top: 10%;
+		}
+		.first
+		{
+			border: none;
+			border-bottom: 1px solid #fff;
+			background: transparent;
+			outline: none;
+			height: 40px;
+			width: 50%;
+			margin-left: 25%;
+            font-size: 30px;
+		}
+		input
+		{
+			text-align: center;
+			color: #FFFFFF;
+		}
+		#click
+		{
+			border: none;
+			border-radius: 20px 20px 20px 20px;
+			height: 40px;
+			width: 50%;
+			background: #0000D9;
+			color: #FFFFFF;
+			outline: none;
+		margin-top: 7%;
+			margin-left: 25%;
+			font-size: 20px;
+			letter-spacing: 1px;
+		}
+
+		#click:hover
+		{
+			background: #72BCD4;
+			color: #000000;
+		}
+
+		form p
+		{
+			text-align: center;
+			color: #FFFFFF;
+            font-size: 30px;
+		}
+        .content
+        {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+            background: rgba(0, 0, 0, 0.5);
+            color: #FFFFFF;
+            width: 50%;
+            height: 50%;
+            text-align: center;
+            font-size: 30px;
+        }
+
+	</style>
+</head>
+<body>
+	<header>
+		<h1 id = "heading">Cipher</h1>
+		<a href = "{{ url_for('auth.login') }}"><p>Login</p></a>
+	    <span>&nbsp&nbsp</span>
+		<a href = "{{ url_for('auth.contact') }}"><p>Contact Us</p></a>
+	</header>
+
+
+	<form method="post">
+		<br>
+
+		<div class = "input">
+            <p>Username</p>
+			<label for="username"></label><br>
+			<input name="username" id="username" required class = "first" placeholder = "username">
+		</div>
+		<div class = "input">
+            <p>Password</p>
+    			<label for="password"></label><br>
+			<input type="password" name="password" id="password" required class = "first" placeholder = "password">
+		</div>
+		<br>
+		<div class = "input">
+			<input type = "submit" value = "Register" id = "click" >
+		</div>
+	</form>
+
+	<section class = "content">
+	  {% for message in get_flashed_messages() %}
+	    <div class="flash">{{ message }}</div>
+	  {% endfor %}
+	</section>
+
+
+</body>
+</html>

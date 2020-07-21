@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Cipher</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel = "icon" type = "img/png" href = "https://cdn.iconscout.com/icon/premium/png-256-thumb/coding-252-407038.png">
+<style>
+body
+    {
+        background-color: #CDC1C5;
+                background-repeat: no-repeat;
+                    background-position: center;
+                         background-attachment: fixed;
+                             background-size: cover;
+}
+
+#head
+    {
+        margin: auto;
+            width: 82.5%;
+                padding: 5%;
+                    
+}
+
+#navigation
+    {
+        display: block;
+            text-align: center;
+                background: linear-gradient(#C1E1EC, #84E0FF);
+                    margin-bottom: 30px;
+                        width: 82.5%;
+                            margin-top: 5%;
+}
+
+#head h1
+    {
+        font-family: Courier;
+            font-weight: bold;
+                letter-spacing: 20px;
+                    color: #A50000;
+}
+#head p
+    {
+        color:#003B00;
+            letter-spacing: 5px;
+                font-size: 30px;
+
+}
+
+.top
+    {
+        width: 20px;
+            text-decoration: none;
+                color: #480027;
+                    text-align: center;
+                        padding: 2%;
+                            padding-left:10%;
+                                padding-right:10%;
+                                    border: solid 2px #480027;
+}
+
+.top:hover
+    {
+        color: #FFFFFF;
+            background-color: #480027;
+                text-decoration: none;
+}
+
+#blue
+    {
+        color: #00004F ;
+            border: solid 2px #00004F;
+                border-radius: 25px;
+}
+
+#blue:hover
+    {
+        color: #FFFFFF;
+            background-color: #00004F;
+                text-decoration: none;
+}
+.menu
+    {
+        margin: 10%;
+}
+
+#Logo img
+    {
+        margin-left:20%;
+        width: 60%;
+        height: 80%;
+}
+
+#Logo
+    {
+        margin: auto;
+}
+
+#information
+    {
+        margin-top: 3%;
+            text-align: center;
+                color: #DC143C;
+                    background: linear-gradient(#EEA9B8 ,#CD919E);
+                        padding: 10%;
+}
+footer div
+    {
+    margin-top: 20%;
+    margin: auto;
+    width: 100%;
+   text-align: center;
+   background-color: transparent;
+   padding: 1%;
+   padding-top:2%;
+   color: #000000;
+}
+</style>
+</head>
+<body>
+	<header>
+		<div class="jumbotron text-center" id="head">
+  			<h1>CIPHER</h1>
+  			<p>Start Coding Now</p>
+		</div>
+
+		<div class="container" id="navigation">
+  			<div class="row">
+    			<div class="col-sm-4 col-xs-4">
+    				<div class="menu">
+      				<a href="{{ url_for('auth.login') }}" class="top">&nbsp<i class="fa fa-sign-in"></i>&nbsp Login &nbsp</a>
+      			</div>
+    			</div>
+    			<div class="col-sm-4 col-xs-4">
+    				<div class="menu">
+      				<a href="{{ url_for('auth.register') }}" class="top">&nbsp<i class="fa fa-file-code-o"></i>&nbsp Register &nbsp</a>
+      			</div>
+    			</div>
+    			<div class="col-sm-4 col-xs-4">
+    				<div class="menu">
+      			<a href="{{ url_for('auth.contact') }}" class="top" id="blue">&nbsp<i class="fa fa-phone-square"></i>&nbsp Contact Us &nbsp</a>
+      		</div>
+    			</div>
+  			</div>
+		</div>
+		<div class = "row">
+			<div class = "col-xs-4" id="Logo">
+				<img src = "http://appslab.hk/wp-content/uploads/General/logos/LOGO-Lets-Code.png">
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12" id ="information">
+				<h1>ALL ABOUT CIPHER</h1>
+				<p>Coding Guide For Beginners</p>
+				<p>Welcome !!
+
+				Are you a beginner in coding and looking for some guidance? You are at the right place! Cipher delivers the concepts in a way that is easy to grasp for the beginners along with our bot that makes your learning interactive and fun.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
