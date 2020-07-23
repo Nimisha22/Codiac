@@ -3,6 +3,16 @@
 
 <head>
 <title>C Language</title>
+<script type="text/javascript"
+    id="botcopy-embedder-d7lcfheammjct"
+    class="botcopy-embedder-d7lcfheammjct" 
+    data-botId="5f16a387d0d1230008922f22"
+>
+    var s = document.createElement('script'); 
+    s.type = 'text/javascript'; s.async = true; 
+    s.src = 'https://widget.botcopy.com/js/injection.js'; 
+    document.getElementById('botcopy-embedder-d7lcfheammjct').appendChild(s);
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -21,8 +31,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 <div class="w3-bar w3-pale-green w3-card">
 
 <!-- Top fixed navigagtion bar -->
-<a href="" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-phone"></i>&nbsp;&nbsp;Contact Us</a>
-<a href="#" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right"><i class="fa fa-home"></i>&nbsp;&nbsp;HOME</a>
+<a href="{{ url_for('auth.contact') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-phone"></i>&nbsp;&nbsp;Contact Us</a>
+<a href="{{ url_for('auth.index') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right"><i class="fa fa-home"></i>&nbsp;&nbsp;HOME</a>
 <div class="w3-dropdown-hover w3-hide-small w3-right">
 <button class="w3-padding-large w3-button w3-hover-pale-dark-grey" title="More">Learn More&nbsp;&nbsp;<i class="fa fa-caret-down"></i></button>     
 <div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -1032,7 +1042,7 @@ When there is no default and there are no matching constants ,then the program c
 
 <p class = "w3-xxlarge w3-text-dark-grey">while Loops</p>
 
-<p class = "w3-large w3-text-dark-grey">while loop is used to repeat certain statements as long as the condition is true, when the condition is false, the while loop is quieted . This loop control structure is called as an entry controlled loop because only when the condition is true, all the statements are executed.</p>
+<p class = "w3-large w3-text-dark-grey">while loop is used to repeat certain statements as long as the condition is true, when the condition is false, the while loop is exited. This loop control structure is called as an entry controlled loop because only when the condition is true, all the statements are executed.</p>
 
 <p class = "w3-xlarge w3-text-dark-grey">Syntax of while loop:</p>
 <p class = "w3-large w3-text-dark-grey">while (condition test) {</p>
@@ -1160,7 +1170,7 @@ When there is no default and there are no matching constants ,then the program c
 
 <p class = "w3-xxlarge w3-text-dark-grey">do-while Loops</p>
 
-<p class = "w3-large w3-text-dark-grey">The  do-while loop is similar to while loop. In a do-while  loop, the condition is tested at the end of the loop. So,  even when the condition is false the body of the loop is executed at least once this is an exit controlled loop.</p>
+<p class = "w3-large w3-text-dark-grey">The do-while loop is similar to while loop. In a do-while  loop, the condition is tested at the end of the loop. So,  even when the condition is false the body of the loop is executed at least once this is an exit controlled loop.</p>
 
 <p class = "w3-xlarge w3-text-dark-grey">Syntax:</p>
 <p class = "w3-large w3-text-dark-grey">do {</p>

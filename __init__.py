@@ -20,17 +20,13 @@ def create_app(test_config=None):
 
     @app.route('/')
     def home():
-        return render_template('home.html')
+        return render_template('auth/welcome.html')
 
     from cipher import db
     db.init_app(app)
 
     from cipher import auth
     app.register_blueprint(auth.bp)
-
-    from cipher import blog
-    app.register_blueprint(blog.bp)
-    app.add_url_rule('/', endpoint='index')
     
     return app
 
