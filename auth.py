@@ -245,3 +245,31 @@ def delete(id):
     db.commit()
     return redirect(url_for("auth.index"))
 
+@bp.route("/addcomments", methods=("GET", "POST"))
+@login_required
+def comments():
+    if request.method == "POST":
+        comments = request.form["comments"]
+        db = get_db()
+        db.execute(
+
+                "INSERT INTO postcomments (comments, author_id) VALUES (?, ?)",
+                (comments, g.user["id"]),
+        )
+        db.commit()
+        return redirect(url_for("auth.index"))
+
+    return render_template("blog/comments.html")
+
+
+@bp.route("/comments")
+@login_required
+def commentsindex():
+    """Show all the comments, most recent first."""
+    db = get_db()
+    postcoms = db.execute(
+        "SELECT comments, author_id"
+        " FROM postcomments p JOIN user u ON p.author_id = u.id"
+        " ORDER BY created DESC"
+    ).fetchall()
+    return render_template("blog/commentsindex.html", postcoms=postcoms)

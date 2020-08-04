@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Comments{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="comments">Comment</label>
+    <input name="comments" id="comments" value="{{ request.form['comments'] }}" required>
+    <input type="submit" value="Save">
+  </form>
+{% endblock %}
+

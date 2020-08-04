@@ -18,6 +18,7 @@
         {% if g.user['id'] == post['author_id'] %}
           <a class="action" href="{{ url_for('auth.update', id=post['id']) }}">Edit</a>
         {% endif %}
+        <a class="action" href="{{ url_for('auth.commentsindex') }}">Comments</a>
       </header>
       <p class="body">{{ post['body'] }}</p>
     </article>
