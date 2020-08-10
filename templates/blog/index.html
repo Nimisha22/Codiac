@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{% block title %}Posts{% endblock %}</h1>
+  <h1>{% block title %}Discussions{% endblock %}</h1>
   {% if g.user %}
     <a class="action" href="{{ url_for('auth.create') }}">New</a>
   {% endif %}
@@ -18,7 +18,7 @@
         {% if g.user['id'] == post['author_id'] %}
           <a class="action" href="{{ url_for('auth.update', topic_id=post['topic_id']) }}">Edit</a>
         {% endif %}
-        <a class="action" href="{{ url_for('auth.commentsindex', topic_id=post['topic_id']) }}">Comments</a>
+        <a class="action" href="{{ url_for('auth.commentsindex', topic_id=post['topic_id']) }}">View</a>
       </header>
       <p class="body">{{ post['body'] }}</p>
     </article>

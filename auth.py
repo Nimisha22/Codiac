@@ -249,7 +249,11 @@ def delete(topic_id):
 @login_required
 def comments(topic_id):
     post = get_post(topic_id)
+    postcoms = query_db(
+        "SELECT * FROM postcomments p JOIN user u ON p.author_id=u.id WHERE topic_id = ?",[topic_id]
+    )
     if request.method == "POST":
+        
         comments = request.form["comments"]
         db = get_db()
         db.execute(
@@ -258,9 +262,9 @@ def comments(topic_id):
                 (comments, g.user["id"], topic_id),
         )
         db.commit()
-        return redirect(url_for("auth.index"))
+        return redirect(url_for("auth.commentsindex", topic_id=post['topic_id']))
 
-    return render_template("blog/comments.html", post=post)
+    return render_template("blog/comments.html", postcoms=postcoms, post=post)
 
 
 @bp.route("/<int:topic_id>/comments")
@@ -271,9 +275,6 @@ def commentsindex(topic_id):
     db = get_db()
     postcoms = query_db(
         "SELECT * FROM postcomments p JOIN user u ON p.author_id=u.id WHERE topic_id = ?",[topic_id]
-        #"SELECT comments, author_id, topic_id"
-        #" FROM postcomments p JOIN user u ON p.author_id = u.id"
-        #" ORDER BY created DESC"
     )
     return render_template("blog/commentsindex.html", postcoms=postcoms, post=post)
 
@@ -284,3 +285,38 @@ def query_db(query, args=(), one=False):
                for idx, value in enumerate(row)) for row in cur.fetchall()]
     return (rv[0] if rv else None) if one else rv
 
+'''
+@bp.route("/<int:topic_id>/updatecomments", methods=("GET", "POST"))
+@login_required
+def updatecomments(topic_id, comment_id):
+    post = get_post(topic_id)
+    if request.method == "POST":
+        
+        comments = request.form["comments"]
+        db = get_db()
+        db.execute(
+
+                "UPDATE postcomments (comments, author_id, topic_id) VALUES (?, ?, ?)",
+                (comments, g.user["id"], topic_id),
+        )
+        db.commit()
+        return redirect(url_for("auth.commentsindex", topic_id=post['topic_id']))
+
+    postcoms = query_db(
+        "SELECT * FROM postcomments p JOIN user u ON p.author_id=u.id WHERE topic_id = ?",[topic_id]
+    )
+    return render_template("blog/updatecomments.html", postcoms=postcoms, post=post)
+
+@bp.route("/<int:topic_id>/commentdelete", methods=("POST",))
+@login_required
+def deletecomments(topic_id, comment_id):
+    """Delete a comment.
+    Ensures that the comment exists and that the logged in user is the
+    author of the comment.
+    """
+    get_post(topic_id)
+    db = get_db()
+    db.execute("DELETE FROM postcomments WHERE comment_id = ?", (comment_id,))
+    db.commit()
+    return redirect(url_for("auth.commentsindex", topic_id=topic_id))
+'''

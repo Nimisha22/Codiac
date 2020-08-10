@@ -20,6 +20,7 @@ CREATE TABLE post (
 
 CREATE TABLE postcomments (
     topic_id INTEGER NOT NULL,
+    --comment_id INTEGER PRIMARY KEY AUTOINCREMENT,
     author_id INTEGER NOT NULL,
     created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     comments TEXT NOT NULL,

@@ -3,9 +3,6 @@
 {% block header %}
 <h1>{% block title %}{{post['title'] }}{% endblock %}</h1>
 <div class="about">by {{ post['username'] }} on {{ post['created'].strftime('%Y-%m-%d') }}</div>
-  {% if g.user %}
-    <a class="action" href="{{ url_for('auth.comments', topic_id=post['topic_id']) }}">Comment</a>
-  {% endif %}
 {% endblock %}
 
 {% block content %}
@@ -14,6 +11,17 @@
         <div>
           <p>{{ post['body'] }}</p>
         </div>
+  {% if g.user %}
+  <form method="post">
+    <label for="comments">Comment</label>
+    <input name="comments" id="comments" value="{{ request.form['comments'] }}" required>
+    <input type="submit" value="Save">
+  </form>
+  <hr>
+  <form action="{{ url_for('auth.deletecomments', topic_id=post['topic_id'], comment_id=postcoms['comment_id']) }}" method="post">
+    <input class="danger" type="submit" value="Delete" onclick="return confirm('Are you sure?');">
+  </form>
+  {% endif %}
     </article>
     <h1>Comments</h1>
   {% for postcom in postcoms %}
@@ -30,5 +38,4 @@
     {% endif %}
   {% endfor %}
 {% endblock %}
-
 
