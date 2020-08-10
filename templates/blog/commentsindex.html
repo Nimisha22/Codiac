@@ -3,17 +3,17 @@
 {% block header %}
   <h1>{% block title %}Comments{% endblock %}</h1>
   {% if g.user %}
-    <a class="action" href="{{ url_for('auth.comments') }}">Comment</a>
+    <a class="action" href="{{ url_for('auth.comments', topic_id=post['topic_id']) }}">Comment</a>
   {% endif %}
 {% endblock %}
 
 {% block content %}
-  {% for postcomments in postcoms %}
+  {% for postcom in postcoms %}
     <article class="post">
       <header>
         <div>
-          <h1>{{ postcomments['comments'] }}</h1>
-          <div class="about">by {{ postcomments['username'] }}</div>
+          <h1>{{ postcom['comments'] }}</h1>
+          <div class="about">by {{postcom['username']}}</div>
         </div>
       </header>
     </article>

@@ -143,7 +143,7 @@ def index():
     """Show all the posts, most recent first."""
     db = get_db()
     posts = db.execute(
-        "SELECT p.id, title, body, created, author_id, username"
+        "SELECT p.topic_id, title, body, created, author_id, username"
         " FROM post p JOIN user u ON p.author_id = u.id"
         " ORDER BY created DESC"
     ).fetchall()
@@ -162,9 +162,9 @@ def get_post(id, check_author=True):
     post = (
         get_db()
         .execute(
-            "SELECT p.id, title, body, created, author_id, username"
+            "SELECT p.topic_id, title, body, created, author_id, username"
             " FROM post p JOIN user u ON p.author_id = u.id"
-            " WHERE p.id = ?",
+            " WHERE p.topic_id = ?",
             (id,),
         )
         .fetchone()
@@ -205,11 +205,11 @@ def create():
     return render_template("blog/create.html")
 
 
-@bp.route("/<int:id>/update", methods=("GET", "POST"))
+@bp.route("/<int:topic_id>/update", methods=("GET", "POST"))
 @login_required
-def update(id):
+def update(topic_id):
     """Update a post if the current user is the author."""
-    post = get_post(id)
+    post = get_post(topic_id)
 
     if request.method == "POST":
         title = request.form["title"]
@@ -224,7 +224,7 @@ def update(id):
         else:
             db = get_db()
             db.execute(
-                "UPDATE post SET title = ?, body = ? WHERE id = ?", (title, body, id)
+                "UPDATE post SET title = ?, body = ? WHERE id = ?", (title, body, topic_id)
             )
             db.commit()
             return redirect(url_for("auth.index"))
@@ -232,44 +232,47 @@ def update(id):
     return render_template("blog/update.html", post=post)
 
 
-@bp.route("/<int:id>/delete", methods=("POST",))
+@bp.route("/<int:topic_id>/delete", methods=("POST",))
 @login_required
-def delete(id):
+def delete(topic_id):
     """Delete a post.
     Ensures that the post exists and that the logged in user is the
     author of the post.
     """
-    get_post(id)
+    get_post(topic_id)
     db = get_db()
-    db.execute("DELETE FROM post WHERE id = ?", (id,))
+    db.execute("DELETE FROM post WHERE id = ?", (topic_id,))
     db.commit()
     return redirect(url_for("auth.index"))
 
-@bp.route("/addcomments", methods=("GET", "POST"))
+@bp.route("/<int:topic_id>/addcomments", methods=("GET", "POST"))
 @login_required
-def comments():
+def comments(topic_id):
+    post = get_post(topic_id)
     if request.method == "POST":
         comments = request.form["comments"]
         db = get_db()
         db.execute(
 
-                "INSERT INTO postcomments (comments, author_id) VALUES (?, ?)",
-                (comments, g.user["id"]),
+                "INSERT INTO postcomments (comments, author_id, topic_id) VALUES (?, ?, ?)",
+                (comments, g.user["id"], topic_id),
         )
         db.commit()
         return redirect(url_for("auth.index"))
 
-    return render_template("blog/comments.html")
+    return render_template("blog/comments.html", post=post)
 
 
-@bp.route("/comments")
+@bp.route("/<int:topic_id>/comments")
 @login_required
-def commentsindex():
+def commentsindex(topic_id):
     """Show all the comments, most recent first."""
+    post = get_post(topic_id)
     db = get_db()
     postcoms = db.execute(
-        "SELECT comments, author_id"
+        "SELECT comments, author_id, topic_id"
         " FROM postcomments p JOIN user u ON p.author_id = u.id"
         " ORDER BY created DESC"
     ).fetchall()
-    return render_template("blog/commentsindex.html", postcoms=postcoms)
+    return render_template("blog/commentsindex.html", postcoms=postcoms, post=post)
+
