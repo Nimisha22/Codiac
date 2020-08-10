@@ -269,10 +269,17 @@ def commentsindex(topic_id):
     """Show all the comments, most recent first."""
     post = get_post(topic_id)
     db = get_db()
-    postcoms = db.execute(
-        "SELECT comments, author_id, topic_id"
-        " FROM postcomments p JOIN user u ON p.author_id = u.id"
-        " ORDER BY created DESC"
-    ).fetchall()
+    postcoms = query_db(
+        "SELECT * FROM postcomments WHERE topic_id = ?",[topic_id]
+        #"SELECT comments, author_id, topic_id"
+        #" FROM postcomments p JOIN user u ON p.author_id = u.id"
+        #" ORDER BY created DESC"
+    )
     return render_template("blog/commentsindex.html", postcoms=postcoms, post=post)
+
+def query_db(query, args=(), one=False):
+    cur = g.db.execute(query, args)
+    rv = [dict((cur.description[idx][0], value)
+               for idx, value in enumerate(row)) for row in cur.fetchall()]
+    return (rv[0] if rv else None) if one else rv
 
