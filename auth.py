@@ -173,8 +173,8 @@ def get_post(id, check_author=True):
     if post is None:
         abort(404, "Post id {0} doesn't exist.".format(id))
 
-    if check_author and post["author_id"] != g.user["id"]:
-        abort(403)
+    #if check_author and post["author_id"] != g.user["id"]:
+        #abort(403)
 
     return post
 
@@ -270,7 +270,7 @@ def commentsindex(topic_id):
     post = get_post(topic_id)
     db = get_db()
     postcoms = query_db(
-        "SELECT * FROM postcomments WHERE topic_id = ?",[topic_id]
+        "SELECT * FROM postcomments p JOIN user u ON p.author_id=u.id WHERE topic_id = ?",[topic_id]
         #"SELECT comments, author_id, topic_id"
         #" FROM postcomments p JOIN user u ON p.author_id = u.id"
         #" ORDER BY created DESC"
@@ -278,7 +278,8 @@ def commentsindex(topic_id):
     return render_template("blog/commentsindex.html", postcoms=postcoms, post=post)
 
 def query_db(query, args=(), one=False):
-    cur = g.db.execute(query, args)
+    db = get_db()
+    cur = db.execute(query, args)
     rv = [dict((cur.description[idx][0], value)
                for idx, value in enumerate(row)) for row in cur.fetchall()]
     return (rv[0] if rv else None) if one else rv
