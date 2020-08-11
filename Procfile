@@ -1,2 +1,1 @@
-web: gunicorn app:app
-web: gunicorn run:auth
+web: gunicorn cipher:create_app()
