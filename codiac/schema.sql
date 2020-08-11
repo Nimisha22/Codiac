@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS postcomments;
 
 CREATE TABLE user (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  email string UNIQUE NOT NULL,
+  --email string UNIQUE NOT NULL,
   username string UNIQUE NOT NULL,
   password string NOT NULL
 );

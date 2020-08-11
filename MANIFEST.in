@@ -1,0 +1,4 @@
+include cipher/schema.sql
+graft cipher/static
+graft cipher/templates
+global-exclude *.pyc
