@@ -1,2 +1,2 @@
 web: gunicorn app:app
-web: gunicorn run:cipher
+web: gunicorn run:home
