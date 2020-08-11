@@ -1,2 +1,2 @@
 web: gunicorn app:app
-web: gunicorn run:home
+web: gunicorn run:auth
