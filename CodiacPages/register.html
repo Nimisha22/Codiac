@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<link rel = "icon" href = "https://img.icons8.com/color/48/000000/add-user-group-woman-man-skin-type-7.png">
+	<title>Register</title>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		body {
+
+			background-image: url('https://i.pinimg.com/originals/89/67/92/8967925b9d9141e88ced0a9020bdbc5e.gif');
+			background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+		}
+		.register{
+			padding: 1%;
+			margin-right: 20%;
+			margin-left: 20%;
+			margin-top: 1%;
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+		h1, label {
+			letter-spacing: 5px;
+			color: #85C1E9 ;
+		}
+		.inputbuttons {
+			text-align: center;
+			text-decoration: none;
+			background: transparent;
+			border: none;
+			border-bottom: 2px solid #FFFFFF;
+			color: #FFFFFF;
+		}
+		.link {
+			text-decoration: none;
+		}
+		.link:hover {
+			color: #FFFFFF;
+		}
+		.submit {
+			padding: 15px;
+			background-color: #85C1E9;
+			color: #FFFFFF;
+			border: 5px solid #85C1E9;
+		}
+		.submit:hover {
+			background-color: #FFFFFF;
+			border: 5px solid #FFFFFF;
+			color: #85C1E9;
+		}
+	</style>
+</head>
+<body>
+	<div class = "w3-card-4 register w3-center">
+		<p class = "w3-top ">
+			<h1 class = "w3-left">
+			<img src="https://img.icons8.com/color/48/000000/source-code.png"/>&nbsp;Codiac</h1>
+			<h1 class = "w3-right"><a href = "login.html" class = "link">
+			<img src="https://img.icons8.com/color/48/000000/under-computer.png"/>&nbsp;Log In</a></h1>
+			<h1 class = "w3-right"><a href = "register.html" class = "link">
+			<img src="https://img.icons8.com/color/48/000000/myspace.png"/>&nbsp;Register&nbsp;&#x7c;&nbsp;</a></h1></p>
+
+		<br><br>
+		<hr>
+		<form>
+			<br>
+			<label class = "w3-xxlarge">Email</label>
+			<br>
+			<input type = "email" placeholder = "Email" class = "w3-xlarge inputbuttons">
+			<br><br><br>
+			<label class = "w3-xxlarge">Username</label>
+			<br>
+			<input type = "email" placeholder = "Username" class = "w3-xlarge inputbuttons">
+			<br><br><br>
+			<label class = "w3-xxlarge">Password</label>
+			<br>
+			<input type = "password" placeholder = "Password" id="myInput" class = "w3-xlarge inputbuttons">
+			<br><br><br>
+			<input type="checkbox" onclick="myFunction()" ><span class = "w3-large w3-text-white">&nbsp;&nbsp;Show Password</span>
+			<script>
+			function myFunction() {
+  			var x = document.getElementById("myInput");
+  			if (x.type === "password") {
+   				 x.type = "text";
+  			} else {
+    			x.type = "password";
+  			}
+			}
+		</script>
+			<br><br><br>
+			<input type = "submit" class = "w3-xlarge submit" value = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;">
+			<br>
+		</form>
+	</div>
+</body>
+</html>
