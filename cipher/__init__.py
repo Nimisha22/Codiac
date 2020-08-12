@@ -23,7 +23,7 @@ def create_app(test_config=None):
 
     @app.route('/')
     def home():
-        return render_template('auth/welcomepage.html')
+        return render_template('auth/home.html')
 
     from cipher import db
     db.init_app(app)

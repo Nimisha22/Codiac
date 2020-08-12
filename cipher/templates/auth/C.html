@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel = "icon" href = "https://img.icons8.com/dusk/64/000000/c-drive-2.png">
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 #navfix {
@@ -31,14 +32,14 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 <div class="w3-bar w3-pale-green w3-card">
 
 <!-- Top fixed navigagtion bar -->
-<a href="{{ url_for('auth.contact') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-phone"></i>&nbsp;&nbsp;Contact Us</a>
-<a href="{{ url_for('auth.index') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right"><i class="fa fa-home"></i>&nbsp;&nbsp;FORUM</a>
+<a href="{{ url_for ('auth.logout') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-sign-out"></i>&nbsp;&nbsp;Log Out</a>
+<a href="" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;Profile</a>
+<a href="{{ url_for ('auth.contact') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-envelope"></i>&nbsp;&nbsp;Email Us</a>
+<a href="{{ url_for('auth.home') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right"><i class="fa fa-home"></i>&nbsp;&nbsp;HOME</a>
 <div class="w3-dropdown-hover w3-hide-small w3-right">
 <button class="w3-padding-large w3-button w3-hover-pale-dark-grey" title="More">Learn More&nbsp;&nbsp;<i class="fa fa-caret-down"></i></button>     
 <div class="w3-dropdown-content w3-bar-block w3-card-4">
-<a href="#" class="w3-bar-item w3-button w3-hover-dark-grey ">Python</a>
-<a href="#" class="w3-bar-item w3-button w3-hover-dark-grey">Java</a>
-<a href="#" class="w3-bar-item w3-button w3-hover-dark-grey">C++</a>
+<a href="{{ url_for ('auth.python') }}" class="w3-bar-item w3-button w3-hover-dark-grey ">Python</a>
 </div>
 </div>
 </div>
@@ -78,14 +79,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 <a href = "#functions" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Functions</a>
 <br><br>
 <a href = "#arrays" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Arrays</a>
-<br><br>
-<a href = "#strings" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Strings</a>
-<br><br>
-<a href = "#pointers" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Pointers</a>
-<br><br>
-<a href = "#structuresandunions" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Structures & Unions</a>
-<br><br>
-<a href = "#standardlibrary" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Standard Library Functions</a>
 <br><br><br><br>
   </div>
 </nav>
@@ -138,8 +131,7 @@ subroutines/procedures - functions</p>
 <ul>
 <li>Extensible</li>
 </ul>
-<p class = "w3-large w3-text-dark-grey">C focuses on mechanisms to extend the programming language, compiler and runtime environment.
-Please type "content" to choose the next topic you would like to learn.</p>
+<p class = "w3-large w3-text-dark-grey">C focuses on mechanisms to extend the programming language, compiler and runtime environment.</p>
 <hr>
 <hr>
 </div>
@@ -1042,7 +1034,7 @@ When there is no default and there are no matching constants ,then the program c
 
 <p class = "w3-xxlarge w3-text-dark-grey">while Loops</p>
 
-<p class = "w3-large w3-text-dark-grey">while loop is used to repeat certain statements as long as the condition is true, when the condition is false, the while loop is exited. This loop control structure is called as an entry controlled loop because only when the condition is true, all the statements are executed.</p>
+<p class = "w3-large w3-text-dark-grey">while loop is used to repeat certain statements as long as the condition is true, when the condition is false, the while loop is quieted . This loop control structure is called as an entry controlled loop because only when the condition is true, all the statements are executed.</p>
 
 <p class = "w3-xlarge w3-text-dark-grey">Syntax of while loop:</p>
 <p class = "w3-large w3-text-dark-grey">while (condition test) {</p>
@@ -1170,7 +1162,7 @@ When there is no default and there are no matching constants ,then the program c
 
 <p class = "w3-xxlarge w3-text-dark-grey">do-while Loops</p>
 
-<p class = "w3-large w3-text-dark-grey">The do-while loop is similar to while loop. In a do-while  loop, the condition is tested at the end of the loop. So,  even when the condition is false the body of the loop is executed at least once this is an exit controlled loop.</p>
+<p class = "w3-large w3-text-dark-grey">The  do-while loop is similar to while loop. In a do-while  loop, the condition is tested at the end of the loop. So,  even when the condition is false the body of the loop is executed at least once this is an exit controlled loop.</p>
 
 <p class = "w3-xlarge w3-text-dark-grey">Syntax:</p>
 <p class = "w3-large w3-text-dark-grey">do {</p>
@@ -1943,57 +1935,9 @@ Let's see a simple example of C function that returns int value from the functio
 <hr><hr>
 </div>
 <br>
-
-
-<!-- Strings -->
-<div id = "strings">
-</div>
-<br><br><br>
-<div class = "w3-container w3-card w3-pale-blue">
-<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-link"></i>&nbsp;&nbsp;Strings</h2>
-<hr><hr>
-<hr><hr>
-</div>
-<br>
-
-
- <!-- Pointers -->
-<div id = "pointers">
-</div>
-<br><br><br>
-<div class = "w3-container w3-card w3-pale-red">
-<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-asterisk"></i>&nbsp;&nbsp;Pointers</h2>
-<hr><hr>			
-<hr><hr>
-</div>
-<br>
-
-
- <!-- Structures and Unions -->
-<div id = "structuresandunions">
-</div>
-<br><br><br>
-<div class = "w3-container w3-card w3-pale-yellow">
-<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-list"></i>&nbsp;&nbsp;Structures and Unions</h2>
-<hr><hr>
-<hr><hr>
-</div>
-<br>
-
-
- <!-- Pointers -->
-<div id = "standardlibrary">
-</div>
-<br><br><br>
-<div class = "w3-container w3-card w3-sand">
-<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-file-text-o"></i>&nbsp;&nbsp;Standard Library</h2>
-<hr><hr>
-<hr><hr>
-</div>
-<br>
-
 </div>
 </div>
 </div>
 </body>
 </html>
+

@@ -2,150 +2,95 @@
 <html lang = "en">
 <head>
 	<meta charset = "UTF-8">
+	<link rel = "icon" href = "https://img.icons8.com/color/48/000000/add-user-group-woman-man-skin-type-7.png">
 	<title>Register</title>
-	<link rel = "icon" type = "img/png" href = "https://image.flaticon.com/icons/png/512/1127/1127745.png">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style>
-		body
-		{
-			background-color: #6699CC;
+		body {
+
+			background-image: url('https://i.pinimg.com/originals/89/67/92/8967925b9d9141e88ced0a9020bdbc5e.gif');
 			background-repeat: no-repeat;
-			background-position: center;
-	 		background-attachment: fixed;
-	 		background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
 		}
-		header
-		{
-			background: #C0C0C0;
-			width: 50%;
-			margin: auto;
-			margin-top: 5%;
+		.register{
+			padding: 1%;
+			margin-right: 20%;
+			margin-left: 20%;
+			margin-top: 1%;
+			background-color: rgba(0, 0, 0, 0.8);
 		}
-
-		header h1
-		{
-			display: inline-block;
-			width : 50%;
-			text-align: left;
-			padding-left: 10%;
+		h1, label {
+			letter-spacing: 5px;
+			color: #85C1E9 ;
 		}
-		header p
-		{
-			display: inline-block;
+		.inputbuttons {
 			text-align: center;
-			width: 15%;
 			text-decoration: none;
-			color: #000000;
-			background-color: #FFFFFF;
-			border-radius: 25px;
-			padding-top: 2%;
-			padding-bottom: 2%;
-		}
-
-		header p:hover
-		{
-			color: #FFFFFF;
-			background-color: #000000;
-			border-radius: 25px;
-		}
-		form
-		{
-			width: 50%;
-			height: 70%;
-			background: rgba(0, 0, 0, 0.3);
-			color: #fff;
-			position: absolute;	
-			top: 20%;
-			left: 25%;
-			box-sizing: border-box;
-			margin: auto;
-			margin-top: 10%;
-		}
-		.first
-		{
-			border: none;
-			border-bottom: 1px solid #fff;
 			background: transparent;
-			outline: none;
-			height: 40px;
-			width: 50%;
-			margin-left: 25%;
-            font-size: 30px;
-		}
-		input
-		{
-			text-align: center;
-			color: #FFFFFF;
-		}
-		#click
-		{
 			border: none;
-			border-radius: 20px 20px 20px 20px;
-			height: 40px;
-			width: 50%;
-			background: #0000D9;
+			border-bottom: 2px solid #FFFFFF;
 			color: #FFFFFF;
-			outline: none;
-		margin-top: 7%;
-			margin-left: 25%;
-			font-size: 20px;
-			letter-spacing: 1px;
 		}
-
-		#click:hover
-		{
-			background: #72BCD4;
-			color: #000000;
+		.link {
+			text-decoration: none;
 		}
-
-		form p
-		{
-			text-align: center;
+		.link:hover {
 			color: #FFFFFF;
-            font-size: 30px;
 		}
-        .content
-        {
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: auto;
-            margin-bottom: auto;
-            background: rgba(0, 0, 0, 0.5);
-            color: #FFFFFF;
-            width: 50%;
-            height: 50%;
-            text-align: center;
-            font-size: 30px;
-        }
-
+		.submit {
+			padding: 15px;
+			background-color: #85C1E9;
+			color: #FFFFFF;
+			border: 5px solid #85C1E9;
+		}
+		.submit:hover {
+			background-color: #FFFFFF;
+			border: 5px solid #FFFFFF;
+			color: #85C1E9;
+		}
 	</style>
 </head>
 <body>
-	<header>
-		<h1 id = "heading">Cipher</h1>
-		<a href = "{{ url_for('auth.login') }}"><p>Login</p></a>
-	    <span>&nbsp&nbsp</span>
-		<a href = "{{ url_for('auth.contact') }}"><p>Contact Us</p></a>
-	</header>
+	<div class = "w3-card-4 register w3-center">
+		<p class = "w3-top ">
+			<h1 class = "w3-left">
+			<img src="https://img.icons8.com/color/48/000000/source-code.png"/>&nbsp;Codiac</h1>
+			<h1 class = "w3-right"><a href = "{{ url_for ('auth.login') }}" class = "link">
+			<img src="https://img.icons8.com/color/48/000000/under-computer.png"/>&nbsp;Log In</a></h1>
+			<h1 class = "w3-right"><a href = "{{ url_for('auth.register') }}" class = "link">
+			<img src="https://img.icons8.com/color/48/000000/myspace.png"/>&nbsp;Register&nbsp;&#x7c;&nbsp;</a></h1></p>
 
-
-	<form method="post">
-		<br>
-
-		<div class = "input">
-            <p>Username</p>
-			<label for="username"></label><br>
-			<input name="username" id="username" required class = "first" placeholder = "username">
-		</div>
-		<div class = "input">
-            <p>Password</p>
-    			<label for="password"></label><br>
-			<input type="password" name="password" id="password" required class = "first" placeholder = "password">
-		</div>
-		<br>
-		<div class = "input">
-			<input type = "submit" value = "Register" id = "click" >
-		</div>
-	</form>
+		<br><br>
+		<hr>
+		<form method="post">
+			<br>
+			<div class = "input">
+			<label for = "username" class = "w3-xxlarge">Username</label>
+			<br>
+			<input name = "username" id = "username" required class = "first" placeholder = "username" class = "w3-xlarge inputbuttons">
+			<br><br><br>
+			<label class = "w3-xxlarge">Password</label>
+			<br>
+			<input type = "password" name = "password" placeholder = "password" id="password" required class = "first" class = "w3-xlarge inputbuttons">
+			<br><br><br>
+			<input type="checkbox" onclick="myFunction()" ><span class = "w3-large w3-text-white">&nbsp;&nbsp;Show Password</span>
+			<script>
+			function myFunction() {
+  			var x = document.getElementById("password");
+  			if (x.type === "password") {
+   				 x.type = "text";
+  			} else {
+    			x.type = "password";
+  			}
+			}
+		</script>
+			<br><br><br>
+			<input type = "submit" class = "w3-xlarge submit" value = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" id="click">
+			<br>
+		</form>
 
 	<section class = "content">
 	  {% for message in get_flashed_messages() %}
@@ -154,5 +99,7 @@
 	</section>
 
 
+	</div>
 </body>
 </html>
+

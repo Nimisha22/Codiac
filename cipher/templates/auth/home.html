@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+	<title>Codiac</title>
+	<link rel = "icon" href = "https://img.icons8.com/officel/16/000000/student-male.png">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style>
+		body {
+
+			background-color:  #ffffff;
+			background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+		}
+		.navigation {
+			background: linear-gradient(to right,  #84CEEB 20%, #C1C8E4 80%);
+			border: 0.00001px solid #FFFFFF;
+			padding: 0.8%;
+		}
+    .sitename {
+      color: #FFFFFF;
+    }
+
+    .link2 {
+      color:  #FFFFFF;
+      padding: 15px;
+      margin: 15px;
+    }
+    .link2:hover {
+      color: #FFFFFF;
+      border: 2px solid #FFFFFF;
+      background-color: #5AB9EA;
+      border-radius: 50px;
+    }
+.design { 
+   background-image: url("https://dirkjan.co/wp-content/uploads/2019/03/Citigroup-CANVAS-Group-Meeting.gif");
+ background-color: #cccccc;
+      background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+	color: #5680E9; 
+	text-decoration: none;
+	text-align: center;
+  font-size: 30px;
+  height: 600px;
+}
+  @media only screen and (min-width: 601px) {
+ .design { 
+  color:  #5680E9; 
+  text-decoration: none;
+  text-align: center;
+  font-size: 60px;}
+}
+	h2 {
+	font-size: 22px
+}
+.typewriter {
+  font-size: 400px;
+}
+h1
+{
+  letter-spacing: 0;
+  font-weight: normal;
+  position: relative;
+  padding: 0 0 10px 0;
+  font-weight: normal;
+  line-height: 120% !important;
+  color: #1f1f1f;
+  margin: 0;
+  font-size: 24px;
+}
+
+@media (min-width: 601px) {
+
+   .half_bg_theme {
+  position: relative;
+}
+
+.half_bg_theme::after {
+    width: 50%;
+    height: 80%;
+    background: CCDBEE;
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+}
+
+
+
+.text_align_right_img img {
+    position: relative;
+    right: 15px;
+    box-shadow: 0px 0 5px 0 rgba(0,0,0,.2);
+}
+
+
+.header_top {
+    min-height: 98px;
+    padding: 8px 0;
+    background: #fff;
+}
+
+.section {
+    float: left;
+    width: 100%;
+}
+
+.top-header .navbar .navbar-collapse{
+    text-transform: none;
+    font-size: 17px;
+    padding: 10px 25px;
+    font-weight: 400;
+    overflow: hidden;
+    color: #000;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.theme_color {
+  color: #5680E9;
+}
+
+.section.about_section.half_bg_theme .container {
+    position: relative;
+    z-index: 11;
+}
+
+p {
+  letter-spacing: 2px;
+  font-size: 60px;
+    margin-top: 5px;
+    margin-bottom: 1rem;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #4a4a49;
+}
+
+.text_align_right_img img {
+    float: right;
+}
+
+
+.layout_padding {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.heading_main h2 {
+    font-size: 45px;
+    letter-spacing: -0.5px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    text-transform: uppercase;
+    line-height: 52px !important;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+@media only screen and (min-width: 601px) {
+ .img {
+  height: 550px;
+  width: 650px;
+}
+}
+#horizontal {
+  background-color: #000000; 
+  height: 1px;
+}
+.content {
+  background-color: #8860D0;
+  color: #FFFFFF;
+}
+
+.height {
+
+  height: 500px;
+}
+.foot {
+  background-color: #5AB9AE;
+}
+
+</style>
+</head>
+<body>
+<header>
+<nav class="navbar navbar-inverse navigation">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="#"><span class = "sitename"><span class="glyphicon glyphicon-pencil"></span> Codiac</span></a>
+</div>
+<div class="collapse navbar-collapse" id="myNavbar">
+<ul class="nav navbar-nav navbar-right link">
+<li><a href="{{ url_for ('auth.register') }}" ><span class = "link2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span>&nbsp;Sign Up&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
+<li><a href="{{ url_for ('auth.login') }}"><span class = "link2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-log-in"></span>&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+<h1 class = "design">
+  <a href="" class="typewrite" data-period="2000" data-type='[ "Welcome to Codiac!", "Your One Stop Destination to Learn to Code.", "Your interactive learning begins here!" ]'>
+    <span class="wrap"></span>
+  </a>
+</h1>
+<script>
+	var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #5680E9}";
+        document.body.appendChild(css);
+    };
+
+</script>
+         <div class="section about_section layout_padding half_bg_theme padding_bottom_0">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="full text_align_right_img">
+                        <img src="https://learn.g2.com/hs-fs/hubfs/Best%20Free%20Animation%20Tools/G2%20best%20free%20animation%20software%202019.gif?width=533&name=G2%20best%20free%20animation%20software%202019.gif" alt="coding image"  class = "img"/>
+                     </div>
+                  </div>
+                  <div class="col-md-6 rightside">
+                     <div class="full paddding_left_15">
+                        <div class="heading_main text_align_left">
+                           <h2><span class="theme_color">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome !</span><br><img src="https://img.icons8.com/clouds/100/000000/web-settings.png"/>To Codiac</h2>
+                        </div>
+                     </div>
+                     <div class="full paddding_left_15">
+                        <p>Welcome to Codiac. Here at Codiac we believe that coding is a very important skill to gain in today's era. So, to make it easy and exciting for you to get started with coding. We have a website that will guide you through with the basics.<br><br><h1 class = "w3-xxxlarge"><img src="https://img.icons8.com/plasticine/100/000000/bot.png"/>What more ?</h1><br><p> We have codiac the bot, who will teach you as you chat with it. Learning to code can never be more fun and exciting!! 
+                        </p></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <br><br><br><br>
+         <br><br><br><br>
+         <br><br><br><br>
+         <br><br><br><br>
+         <br><br><br><br>
+         <br><br><br><br>
+         <br><br><br>
+
+         <div class = "w3-card-4 w3-third content">
+          <p class = "w3-center w3-xxlarge w3-text-white height"><img src="https://img.icons8.com/dusk/64/000000/c-drive-2.png"/>C</p>
+        </div>
+        <div class = "w3-card-4 w3-third content">
+          <p class = "w3-center w3-xxlarge w3-text-white height"><img src="https://img.icons8.com/dusk/64/000000/python.png"/>Python</p>
+          
+        </div>
+        <div class = "w3-card-4 w3-third content">
+          <p class = "w3-center w3-xxlarge w3-text-white height"><img src="https://img.icons8.com/dusk/64/000000/bot.png"/>Codiac the Bot</p>
+        </div>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br class = "w3-hide-large">
+        <br class = "w3-hide-large">
+        <br class = "w3-hide-large">
+        <br class = "w3-hide-large">
+        <br class = "w3-hide-large">
+        <br class = "w3-hide-large">
+        <br class = "w3-hide-large">
+        <br class = "w3-hide-large">
+        <br class = "w3-hide-large">
+        <br class = "w3-hide-large">
+        <br class = "w3-hide-large">
+        <br class = "w3-hide-large">
+        <br class = "w3-hide-large">
+        <br class = "w3-hide-large">
+        <br class = "w3-hide-large">
+        <br class = "w3-hide-large">
+
+
+
+<footer>
+  <div class = "w3-card-2 foot">
+    <br>
+    <p class = "w3-center w3-text-white w3-xxlarge">Follow us on</p>
+    <p class = "w3-center w3-text-white w3-large" >
+    <a href = "" ><img src="https://img.icons8.com/clouds/100/000000/instagram-new--v2.png"/></a>
+    <a href = "" ><img src="https://img.icons8.com/clouds/100/000000/facebook-new.png"/></a>
+    <a href = "" ><img src="https://img.icons8.com/clouds/100/000000/whatsapp.png"/></a>
+    <a href = "" ><img src="https://img.icons8.com/clouds/100/000000/phone.png"/></a>
+    <a href = "" ><img src="https://img.icons8.com/clouds/100/000000/email.png"/></a></p>
+  </div>
+</footer>
+</body>
+</html>
+

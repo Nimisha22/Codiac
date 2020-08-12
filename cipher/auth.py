@@ -129,12 +129,15 @@ def contact():
 
 @bp.route('/home')
 def home():
-    return render_template("auth/homepage.html")
+    return render_template("auth/choose.html")
 
 @bp.route('/C')
 def cpage():
     return render_template('auth/C.html')
 
+@bp.route('/python')
+def python():
+    return render_template('auth/python.html')
 
 
 
