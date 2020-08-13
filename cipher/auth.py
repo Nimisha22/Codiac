@@ -227,7 +227,7 @@ def update(topic_id):
         else:
             db = get_db()
             db.execute(
-                "UPDATE post SET title = ?, body = ? WHERE id = ?", (title, body, topic_id)
+                "UPDATE post SET title = ?, body = ? WHERE topic_id = ?", (title, body, topic_id)
             )
             db.commit()
             return redirect(url_for("auth.index"))
