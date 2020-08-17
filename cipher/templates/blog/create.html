@@ -1,15 +1,75 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<title>Discussion</title>
+<link rel = "icon" href = "https://img.icons8.com/clouds/100/000000/home-page.png">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel = "icon" href = "https://img.icons8.com/wired/50/000000/communication-skill.png">
+<style>
+.x {
+    color: #a82e3f;
+    font-size: 100px;
+}
+.sub {
+    padding: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
+    border: none;
+    background-color: #a82e3f;
+    border-radius: 50px;
+    color: #FFFFFF;
+    font-size: 30px;
+}
+.sub:hover {
+    border: 5px solid #a82e3f;
+    background-color: #FFFFFF;
+    color: #a82e3f;
+}
+.y {
+    font-size: 30px;
+    color: #a82e3f;
+}
+.box2 {
+    height: 200px;
+    width: 1000px;
+}
+.box {
+    height: 50px;
+    width: 500px;
+}
+.bod {
+    margin: 200px;
+}
+</style>
+</head>
+<body>
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{% block title %}New Post{% endblock %}</h1>
+  <h1 class = "w3-center x">{% block title %}New Post{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
+<br><br>
   <form method="post">
-    <label for="title">Title</label>
-    <input name="title" id="title" value="{{ request.form['title'] }}" required>
-    <label for="body">Body</label>
-    <textarea name="body" id="body">{{ request.form['body'] }}</textarea>
-    <input type="submit" value="Save">
+      <div class = "w3-center">
+    <label for="title" class = "w3-center bod y">&nbsp;&nbsp;Title&nbsp;&nbsp;&nbsp;</label>
+    <br><br>
+    <input name="title" id="title" value="{{ request.form['title'] }}" required class = "box">
+      </div>
+    <br><br>
+    <div class = "w3-center">
+    <label for="body" class = "w3-center bod  y">&nbsp;&nbsp;Body&nbsp;&nbsp;&nbsp;</label>
+    <br><br>
+    <textarea name="body" id="body" class = "box2">{{ request.form['body'] }}</textarea>
+    </div>
+    <br><br>
+    <div class = "w3-center">
+    <input type="submit" value="Save" class = "sub">
+    </div>
+    <br><br><br>
   </form>
 {% endblock %}
+</body>
+</html>

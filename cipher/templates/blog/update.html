@@ -1,20 +1,88 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<title>Discussion</title>
+<link rel = "icon" href = "https://img.icons8.com/clouds/100/000000/home-page.png">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel = "icon" href = "https://img.icons8.com/wired/50/000000/communication-skill.png">
+<style>
+.t {
+    font-size: 80px;
+    color: #a82e3f;
+}
+.bar1 {
+    background-color: #a82e3f;
+    height: 2px;
+}
+.tit {
+    color: #db5c77;
+    font-size: 50px;
+}
+.col {
+    color: #db5c77;
+}
+.b {
+    width: 500px;
+    height: 50px;
+    font-size: 30px;
+}
+
+
+.b1 {
+    width: 1000px;
+    height: 300px;
+    font-size: 30px;
+}
+.but {
+    border: none;
+    padding: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+    background-color: #a82e3f;
+    color: #FFFFFF;
+    font-size: 30px;
+}
+.but:hover {
+    border: 2px solid #a82e3f;
+    background-color: #FFFFFF;
+    color: #a82e3f;
+}
+
+</style>
+</head>
+<body>
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{% block title %}Edit "{{ post['title'] }}"{% endblock %}</h1>
+<h1 class = "w3-center t">&nbsp;&nbsp;<i class = "fa fa-pencil"></i>&nbsp;&nbsp;&nbsp;{% block title %}Editing "{{ post['title'] }}"{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
   <form method="post">
-    <label for="title">Title</label>
-    <input name="title" id="title"
-      value="{{ request.form['title'] or post['title'] }}" required>
-    <label for="body">Body</label>
-    <textarea name="body" id="body">{{ request.form['body'] or post['body'] }}</textarea>
-    <input type="submit" value="Save">
+      <div class = "w3-center">
+    <label for="title" class = "tit w3-center">Title</label>
+    <br>
+    <input name="title" id="title" value="{{ request.form['title'] or post['title'] }}" required class = "col b">
+      </div>
+    <br><br>
+    <div class = "w3-center">
+    <label for="body" class = "tit w3-center">Body</label>
+    <br>
+    <textarea name="body" id="body" class = "col b1">{{ request.form['body'] or post['body'] }}</textarea>
+    </div>
+    <br><br>
+    <div class = "w3-center">
+    <input type="submit" value="Save" class = "but w3-center">
+    <br><br>
+    </div>
   </form>
-  <hr>
   <form action="{{ url_for('auth.delete', topic_id=post['topic_id']) }}" method="post">
-    <input class="danger" type="submit" value="Delete" onclick="return confirm('Are you sure?');">
+      <div class = "w3-center">
+    <input class="but w3-center danger" type="submit"  value="Delete" onclick="return confirm('Are you sure?');">
+      </div>
   </form>
+  <hr class = "bar1">
 {% endblock %}
+</html>
+</body>
