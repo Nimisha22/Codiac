@@ -1,39 +1,100 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<title>Discussion</title>
+<link rel = "icon" href = "https://img.icons8.com/clouds/100/000000/home-page.png">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel = "icon" href = "https://img.icons8.com/wired/50/000000/communication-skill.png">
+<style>
+.com {
+    color: #a82e3f;
+}
+.li {
+    background-color: #a82e3f;
+    height: 2px;
+}
+.ti {
+    color: #db5c77;
+}
+.bo {
+    border: none;
+    background: transparent;
+    width: 500px;
+    border: 2px solid #a82e3f;
+    color: #a82e3f;
+}
+.sa {
+    padding: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #a82e3f;
+    font-size: 20px;
+    color: #FFFFFF;
+    border: none;
+    margin-left: 200px;
+    border-radius: 50px;
+}
+.sa:hover {
+    border: 2px solid #a82e3f;
+    color: #a82e3f;
+    background-color: #FFFFFF;
+}
+
+
+</style>
+</head>
+<body class = "w3-card-4 w3-pale-red">
 {% extends 'base.html' %}
 
 {% block header %}
-<h1>{% block title %}{{post['title'] }}{% endblock %}</h1>
-<div class="about">by {{ post['username'] }} on {{ post['created'].strftime('%Y-%m-%d') }}</div>
+<h1 class = "com w3-xxxlarge"> &nbsp;&nbsp;&nbsp; {% block title %}{{post['title'] }}{% endblock %}</h1>
+
+<div class="ti"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class = "fa fa-circle"></i>&nbsp;&nbsp;&nbsp;by {{ post['username'] }} on {{ post['created'].strftime('%Y-%m-%d') }}</div>
 {% endblock %}
 
 {% block content %}
 <article class="post">
       <header>
         <div>
-          <p>{{ post['body'] }}</p>
+          <p class = "w3-xxxlarge com">&nbsp;&nbsp;&nbsp;{{ post['body'] }}</p>
         </div>
+        <hr class = "li">
   {% if g.user %}
     
   <form method="post">
-    <label for="comments">Comment</label>
-    <input name="comments" id="comments" value="{{ request.form['comments'] }}" required>
-    <input type="submit" value="Save">
+      <div class = "com">
+    <label for="comments" class = "w3-xlarge">&nbsp;&nbsp;&nbsp;Comment</label>
+    &nbsp;&nbsp;&nbsp;
+    <input class = "bo" name="comments" id="comments" value="{{ request.form['comments'] }}" required>
+      </div>
+      <br>
+      <div>
+          &nbsp;&nbsp;&nbsp;
+    <input class = "sa"  type="submit" value="Save">
+    <br><br><br>
+      </div>
   </form>
   {% endif %}
+  <hr class = "li">
     </article>
-    <h1>Comments</h1>
+    <h1 class = "w3-xxxlarge com">&nbsp;&nbsp;&nbsp;<i class = "fa fa-microphone"></i>&nbsp;&nbsp;&nbsp;Comments</h1>
+    <br><br>
+    <hr class = "li">
   {% for postcom in postcoms %}
     <article class="post">
       <header>
         <div>
-          <h1>{{ postcom['comments'] }}</h1>
-          <div class="about">by {{postcom['username']}} on {{postcom['created'].strftime('%Y-%m-%d') }}</div>
+          <h1 class = "w3-xxxlarge com">&nbsp;&nbsp;&nbsp;{{ postcom['comments'] }}</h1>
+          <div class="ti">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class = "fa fa-circle"></i>&nbsp;&nbsp;&nbsp;by {{postcom['username']}} on {{postcom['created'].strftime('%Y-%m-%d') }}</div>
+          <br><br>
         </div>
       </header>
     </article>
     {% if not loop.last %}
-      <hr>
+      <hr class = "li">
     {% endif %}
   {% endfor %}
 {% endblock %}
-
-
+</body>
+</html>

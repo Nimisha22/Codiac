@@ -1,29 +1,73 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<title>Discussion</title>
+<link rel = "icon" href = "https://img.icons8.com/clouds/100/000000/home-page.png">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel = "icon" href = "https://img.icons8.com/wired/50/000000/communication-skill.png">
+<style>
+.top {
+    display: inline-block;
+}
+.dec {
+    text-decoration: none;
+}
+.hov:hover {
+    text-decoration: underline;
+}
+.bar {
+    height: 3px;
+    background-color: #C0C0C0;
+}
+.head {
+    color: #a82e3f;
+    font-size: 50px;
+}
+.post {
+    color: #db5c77;
+    font-size: 20px;
+}
+</style>
+</head>
+<body>
+
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{% block title %}Discussions{% endblock %}</h1>
+<div class = "w3-card-4 w3-light-grey">
+    <h1 class = "w3-text-pink w3-left top">&nbsp;&nbsp;<i class="fa fa-users"></i>&nbsp;&nbsp;{% block title %}Discussions{% endblock %}</h1>
   {% if g.user %}
-    <a class="action" href="{{ url_for('auth.create') }}">New</a>
+  <h1 class= "w3-text-pink w3-right top hover" > <a class = "dec" href="{{ url_for('auth.create') }}"><i class="fa fa-star"></i>&nbsp;<span class = "hov">New</span>&nbsp;&nbsp;&nbsp;</a></h1>
+  <br><br><br><br>
+  <hr class = "bar">
   {% endif %}
 {% endblock %}
 
 {% block content %}
   {% for post in posts %}
+  <div class = "w3-card-4 w3-light-grey">
     <article class="post">
       <header>
         <div>
-          <h1>{{ post['title'] }}</h1>
-          <div class="about">by {{ post['username'] }} on {{ post['created'].strftime('%Y-%m-%d') }}</div>
+            <h1><span class = "head">&nbsp;&nbsp;<i class="fa fa-check"></i>&nbsp;&nbsp;{{ post['title'] }}<span></h1>
+            <div><span class = "post">&nbsp;&nbsp;<i class="fa fa-circle"></i>&nbsp;&nbsp; by {{ post['username'] }} on {{ post['created'].strftime('%Y-%m-%d') }}<span></div>
         </div>
         {% if g.user['id'] == post['author_id'] %}
-          <a class="action" href="{{ url_for('auth.update', topic_id=post['topic_id']) }}">Edit</a>
+        <br>
+        <a class="dec" href="{{ url_for('auth.update', topic_id=post['topic_id'])}}">&nbsp;&nbsp;&nbsp;<i class="fa fa-pencil"></i>&nbsp;&nbsp;<span class = "hov">Edit</span></a>
         {% endif %}
-        <a class="action" href="{{ url_for('auth.commentsindex', topic_id=post['topic_id']) }}">View</a>
+        <a class="dec" href="{{ url_for('auth.commentsindex', topic_id=post['topic_id']) }}">&nbsp;&nbsp;<i class="fa fa-eye"></i>&nbsp;&nbsp;<span class = "hov">View</span></a>
       </header>
-      <p class="body">{{ post['body'] }}</p>
+      <p class="body">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-square"></i>&nbsp;&nbsp;{{ post['body'] }}</p>
+      <br>
     </article>
     {% if not loop.last %}
-      <hr>
+      <hr class = "bar">
     {% endif %}
   {% endfor %}
 {% endblock %}
+  </div>
+</div>
+</body>
+</html>
