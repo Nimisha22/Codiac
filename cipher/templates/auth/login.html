@@ -1,71 +1,89 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head>
-	<meta charset = "UTF-8">
-	<link rel = "icon" href = "https://img.icons8.com/color/48/000000/login-rounded--v1.png">
-	<title>Log In</title>
+	<title>Sign In</title>
+	<link rel = "icon" href = "https://img.icons8.com/dusk/50/000000/enter-2.png">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style>
 		body {
-
-			background-image: url('https://i.pinimg.com/originals/89/67/92/8967925b9d9141e88ced0a9020bdbc5e.gif');
-			background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
-            background-size: cover;
+			background-color: #C0C0C0;
 		}
-		.register{
-			padding: 1%;
-			margin-right: 20%;
-			margin-left: 20%;
-			margin-top: 5%;
-			background-color: rgba(0, 0, 0, 0.8);
+		.hello {
+			font-size: 50px;
+			font-style: italic;
+			color: #FFFFFF;
 		}
-		h1, label {
-			letter-spacing: 5px;
-			color:#85C1E9 ;
+		.signin {
+			font-size: 70px;
+			font-weight: bolder;
+			color: #C71585;
 		}
-		.inputbuttons {
-			text-align: center;
-			text-decoration: none;
-			background: transparent;
+		.text {
+			font-style: italic;
+			font-size: 20px;
+			color: #C0C0C0;
+		}
+		.box {
+			font-size: 30px;
+			background-color: #C0C0C0;
 			border: none;
-			border-bottom: 2px solid #FFFFFF;
-			color: #FFFFFF;
-		}
-		.link {
-			text-decoration: none;
-		}
-		.link:hover {
-			color: #FFFFFF;
+			height: 60px;
 		}
 		.submit {
-			padding: 15px;
-			background-color: #85C1E9;
+			height: 60px;
+			width: 200px;
+			border: none;
+			background-color: #C71585;
 			color: #FFFFFF;
-			border: 5px solid #85C1E9;
+			font-size: 20px;
+			border-radius: 50px;
 		}
 		.submit:hover {
+			border: 2px solid #C71585;
 			background-color: #FFFFFF;
-			border: 5px solid #FFFFFF;
-			color: #85C1E9;
+			color: #C71585;
+		}
+		.back {
+			background-color: #C71585;
+		}
+		.card {
+			height: 620px;
+		}
+		.hellomsg {
+			font-size: 20px;
+			letter-spacing: 2px;
+		}
+		.register {
+			text-decoration: none;
+			font-size: 20px;
+			height: 60px;
+			width: 200px;
+			border-radius: 50px;
+			border: 2px solid #FFFFFF;
+			padding: 25px;
+		}
+		.register:hover {
+			background-color: #FFFFFF;
+			color: #C71585;
+		}
+		.div1 {
+			margin-left: 5%;
+			width: 45%;
+		}
+		.div2 {
+			margin-right: 5%;
+			width: 45%;
 		}
 	</style>
 </head>
+<br><br><br>
 <body>
-	<div class = "w3-card-4 register w3-center">
-		<p class = "w3-top ">
-			<h1 class = "w3-left">
-			<img src="https://img.icons8.com/color/48/000000/source-code.png"/>&nbsp;Codiac</h1>
-			<h1 class = "w3-right"><a href = "{{ url_for ('auth.login') }}" class = "link">
-			<img src="https://img.icons8.com/color/48/000000/under-computer.png"/>&nbsp;Log In</a></h1>
-			<h1 class = "w3-right"><a href = "{{ url_for ('auth.register') }}" class = "link">
-			<img src="https://img.icons8.com/color/48/000000/myspace.png"/>&nbsp;Register&nbsp;&#x7c;&nbsp;</a></h1></p>
 
-		<br><br>
-		<hr>
-		<form method="post">
+	<div class = "w3-half w3-card-4 w3-white card div1">
+		<br><br><br><br>
+		<h1 class = "w3-center signin">Sign In</h1>
+		<p class = "w3-center text">Use your Account</p>
+<form method="post">
 			<br><br><br>
 			<div class = "input">
 			<label for = "username" class = "w3-xxlarge">Username</label>
@@ -103,6 +121,18 @@
 	</section>
 
 	</div>
+
+	<div class = "w3-half w3-card-4 w3-text-white card back div2">
+		<br><br><br><br>
+		<br>
+		<br><br><br>
+		<h1 class = "w3-center hello">Hello, Friend!</h1>
+		<p class = "w3-center hellomsg">Enter your personal details and</p>
+		<p class = "w3-center hellomsg">start journey with us.</p>
+		<br>
+		<p class = "w3-center"><a class = "w3-center register" href = "{{ url_for ('auth.register') }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign Up&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></p>
+	</div>
 </body>
+<br><br><br>
 </html>
 

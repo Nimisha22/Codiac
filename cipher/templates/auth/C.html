@@ -13,6 +13,7 @@
     s.src = 'https://widget.botcopy.com/js/injection.js'; 
     document.getElementById('botcopy-embedder-d7lcfheammjct').appendChild(s);
 </script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -32,14 +33,15 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 <div class="w3-bar w3-pale-green w3-card">
 
 <!-- Top fixed navigagtion bar -->
-<a href="{{ url_for ('auth.logout') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-sign-out"></i>&nbsp;&nbsp;Log Out</a>
-<a href="{{url_for('auth.index') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;Forum</a>
-<a href="{{ url_for ('auth.contact') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-envelope"></i>&nbsp;&nbsp;Email Us</a>
-<a href="{{ url_for('auth.home') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right"><i class="fa fa-home"></i>&nbsp;&nbsp;HOME</a>
+<a href="{{ url_for('auth.logout') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-sign-out"></i>&nbsp;&nbsp;Log Out</a>
+<a href="{{ url_for ('auth.index') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-users"></i>&nbsp;&nbsp;Discussion Forum</a>
+<a href="" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;Profile</a>
+<a href="" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-envelope"></i>&nbsp;&nbsp;Email Us</a>
+<a href="{{ url_for ('auth.home') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right"><i class="fa fa-home"></i>&nbsp;&nbsp;HOME</a>
 <div class="w3-dropdown-hover w3-hide-small w3-right">
 <button class="w3-padding-large w3-button w3-hover-pale-dark-grey" title="More">Learn More&nbsp;&nbsp;<i class="fa fa-caret-down"></i></button>     
 <div class="w3-dropdown-content w3-bar-block w3-card-4">
-<a href="{{ url_for ('auth.python') }}" class="w3-bar-item w3-button w3-hover-dark-grey ">Python</a>
+<a href="{{ url_for('auth.python') }}" class="w3-bar-item w3-button w3-hover-dark-grey ">Python</a>
 </div>
 </div>
 </div>

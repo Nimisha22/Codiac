@@ -1,145 +1,63 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head>
-	<meta charset = "UTF-8">
 	<title>Home</title>
-	<link rel = "icon" href = "https://img.icons8.com/color/48/000000/german-house.png">
+	<link rel = "icon" href = "https://img.icons8.com/clouds/100/000000/home-page.png">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style>
-		.headlink {
+		.back {
+			height: 300px;
+      		background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            transition: transform .2s;
+            color: #FFFFFF;
+		}
+		.back:hover {
+			 transform: scale(1.2);
+		}
+		.links {
 			text-decoration: none;
-			color: #D9D9F3;
 		}
-		.link:hover {
-			background-color: #D9D9F3;
-			border: 2px solid #D9D9F3;
+		.linkstop {
+			text-decoration: none;
+			color: #FFFFFF;
+			padding: 5px;
+		}
+		.plinks {
+			display: inline-block;
+		}
+		.hovering:hover {
+			background-color: #C71585;
+			color: #FFFFFF;
+			border: 3px solid #FFFFFF;
 			border-radius: 50px;
-			color: #00688B;
 		}
-		body {
-
-			background-image: url('https://i.pinimg.com/originals/c7/0b/a7/c70ba709862977aaaf7db4cbcb67afa9.png');
-			background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
-            background-size: cover;
+		.navigation {
+			background-color: #C71585;
 		}
-		.foot {
-  background-color: #5AB9AE;
-}
-.quotes {
-	padding: 5%;
-	margin-right: 10%;
-	margin-left: 10%;
-	margin-top: 10%;
-	color:  #FFFFFF;
-}
-.content {
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.quote1 {
-
-	background-image: url('https://cdn.dribbble.com/users/634482/screenshots/3823866/laptop_animation.gif');
-			background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
-            background-size: cover;
-}
-
-.quote2 {
-
-	background-image: url('https://cdn.dribbble.com/users/634482/screenshots/3823866/laptop_animation.gif');
-			background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
-            background-size: cover;
-}
-
-.quote3 {
-
-	background-image: url('https://cdn.dribbble.com/users/634482/screenshots/3823866/laptop_animation.gif');
-			background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
-            background-size: cover;
-}
-
-.quote4 {
-
-	background-image: url('https://cdn.dribbble.com/users/634482/screenshots/3823866/laptop_animation.gif');
-			background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
-            background-size: cover;
-}
-.inverted {
-	font-size: 100px;
-}
-
 	</style>
 </head>
 <body>
-	<header>
-		<div class = "w3-card-4 w3-blue-grey w3-text-pale-blue w3-top navigation">
-			<p><a href = "#" class = "w3-left w3-large headlink">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.icons8.com/color/48/000000/map-editing.png"/>Codiac&nbsp;&nbsp;&nbsp;&nbsp;</a>
-			<a href = "{{ url_for('auth.cpage') }}" class = "w3-left w3-large link headlink">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.icons8.com/color/48/000000/c-drive-2.png"/>&nbsp;&nbsp;C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-			<a href = "{{ url_for ('auth.python') }}" class = "w3-left w3-large link headlink">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.icons8.com/color/48/000000/py.png"/>&nbsp;&nbsp;Python&nbsp;&nbsp;&nbsp;&nbsp;</a>
-			<a href = "{{ url_for ('auth.logout') }}" class = "w3-right w3-large link headlink">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.icons8.com/color/48/000000/export.png"/>&nbsp;&nbsp;Logout&nbsp;&nbsp;&nbsp;&nbsp;</a>
-			<a href = "#" class = "w3-right w3-large link headlink">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.icons8.com/color/48/000000/group-foreground-selected.png"/>&nbsp;&nbsp;Welcome Person!&nbsp;&nbsp;&nbsp;&nbsp;</a>
-		</p>
+	<br><br><br><br>
+	<div class = "w3-top navigation">
+		<p class = "w3-xlarge w3-center w3-left plinks"><a href = "#" class = "linkstop">&nbsp;&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp;&nbsp;Codiac</a></p>
+		<p class = "w3-xlarge w3-center w3-right plinks"><a href = "{{ url_for('auth.logout') }}" class = "linkstop hovering">&nbsp;&nbsp;&nbsp;<i class="fa fa-sign-out"></i>&nbsp;&nbsp;Sign Out&nbsp;&nbsp;&nbsp;</a></p>
+		<p class = "w3-xlarge w3-center w3-right plinks"><a href = "#" class = "linkstop hovering">&nbsp;&nbsp;&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;Welcome Name&nbsp;&nbsp;&nbsp;</a></p>
+	</div>
+	<div class = "w3-full w3-card-4 back w3-indigo">
 		<br><br><br>
-		</div>
-	</header>
-	<div class = "w3-card-4 quotes quote1 w3-center">
-		<div class = "inverted">&#x201C;</div>
-		<p class = "w3-xlarge">Learning to write programs stretches your mind, and helps you think better, creates a way of thinking about things that I think is helpful in all domains.
-		</p>
-		<p class = "w3-xxlarge">&nbsp;—&nbsp;Bill Gate</p>
-		<div class = "inverted">&#x201D;</div>
+		<p class = "w3-xxxlarge w3-center"><a href = "{{ url_for ('auth.cpage') }}" class = "links"><i class="fa fa-code"></i>&nbsp;&nbsp;C</a></p>
 	</div>
-	<div class = "w3-card-4 quotes quote2 w3-center">
-
-		<div class = "inverted">&#x201C;</div>
-		<p class = "w3-xlarge">Whether you want to uncover the secrets of the universe, or you just want to pursue a career in the 21st century, basic computer programming is an essential skill to learn.
-		</p>
-		<p class = "w3-xxlarge">&nbsp;—&nbsp;Stephen Hawking</p>
-		<div class = "inverted">&#x201D;</div>
+	<div class = "w3-full w3-card-4 back w3-yellow">
+		<br><br><br>
+		<p class = "w3-xxxlarge w3-center w3-text-white"><a href = "{{ url_for ('auth.python') }}" class = "links"><i class="fa fa-code"></i>&nbsp;&nbsp;Python</a></p>
 	</div>
-	<div class = "w3-card-4 quotes quote3 w3-center">
-		<div class = "inverted">&#x201C;</div>
-		<p class = "w3-xlarge">To be prepared for the demands of the 21st century—and to take advantage of its opportunities—it is essential that more of our students today learn basic computer programming skills, no matter what field of work they want to pursue.
-		</p>
-		<p class = "w3-xxlarge">&nbsp;—&nbsp;—Todd Park</p>
-		<div class = "inverted">&#x201D;</div>
+	<div class = "w3-full w3-card-4 back w3-blue-grey">
+		<br><br><br>
+		<p class = "w3-xxxlarge w3-center"><a href = "{{ url_for ('auth.index') }}" class = "links"><i class="fa fa-users"></i>&nbsp;&nbsp;Discussion Forum</a></p>
 	</div>
-	<div class = "w3-card-4 quotes quote4 w3-center">
-		<div class = "inverted">&#x201C;</div>
-		<p class = "w3-xlarge">Learning to code is learning to create and innovate.
-		</p>
-		<p class = "w3-xxlarge">&nbsp;—&nbsp;Enda Kenny</p>
-		<div class = "inverted">&#x201D;</div>
-	</div>
-	<br><br><br>
-	<br><br><br>
-	<footer>
-  <div class = "w3-card-4 foot">
-    <br>
-    <p class = "w3-center w3-text-white w3-xxxlarge">Follow us on</p>
-    <p class = "w3-center w3-text-white w3-large" >
-    <a href = "" ><img src="https://img.icons8.com/clouds/100/000000/instagram-new--v2.png"/></a>
-    <a href = "" ><img src="https://img.icons8.com/clouds/100/000000/facebook-new.png"/></a>
-    <a href = "" ><img src="https://img.icons8.com/clouds/100/000000/whatsapp.png"/></a>
-    <a href = "" ><img src="https://img.icons8.com/clouds/100/000000/phone.png"/></a>
-    <a href = "" ><img src="https://img.icons8.com/clouds/100/000000/email.png"/></a></p>
-    <br><br><br>
-  </div>
-</footer>
-<br><br><br>
-</body>
 </html>
 

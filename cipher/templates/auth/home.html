@@ -1,230 +1,104 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head>
-	<meta charset = "UTF-8">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
 	<title>Codiac</title>
 	<link rel = "icon" href = "https://img.icons8.com/officel/16/000000/student-male.png">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<style>
-		body {
-
-			background-color:  #ffffff;
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    	header {
+    		background-image: url('https://media.istockphoto.com/vectors/laptop-with-code-on-screen-hanging-over-icons-programming-app-web-vector-id1205513619?k=6&m=1205513619&s=612x612&w=0&h=OsI2tNhNn8pXwlIBnzBPewJmZ_bRNt7lO5GTW4XQ368=');
 			background-repeat: no-repeat;
             background-position: center;
             background-attachment: fixed;
             background-size: cover;
-		}
-		.navigation {
-			background: linear-gradient(to right,  #84CEEB 20%, #C1C8E4 80%);
-			border: 0.00001px solid #FFFFFF;
-			padding: 0.8%;
-		}
-    .sitename {
-      color: #FFFFFF;
-    }
-
-    .link2 {
-      color:  #FFFFFF;
-      padding: 15px;
-      margin: 15px;
-    }
-    .link2:hover {
-      color: #FFFFFF;
-      border: 2px solid #FFFFFF;
-      background-color: #5AB9EA;
-      border-radius: 50px;
-    }
-.design { 
-   background-image: url("https://dirkjan.co/wp-content/uploads/2019/03/Citigroup-CANVAS-Group-Meeting.gif");
- background-color: #cccccc;
-      background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
-            background-size: cover;
-	color: #5680E9; 
-	text-decoration: none;
-	text-align: center;
-  font-size: 30px;
-  height: 600px;
-}
-  @media only screen and (min-width: 601px) {
- .design { 
-  color:  #5680E9; 
-  text-decoration: none;
-  text-align: center;
-  font-size: 60px;}
-}
-	h2 {
-	font-size: 22px
-}
-.typewriter {
-  font-size: 400px;
-}
-h1
-{
-  letter-spacing: 0;
-  font-weight: normal;
-  position: relative;
-  padding: 0 0 10px 0;
-  font-weight: normal;
-  line-height: 120% !important;
-  color: #1f1f1f;
-  margin: 0;
-  font-size: 24px;
+            height: 800px;
+    	}
+    	.uplinks {
+    		margin: 2%;
+    		text-align: center;
+    		color: #FFFFFF;
+    	}
+    	.uplinks:hover {
+    		color: #C71585;
+    		text-decoration: underline;
+    	}
+    	.typewrite {
+    		text-decoration: none;
+    	}
+    	.width {
+    		width: 10%;
+    	}
+    	.width2 {
+    		width: 30%;
+    	}
+    	.image {
+    		width: 100%;
+    		height: 100%;
+    		padding: 20px;
+    		margin: 10px;
+    	}
+    	.text {
+    		margin: 5%;
+    		padding: 1%;
+    	}
+    	.image2 {
+    		width: 100%;
+    		height: 600px;
+    		padding: 20px;
+    		margin: 10px;
+    	}
+    	.footlink {
+    		font-size: 50px;
+    		display: inline-block;
+  transition: transform .01s; 
+  margin: 2%
 }
 
-@media (min-width: 601px) {
-
-   .half_bg_theme {
-  position: relative;
+.whats:hover{
+	color: #25D366;
+  transform: scale(2.5); 
 }
-
-.half_bg_theme::after {
-    width: 50%;
-    height: 80%;
-    background: CCDBEE;
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    z-index: 1;
+.face:hover{
+	color: #3b5998;
+  transform: scale(2.5); 
 }
-
+.insta:hover{
+	color: #E1306C;
+  transform: scale(2.5); 
 }
-
-
-
-.text_align_right_img img {
-    position: relative;
-    right: 15px;
-    box-shadow: 0px 0 5px 0 rgba(0,0,0,.2);
+.tele:hover{
+	color: #0088cc;
+  transform: scale(2.5); 
 }
-
-
-.header_top {
-    min-height: 98px;
-    padding: 8px 0;
-    background: #fff;
+.enve:hover{
+	color: #D44638;
+  transform: scale(2.5); 
 }
-
-.section {
-    float: left;
-    width: 100%;
+.mobi:hover{
+	color: #833AB4;
+  transform: scale(2.5); 
 }
-
-.top-header .navbar .navbar-collapse{
-    text-transform: none;
-    font-size: 17px;
-    padding: 10px 25px;
-    font-weight: 400;
-    overflow: hidden;
-    color: #000;
-    position: relative;
-    z-index: 2;
-}
-
-
-
-.theme_color {
-  color: #5680E9;
-}
-
-.section.about_section.half_bg_theme .container {
-    position: relative;
-    z-index: 11;
-}
-
-p {
-  letter-spacing: 2px;
-  font-size: 60px;
-    margin-top: 5px;
-    margin-bottom: 1rem;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 28px;
-    color: #4a4a49;
-}
-
-.text_align_right_img img {
-    float: right;
-}
-
-
-.layout_padding {
-  padding-top: 75px;
-  padding-bottom: 75px;
-}
-
-.heading_main h2 {
-    font-size: 45px;
-    letter-spacing: -0.5px;
-    font-weight: 400;
-    padding: 0;
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
-    position: relative;
-    text-transform: uppercase;
-    line-height: 52px !important;
-}
-
-.img {
-  height: 100%;
-  width: 100%;
-  padding: 20px;
-}
-
-@media only screen and (min-width: 601px) {
- .img {
-  height: 550px;
-  width: 650px;
-}
-}
-#horizontal {
-  background-color: #000000; 
-  height: 1px;
-}
-.content {
-  background-color: #8860D0;
-  color: #FFFFFF;
-}
-
-.height {
-
-  height: 500px;
-}
-.foot {
-  background-color: #5AB9AE;
-}
-
-</style>
+    </style>
 </head>
 <body>
-<header>
-<nav class="navbar navbar-inverse navigation">
-<div class="container-fluid">
-<div class="navbar-header">
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-<a class="navbar-brand" href="#"><span class = "sitename"><span class="glyphicon glyphicon-pencil"></span> Codiac</span></a>
-</div>
-<div class="collapse navbar-collapse" id="myNavbar">
-<ul class="nav navbar-nav navbar-right link">
-<li><a href="{{ url_for ('auth.register') }}" ><span class = "link2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span>&nbsp;Sign Up&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
-<li><a href="{{ url_for ('auth.login') }}"><span class = "link2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-log-in"></span>&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
-</ul>
-</div>
-</div>
-</nav>
-</header>
+	<header>
+		<p class = "w3-right w3-xlarge uplinks"><a href = "" style = "text-decoration: none">About Us</a></p>
+        <p class = "w3-right w3-xlarge uplinks"><a href = "{{ url_for('auth.login') }}" style = "text-decoration: none">Login</a></p>
+        <p class = "w3-right w3-xlarge uplinks"><a href = "{{ url_for('auth.register') }}" style = "text-decoration: none">Sign Up</a></p>
+		<p class = "w3-right w3-xlarge uplinks"><a href = "" style = "text-decoration: none">What we Offer</a></p>
+		<p class = "w3-right w3-xlarge uplinks"><a href = "" style = "text-decoration: none">What is Codiac</a></p>
+		<br><br><br><br><br><br><br><br>
+		<div class = "w3-left w3-xxxlarge w3-text-white width">
+			<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</div>
+		<div class = "w3-right w3-text-white width2">	
 <h1 class = "design">
-  <a href="" class="typewrite" data-period="2000" data-type='[ "Welcome to Codiac!", "Your One Stop Destination to Learn to Code.", "Your interactive learning begins here!" ]'>
+	<a href="" class="w3-xxxlarge typewrite">Welcome to Codiac.</a>
+  </a>
+  <a href="" class="w3-xxxlarge typewrite">Start Learning Today!</a>
+  </a>
+  <a href="" class="w3-xxxlarge typewrite" data-period="3000" data-type='[ "Your One Stop Destination to Learn to Code.", "Your interactive learning begins here!" ]'>
     <span class="wrap"></span>
   </a>
 </h1>
@@ -287,89 +161,106 @@ p {
     };
 
 </script>
-         <div class="section about_section layout_padding half_bg_theme padding_bottom_0">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-6">
-                     <div class="full text_align_right_img">
-                        <img src="https://learn.g2.com/hs-fs/hubfs/Best%20Free%20Animation%20Tools/G2%20best%20free%20animation%20software%202019.gif?width=533&name=G2%20best%20free%20animation%20software%202019.gif" alt="coding image"  class = "img"/>
-                     </div>
-                  </div>
-                  <div class="col-md-6 rightside">
-                     <div class="full paddding_left_15">
-                        <div class="heading_main text_align_left">
-                           <h2><span class="theme_color">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome !</span><br><img src="https://img.icons8.com/clouds/100/000000/web-settings.png"/>To Codiac</h2>
-                        </div>
-                     </div>
-                     <div class="full paddding_left_15">
-                        <p>Welcome to Codiac. Here at Codiac we believe that coding is a very important skill to gain in today's era. So, to make it easy and exciting for you to get started with coding. We have a website that will guide you through with the basics.<br><br><h1 class = "w3-xxxlarge"><img src="https://img.icons8.com/plasticine/100/000000/bot.png"/>What more ?</h1><br><p> We have codiac the bot, who will teach you as you chat with it. Learning to code can never be more fun and exciting!! 
-                        </p></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <br><br><br><br>
-         <br><br><br><br>
-         <br><br><br><br>
-         <br><br><br><br>
-         <br><br><br><br>
-         <br><br><br><br>
-         <br><br><br>
+</div>
 
-         <div class = "w3-card-4 w3-third content">
-          <p class = "w3-center w3-xxlarge w3-text-white height"><img src="https://img.icons8.com/dusk/64/000000/c-drive-2.png"/>C</p>
-        </div>
-        <div class = "w3-card-4 w3-third content">
-          <p class = "w3-center w3-xxlarge w3-text-white height"><img src="https://img.icons8.com/dusk/64/000000/python.png"/>Python</p>
-          
-        </div>
-        <div class = "w3-card-4 w3-third content">
-          <p class = "w3-center w3-xxlarge w3-text-white height"><img src="https://img.icons8.com/dusk/64/000000/bot.png"/>Codiac the Bot</p>
-        </div>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br class = "w3-hide-large">
-        <br class = "w3-hide-large">
-        <br class = "w3-hide-large">
-        <br class = "w3-hide-large">
-        <br class = "w3-hide-large">
-        <br class = "w3-hide-large">
-        <br class = "w3-hide-large">
-        <br class = "w3-hide-large">
-        <br class = "w3-hide-large">
-        <br class = "w3-hide-large">
-        <br class = "w3-hide-large">
-        <br class = "w3-hide-large">
-        <br class = "w3-hide-large">
-        <br class = "w3-hide-large">
-        <br class = "w3-hide-large">
-        <br class = "w3-hide-large">
+	</header>
+	<br><br>
+	<div class = "w3-full">
+
+		<div class = "w3-half w3-card-4 w3-light-grey">
+			<p class = "w3-text-red w3-xxxlarge text">What is Codiac ?</p>
+			<p class = "w3-text-black w3-xxlarge text">Codiac is the bot who will guide you through your interctive learning journey. You can ask questions and get the best answers to begin your journey in coding. </p>
+		</div>
+
+
+		<div class = "w3-half">
+			<img src = "https://www.students4bestevidence.net/app/uploads/2014/03/confused-man.jpg" class = "image">
+		</div>
+
+	</div>
 
 
 
-<footer>
-  <div class = "w3-card-2 foot">
-    <br>
-    <p class = "w3-center w3-text-white w3-xxlarge">Follow us on</p>
-    <p class = "w3-center w3-text-white w3-large" >
-    <a href = "" ><img src="https://img.icons8.com/clouds/100/000000/instagram-new--v2.png"/></a>
-    <a href = "" ><img src="https://img.icons8.com/clouds/100/000000/facebook-new.png"/></a>
-    <a href = "" ><img src="https://img.icons8.com/clouds/100/000000/whatsapp.png"/></a>
-    <a href = "" ><img src="https://img.icons8.com/clouds/100/000000/phone.png"/></a>
-    <a href = "" ><img src="https://img.icons8.com/clouds/100/000000/email.png"/></a></p>
-  </div>
-</footer>
+		<div class = "w3-full">
+
+		<div class = "w3-half">
+			<img src = "https://res.cloudinary.com/practicaldev/image/fetch/s--ABZLfRvT--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/658zy0pc4w7l3x25s79t.jpg
+" class = "image2">
+		</div>
+
+		<div class = "w3-half">
+			<div class = "image2 w3-card-4 w3-light-grey">
+			<p class = "w3-text-red w3-xxxlarge text">Start your Journey with C</p>
+			<p class = "w3-text-black w3-xxlarge text w3-text-white">Codiac is the bot who will guide you through your interctive learning journey. You can ask questions and get the best answers to begin your journey in coding. </p>
+		</div>
+		</div>
+
+		</div>
+
+		<div class = "w3-full">
+
+
+			<div class = "w3-half">
+			<div class = "image2 w3-card-4 w3-light-grey">
+			<p class = "w3-text-red w3-xxxlarge text">Start your Journey with Python </p>
+			<p class = "w3-text-black w3-xxlarge text">Codiac is the bot who will guide you through your interctive learning journey. You can ask questions and get the best answers to begin your journey in coding. </p>
+		</div>
+		</div>
+
+		<div class = "w3-half">
+			<img src = "https://www.aalpha.net/wp-content/uploads/2019/10/Python-programming-india.jpg" class = "image2">
+		</div>
+		</div>
+
+		<div class = "w3-full">
+
+		<div class = "w3-half">
+			<img src = "https://botsify.com/blog/wp-content/uploads/2020/02/19.jpg" class = "image2">
+		</div>
+
+		<div class = "w3-half">
+			<div class = "image2 w3-card-4 w3-light-grey">
+			<p class = "w3-text-red w3-xxxlarge text">Codiac the Bot</p>
+			<p class = "w3-text-black w3-xxlarge text">Codiac is the bot who will guide you through your interctive learning journey. You can ask questions and get the best answers to begin your journey in coding. </p>
+		</div>
+		</div>
+		</div>
+
+		<div class = "w3-full">
+
+
+			<div class = "w3-half">
+			<div class = "image2 w3-card-4 w3-light-grey">
+			<p class = "w3-text-red w3-xxxlarge text">Discussion Forum</p>
+			<p class = "w3-text-black w3-xxlarge text">Connect with people, with our discussion forum, Post your Questions and Get Clarified!</p>
+		</div>
+		</div>
+		<div class = "w3-half">
+			<img src = "https://www.shelleygraves.net/wp-content/uploads/2012/06/people-holding-hands-under-cloud-with-social-media-communication-icons-with_MyFJ7oiO.png
+" class = "image2">
+		</div>
+
+		</div>
+
+		
+<br><br>
+<div>
+	
+	<p class = "w3-xxxlarge w3-center"><span class = "foot">&nbsp;&nbsp;</span></p>
+<div class = "w3-khaki">
+	<br><br>
+	<p class = "w3-xxxlarge w3-center"><span class = "foot">Follow Us On</span></p>
+	<div class = "w3-xxxlarge w3-center">
+	<div class = "w3-center footlink whats"><a href = "" style = "text-decoration: none"><i class = "fa fa-whatsapp"></i></a></div>
+	<div class = "w3-center footlink face"><a href = "" style = "text-decoration: none"><i class = "fa fa-facebook"></i></a></div>
+	<div class = "w3-center footlink enve"><a href = "mailto:[rushalisarkar2000@gmail.com]" style = "text-decoration: none"><i class = "fa fa-envelope"></i></a></div>
+	<div class = "w3-center footlink tele"><a href = "" style = "text-decoration: none"><i class = "fa fa-telegram"></i></a></div>
+	<div class = "w3-center footlink insta"><a href = "" style = "text-decoration: none"><i class = "fa fa-instagram"></i></a></div>
+	<div class = "w3-center footlink mobi"><a href = "tel:+919593369403" style = "text-decoration: none"><i class = "fa fa-mobile"></i></a></div>
+	</div>
+</div>
+</div>
+
 </body>
 </html>
 
