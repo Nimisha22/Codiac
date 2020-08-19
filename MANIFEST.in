@@ -1,4 +1,4 @@
-include codiac/schema.sql
-graft codiac/static
-graft codiac/templates
+include cipher/schema.sql
+graft cipher/static
+graft cipher/templates
 global-exclude *.pyc

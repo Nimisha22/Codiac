@@ -25,10 +25,10 @@ def create_app(test_config=None):
     def home():
         return render_template('auth/home.html')
 
-    from codiac import db
+    from cipher import db
     db.init_app(app)
 
-    from codiac import auth
+    from cipher import auth
     app.register_blueprint(auth.bp)
     
     return app

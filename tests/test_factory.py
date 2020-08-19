@@ -1,4 +1,4 @@
-from codiac import create_app
+from cipher import create_app
 
 
 def test_config():

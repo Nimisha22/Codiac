@@ -1,7 +1,7 @@
 import sqlite3
 
 import pytest
-from codiac.db import get_db
+from cipher.db import get_db
 
 
 def test_get_close_db(app):
