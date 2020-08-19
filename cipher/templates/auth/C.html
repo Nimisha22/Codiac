@@ -35,7 +35,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 <!-- Top fixed navigagtion bar -->
 <a href="{{ url_for('auth.logout') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-sign-out"></i>&nbsp;&nbsp;Log Out</a>
 <a href="{{ url_for ('auth.index') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-users"></i>&nbsp;&nbsp;Discussion Forum</a>
-<a href="" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;Profile</a>
+<a href="" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;{{g.user["username"]}}</a>
 <a href="" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-envelope"></i>&nbsp;&nbsp;Email Us</a>
 <a href="{{ url_for ('auth.home') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right"><i class="fa fa-home"></i>&nbsp;&nbsp;HOME</a>
 <div class="w3-dropdown-hover w3-hide-small w3-right">
