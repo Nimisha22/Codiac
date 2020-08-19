@@ -37,6 +37,8 @@
 			color: #FFFFFF;
 			font-size: 20px;
 			border-radius: 50px;
+            padding-left: 40px;
+            padding-right: 40px;
 		}
 		.submit:hover {
 			border: 2px solid #C71585;
@@ -74,6 +76,11 @@
 			margin-right: 5%;
 			width: 45%;
 		}
+        .first {
+            border: none;
+            background-color: #C0C0C0;
+            padding: 10px;
+        }
 	</style>
 </head>
 <br><br><br>
@@ -84,20 +91,19 @@
 		<h1 class = "w3-center signin">Sign In</h1>
 		<p class = "w3-center text">Use your Account</p>
 <form method="post">
-			<br><br><br>
-			<div class = "input">
-			<label for = "username" class = "w3-xxlarge">Username</label>
 			<br>
-			<input name = "username" id = "username" placeholder = "username" required class = "first" class = "w3-xlarge inputbuttons">
+			<div class = "w3-center input">
+			<label for = "username" class = "w3-xxlarge"></label>
+			<input name = "username" id = "username" placeholder = "username" required  class = "first w3-center w3-xlarge inputbuttons">
 			</div>
-			<br><br><br>
-<div class="input">
-			<label for = "password" class = "w3-xxlarge">Password</label>
-			<br>
-			<input type = "password" name="password" placeholder = "password" id="password" required class = first class = "w3-xlarge inputbuttons">
+<div class="w3-center input">
+			<label for = "password" class = "w3-xxlarge"></label>
+			<input type = "password" name="password" placeholder = "password" id="password" required class = "first w3-xlarge w3-center  inputbuttons">
 			</div>
-<br><br><br>
-			<input type="checkbox" onclick="myFunction()" ><span class = "w3-large w3-text-white">&nbsp;&nbsp;Show Password</span>
+<br>
+<div class = "w3-center">
+			<input type="checkbox" onclick="myFunction()" class = "w3-center"><span class = "w3-center w3-large w3-text-grey">&nbsp;&nbsp;Show Password</span>
+</div>
 			<script>
 			function myFunction() {
   			var x = document.getElementById("password");
@@ -108,9 +114,9 @@
   			}
 			}
 		</script>
-			<br><br><br>
-<div class="input">
-			<input type = "submit" class = "w3-xlarge submit" id="click" value = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;">
+			<br>
+<div class="w3-center input">
+			<input type = "submit" class = "w3-center w3-xlarge submit" id="click" value = "Sign In">
 		</div>	<br>
 		</form>
 

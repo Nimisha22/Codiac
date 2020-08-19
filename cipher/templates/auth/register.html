@@ -24,7 +24,6 @@
 			color: #C0C0C0;
 		}
 		.box {
-			font-size: 30px;
 			background-color: #C0C0C0;
 			border: none;
 			height: 60px;
@@ -74,6 +73,12 @@
 			margin-right: 5%;
 			width: 45%;
 		}
+        .first {
+       border: none;
+       background-color: #C0C0C0;
+       padding: 10px;
+       margin-top: 5px;
+        }
 	</style>
 </head>
 <br><br><br>
@@ -91,21 +96,21 @@
 	</div>
 
 	<div class = "w3-half w3-card-4 w3-white card div2">
-		<br><br><br><br>
+		<br><br>
 <form method="post">
 			<br>
 			<h1 class = "w3-center signin">Sign Up</h1>
 			<p class = "w3-center text">Enter your Details</p>
-			<div class = "input">
-			<label for = "username" class = "w3-center">Username</label>
+			<div class = "w3-center input">
+			<label for = "username" class = "w3-center"></label>
+			<input name = "username" id = "username" required placeholder = "username" class = "w3-center w3-xlarge box first">
+            </div>
+            <div class = "w3-center input">
+			<label class = "w3-center"></label>
+			<input type = "password" name = "password" placeholder = "password" id="password" required  class = "w3-center w3-xlarge box first">
+            </div>
 			<br>
-			<input name = "username" id = "username" required class = "first" placeholder = "username" class = "w3-center box">
-			<br><br><br>
-			<label class = "w3-center">Password</label>
-			<br>
-			<input type = "password" name = "password" placeholder = "password" id="password" required class = "first" class = "w3-center box">
-			<br><br><br>
-			<p class="w3-center"><input type="checkbox" onclick="myFunction()" class="check" ><span class = "w3-large text">&nbsp;&nbsp;Show Password</span>
+			<p class="w3-center"><input type="checkbox" onclick="myFunction()" class="check" ><span class = "w3-large text w3-text-grey">&nbsp;&nbsp;Show Password</span>
 			<script>
 			function myFunction() {
   			var x = document.getElementById("password");
@@ -116,9 +121,9 @@
   			}
 			}
 		</script>
-			<br><br><br>
+			<br>
 <p class="w3-center">
-			<input type = "submit" class = "w3-center submit" value = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" id="click">
+			<input type = "submit" class = "w3-center submit" value = "Sign Up" id="click">
 			<br>
 
 	<section class = "content">

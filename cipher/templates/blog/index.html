@@ -50,14 +50,16 @@
     <article class="post">
       <header>
         <div>
-            <h1><span class = "head">&nbsp;&nbsp;<i class="fa fa-check"></i>&nbsp;&nbsp;{{ post['title'] }}<span></h1>
-            <div><span class = "post">&nbsp;&nbsp;<i class="fa fa-circle"></i>&nbsp;&nbsp; by {{ post['username'] }} on {{ post['created'].strftime('%Y-%m-%d') }}<span></div>
+<h1><span class = "head">&nbsp;&nbsp;<i class="fa fa-check"></i>&nbsp;&nbsp;{{ post['title'] }}<span>&nbsp;&nbsp;
+<span class = "w3-right post">&nbsp;&nbsp;<i class="fa fa-circle"></i>&nbsp;&nbsp; by {{ post['username']     }} on {{ post['created'].strftime('%Y-%m-%d') }}<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h1>
         </div>
         {% if g.user['id'] == post['author_id'] %}
-        <br>
+        <div class = "w3-right">
         <a class="dec" href="{{ url_for('auth.update', topic_id=post['topic_id'])}}">&nbsp;&nbsp;&nbsp;<i class="fa fa-pencil"></i>&nbsp;&nbsp;<span class = "hov">Edit</span></a>
         {% endif %}
         <a class="dec" href="{{ url_for('auth.commentsindex', topic_id=post['topic_id']) }}">&nbsp;&nbsp;<i class="fa fa-eye"></i>&nbsp;&nbsp;<span class = "hov">View</span></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
       </header>
       <p class="body">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-square"></i>&nbsp;&nbsp;{{ post['body'] }}</p>
       <br>
