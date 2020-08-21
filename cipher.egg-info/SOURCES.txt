@@ -15,12 +15,12 @@ cipher/static/style1.css
 cipher/templates/base.html
 cipher/templates/home.html
 cipher/templates/auth/C.html
+cipher/templates/auth/choose.html
 cipher/templates/auth/contact2.html
-cipher/templates/auth/homepage.html
+cipher/templates/auth/home.html
 cipher/templates/auth/login.html
+cipher/templates/auth/python.html
 cipher/templates/auth/register.html
-cipher/templates/auth/welcome.html
-cipher/templates/auth/welcomepage.html
 cipher/templates/blog/comments.html
 cipher/templates/blog/commentsindex.html
 cipher/templates/blog/create.html
