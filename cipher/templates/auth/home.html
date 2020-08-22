@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
     	header {
-    		background-image: url('https://media.istockphoto.com/vectors/laptop-with-code-on-screen-hanging-over-icons-programming-app-web-vector-id1205513619?k=6&m=1205513619&s=612x612&w=0&h=OsI2tNhNn8pXwlIBnzBPewJmZ_bRNt7lO5GTW4XQ368=');
+            background-image: url("{{ url_for('static', filename='first.jpg') }}");
 			background-repeat: no-repeat;
             background-position: center;
             background-attachment: fixed;
@@ -30,7 +30,7 @@
     		width: 10%;
     	}
     	.width2 {
-    		width: 30%;
+    		width: 50%;
     	}
     	.image {
     		width: 100%;
@@ -79,25 +79,28 @@
 	color: #833AB4;
   transform: scale(2.5); 
 }
+
+        .design {
+            padding-top: 100px;
+            padding-left: 50px;
+        }
+        .height {
+            height: 500px;
+        }
     </style>
 </head>
 <body>
 	<header>
-<<<<<<< HEAD
         <p class = "w3-right w3-xlarge uplinks"><a href = "{{ url_for('auth.contact')}}" style = "text-decoration: none">About Us</a></p>
         <p class = "w3-right w3-xlarge uplinks"><a href = "{{ url_for('auth.login') }}" style = "text-decoration: none">Login</a></p>
         <p class = "w3-right w3-xlarge uplinks"><a href = "{{ url_for('auth.register') }}" style = "text-decoration: none">Sign Up</a></p>
 		<p class = "w3-right w3-xlarge uplinks"><a href = "#offer" style = "text-decoration: none">What we Offer</a></p>
 		<p class = "w3-right w3-xlarge uplinks"><a href = "#codiac" style = "text-decoration: none">What is Codiac</a></p>
-		<br><br><br><br><br><br><br><br>
-=======
-        <p class = "w3-right w3-xxlarge uplinks"><a href = "{{ url_for('auth.login') }}" style = "text-decoration: none">Login</a></p>
-        <p class = "w3-right w3-xxlarge uplinks"><a href = "{{ url_for('auth.register') }}" style = "text-decoration: none">Sign Up</a></p>
->>>>>>> cc28282b1cb57b6a84b96c2e39864eab0c57dbad
-		<div class = "w3-left w3-xxxlarge w3-text-white width">
-			<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-		</div>
-		<div class = "w3-right w3-text-white width2">	
+	
+
+       		
+	
+		<div class = "w3-left w3-text-white width2">	
 <h1 class = "design">
 	<a href="" class="w3-xxxlarge typewrite">Welcome to Codiac.</a>
   </a>
@@ -171,24 +174,18 @@
 	</header>
 	<br><br>
 	<div class = "w3-full">
-
-<<<<<<< HEAD
-		<div class = "w3-half w3-card-4 w3-light-grey" id = "codiac">
-			<p class = "w3-text-red w3-xxxlarge text">What is Codiac ?</p>
-			<p class = "w3-text-black w3-xxlarge text">Codiac is the bot who will guide you through your interctive learning journey. You can ask questions and get the best answers to begin your journey in coding. </p>
-=======
-		<div class = "w3-half w3-card-4 w3-light-grey">
+		<div class = "w3-half w3-card-4 w3-light-grey height">
 			<p class = "w3-text-red w3-xxlarge text">What is Codiac?</p>
 			<p class = "w3-text-black w3-xlarge text">Codiac is a comprehensive collection of basics of the programming language you wish to learn. It delivers concepts in a way that is easy to understand and grasp through interactive learning.
             <br> <br>
 With thousands of resources out there, it is pretty confusing to choose the right one.
 
 Codiac offers you exactly what you need as a beginner in coding.</p>
->>>>>>> cc28282b1cb57b6a84b96c2e39864eab0c57dbad
+
 		</div>
 
 
-		<div class = "w3-half">
+		<div class = "w3-half height">
 			<img src = "https://www.students4bestevidence.net/app/uploads/2014/03/confused-man.jpg" class = "image">
 		</div>
 
@@ -205,16 +202,12 @@ Codiac offers you exactly what you need as a beginner in coding.</p>
 
 		<div class = "w3-half">
 			<div class = "image2 w3-card-4 w3-light-grey">
-<<<<<<< HEAD
-			<p class = "w3-text-red w3-xxxlarge text">Start your Journey with C</p>
-			<p class = "w3-text-black w3-xxlarge text w3-text-white">C reduces the gap between low level and high level languages. It can be used for writing operating systems as well as doing application level programming.</p>
-=======
 			<p class = "w3-text-red w3-xxlarge text">Start your C Journey</p>
 			<p class = "w3-text-black w3-xlarge text w3-text-white">C is a great first language to learn. It teaches you a lot about memory management. It teaches you how hardware interacts with software. If you have a strong foundation in C, you can easily apply the concepts in higher level programming languages.
             <br><br>
 Here, at Codiac, you are taught all the basics starting from what variables are to pointers and structures.
 </p>
->>>>>>> cc28282b1cb57b6a84b96c2e39864eab0c57dbad
+
 		</div>
 		</div>
 
@@ -225,10 +218,6 @@ Here, at Codiac, you are taught all the basics starting from what variables are 
 
 			<div class = "w3-half">
 			<div class = "image2 w3-card-4 w3-light-grey">
-<<<<<<< HEAD
-			<p class = "w3-text-red w3-xxxlarge text">Start your Journey with Python </p>
-            <p class = "w3-text-black w3-xxlarge text">Python is a language friendly to beginners.Furthermore there is a strong demand for Python skills in a wide range of industries. Python is a great Choice to begin coding! </p>
-=======
 			<p class = "w3-text-red w3-xxlarge text">Start your Python Journey</p>
 			<p class = "w3-text-black w3-xlarge text">Python has a very simple and consistent syntax and a large standard library. It permits you to concentrate on important programming skills such as problem decomposition and data type design. 
             <br>
@@ -236,7 +225,7 @@ Python is being extensively used in data science, machine learning, information 
 <br>
 Here, at Codiac, you are taught all the basics starting from what variables are to some of the important libraries.
 </p>
->>>>>>> cc28282b1cb57b6a84b96c2e39864eab0c57dbad
+
 		</div>
 		</div>
 
@@ -253,18 +242,13 @@ Here, at Codiac, you are taught all the basics starting from what variables are 
 		</div>
 
 		<div class = "w3-half">
-<<<<<<< HEAD
-			<div class = "image2 w3-card-4 w3-light-grey" id = "offer">
-			<p class = "w3-text-red w3-xxxlarge text">What we offer?</p>
-			<p class = "w3-text-black w3-xxlarge text"> We offer you with a website that has all the information for you to begin started with your coding journey! Furthermore, there is our bot who is going to teach you like ahuman being! So, What are you waiting for? </p>
-=======
 			<div class = "image2 w3-card-4 w3-light-grey">
 			<p class = "w3-text-red w3-xxlarge text">Codiac, the Bot</p>
             <p class = "w3-text-black w3-xlarge text">We offer you interactive learning through our bot, Codiac. <br>
             <br>        Codiac is specialized to teach you all the basic concepts and answer your queries. <br>
             <br>You are free to learn at your own pace with a personalized tutor handy at all time!
  </p>
->>>>>>> cc28282b1cb57b6a84b96c2e39864eab0c57dbad
+
 		</div>
 		</div>
 		</div>
