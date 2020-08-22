@@ -75,7 +75,7 @@ def power(x: int, n: int) -> int:
     return x * power(x, n - 1)
 ```
 
-# General Topics we aim to covere
+# General Topics we aim to cover
 
 ```
 1) Algorithm  
@@ -92,6 +92,11 @@ def power(x: int, n: int) -> int:
 12) Arrays
 ```
 
+# What else ?
+
+You can interact with our bot, ask questions to it and get answered! Learning can never be more easy and fast!
+
+## So, What are you waiting for ?
   
 
 
