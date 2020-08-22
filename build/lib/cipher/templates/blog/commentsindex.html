@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<title>Discussion</title>
+<link rel = "icon" href = "https://img.icons8.com/clouds/100/000000/home-page.png">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel = "icon" href = "https://img.icons8.com/wired/50/000000/communication-skill.png">
+</head>
+<style>
+.po {
+    color: #db5c77;
+    font-size: 20px;
+}
+.he {
+    color: #FFFFFF;
+    font-size: 50px;
+}
+.het {
+    color: #a82e3f;
+   font-size: 60px;
+}
+.l {
+    text-decoration: none;
+    font-size: 30px;
+    color: #db5c77;
+}
+.hov:hover {
+    text-decoration: underline;
+}
+.te {
+    font-size: 15px;
+    color: #db5c77;
+}
+.line {
+    background-color: #a82e3f;
+    height: 2px;
+}
+
+
+</style>
+<body> 
+    <div class = "w3-card-4 w3-pale-red width">
+{% extends 'base.html' %}
+
+{% block header %}
+<p><span class = "het">&nbsp;&nbsp;<i class = "fa fa-check"></i>&nbsp;&nbsp;{% block title %}{{post['title'] }}{% endblock %}</span><span class = "w3-right po">&nbsp;&nbsp;&nbsp;&nbsp; <i class = "fa fa-circle"></i>&nbsp;&nbsp;by {{ post['username'] }} on {{ post['created'].strftime('%Y-%m-%d') }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+  {% if g.user %}
+  <br>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+<article class="post">
+      <header>
+        <div>
+            <p class = "w3-xlarge te">&nbsp;&nbsp;<i class = "fa fa-square"></i>   &nbsp;&nbsp;{{ post['body'] }}</p>
+<a class="l" href="{{ url_for('auth.comments', topic_id=post['topic_id']) }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class = "fa fa-microphone"></i>&nbsp;&nbsp;<span class = "hov">Comment</span></a>
+        </div>
+    </article>
+    <h1 class = "w3-pink w3-center">
+        <hr class = "line">
+        <span class = "he">Comments</span>
+        <hr class = "line"> </h1>
+  {% for postcom in postcoms %}
+    <article class="po">
+      <header>
+        <div>
+            <p><span style = "font-size: 30px">&nbsp;&nbsp;&nbsp;{{ postcom['comments'] }}</span>
+              <span class = "w3-right"> &nbsp;&nbsp;&nbsp;&nbsp; <i class = "fa fa-circle"></i>&nbsp;&nbsp;   by {{postcom['username']}} on {{postcom['created'].strftime('%Y-%m-%d') }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+          <br><br>
+        </div>
+      </header>
+    </article>
+    {% if not loop.last %}
+      <hr class = "line">
+    {% endif %}
+  {% endfor %}
+{% endblock %}
+<br><br>
+    </div>
+</body>
+</html>
+

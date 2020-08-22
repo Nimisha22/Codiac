@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>Discussion</title>
+      <link rel = "icon" href = "https://img.icons8.com/clouds/100/000000/home-page.png">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel = "icon" href = "https://img.icons8.com/wired/50/000000/communication-skill.png">
+<link rel="stylesheet" href="{{ url_for('static', filename='') }}">
+<style>
+.top {
+    display: inline-block;
+}
+.links {
+    text-decoration: none;
+    padding: 3px;
+}
+.link:hover {
+text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<nav class = "w3-card-4 w3-pink w3-top">
+    <h1 class = "w3-left top">&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp;&nbsp;CODIAC</h1>
+      {% if g.user %}
+      <h1 class = "w3-right top">
+    <a class = "links" href="{{ url_for('auth.home') }}">&nbsp;&nbsp;<i class="fa fa-home"></i>&nbsp;&nbsp;<span class = "link">Home</span></a>
+          <a class = "links" href="{{ url_for('auth.logout') }}">&nbsp;&nbsp;<i class="fa fa-sign-out"></i>&nbsp;&nbsp;<span class = "link">Log out</span>&nbsp;&nbsp;</a></h1>
+      <h1 class = "w3-right top">&nbsp;&nbsp;<i class="fa fa-user"></i>&nbsp;{{ g.user['username'] }}&nbsp;&nbsp;</span></h1>&nbsp;&nbsp;
+    {% else %}
+    <h1 class = "w3-right top"><a class = "links"  href="{{ url_for('auth.register') }}">&nbsp;&nbsp;<i class="fa     fa-envelope"></i>&nbsp;&nbsp;<span class = "link">Email Us</span>&nbsp;&nbsp;</a></h1>
+    <h1 class = "w3-right top"><a class = "links" href="{{ url_for('auth.login') }}">&nbsp;&nbsp;<i class="fa     fa-sign-in"></i>&nbsp;&nbsp;<span class = "link">Log in</span>&nbsp;&nbsp;</a></h1>
+    <h1 class = "w3-right top"><a class = "links" href="{{ url_for('auth.contact') }}">&nbsp;&nbsp;<i class="fa     fa-file"></i>&nbsp;&nbsp;<span class = "link">Register</span>&nbsp;&nbsp;</a></h1>
+    {% endif %}
+  
+</nav>
+<br><br><br><br>
+<section class="content">
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  {% block content %}{% endblock %}
+</section>
+</body>
+</html>
