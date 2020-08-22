@@ -73,7 +73,25 @@ def power(x: int, n: int) -> int:
     if n == 1:
         return x
     return x * power(x, n - 1)
-``` 
+```
+
+# General Topics we aim to covere
+
+```
+1) Algorithm  
+2) About the Language (Who made it, what are the key features, why it is used)  
+3) Getting started (Absolute beginner level guide to get started)  
+4) Variables (What are variables? How to use them?)
+5) Keywords 
+6) Datatypes 
+7) Operators
+8) Conditional Statements
+9) Loop
+10) Getting started with your first ever program
+11) Functions (A little about functions to get started)
+12) Arrays
+```
+
   
 
 
