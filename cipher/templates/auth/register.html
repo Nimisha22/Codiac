@@ -79,6 +79,13 @@
        padding: 10px;
        margin-top: 5px;
         }
+        .fl {
+            color:  #C71585;
+            background: #FFFFFF;
+            padding: 10px;
+            margin: 5%;
+        }
+        
 	</style>
 </head>
 <br><br><br>
@@ -124,13 +131,14 @@
 <p class="w3-center">
 			<input type = "submit" class = "w3-center submit" value = "Sign Up" id="click">
 			<br>
-
-	<section class = "content">
+</form>
+    </div>
+	<section class = "w3-top mess">
 	  {% for message in get_flashed_messages() %}
-	    <div class="flash">{{ message }}</div>
+	    <div class="w3-center w3-xxxlarge fl">{{ message }}</div>
 	  {% endfor %}
 	</section>
-		</form>
+		
 
 
 

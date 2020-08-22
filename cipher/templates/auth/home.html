@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
     	header {
-    		background-image: url('https://media.istockphoto.com/vectors/laptop-with-code-on-screen-hanging-over-icons-programming-app-web-vector-id1205513619?k=6&m=1205513619&s=612x612&w=0&h=OsI2tNhNn8pXwlIBnzBPewJmZ_bRNt7lO5GTW4XQ368=');
+            background-image: url("{{ url_for('static', filename='first.jpg') }}");
 			background-repeat: no-repeat;
             background-position: center;
             background-attachment: fixed;
@@ -30,7 +30,7 @@
     		width: 10%;
     	}
     	.width2 {
-    		width: 30%;
+    		width: 50%;
     	}
     	.image {
     		width: 100%;
@@ -79,16 +79,28 @@
 	color: #833AB4;
   transform: scale(2.5); 
 }
+
+        .design {
+            padding-top: 100px;
+            padding-left: 50px;
+        }
+        .height {
+            height: 500px;
+        }
     </style>
 </head>
 <body>
 	<header>
-        <p class = "w3-right w3-xxlarge uplinks"><a href = "{{ url_for('auth.login') }}" style = "text-decoration: none">Login</a></p>
-        <p class = "w3-right w3-xxlarge uplinks"><a href = "{{ url_for('auth.register') }}" style = "text-decoration: none">Sign Up</a></p>
-		<div class = "w3-left w3-xxxlarge w3-text-white width">
-			<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-		</div>
-		<div class = "w3-right w3-text-white width2">	
+        <p class = "w3-right w3-xlarge uplinks"><a href = "{{ url_for('auth.contact')}}" style = "text-decoration: none">About Us</a></p>
+        <p class = "w3-right w3-xlarge uplinks"><a href = "{{ url_for('auth.login') }}" style = "text-decoration: none">Login</a></p>
+        <p class = "w3-right w3-xlarge uplinks"><a href = "{{ url_for('auth.register') }}" style = "text-decoration: none">Sign Up</a></p>
+		<p class = "w3-right w3-xlarge uplinks"><a href = "#offer" style = "text-decoration: none">What we Offer</a></p>
+		<p class = "w3-right w3-xlarge uplinks"><a href = "#codiac" style = "text-decoration: none">What is Codiac</a></p>
+	
+
+       		
+	
+		<div class = "w3-left w3-text-white width2">	
 <h1 class = "design">
 	<a href="" class="w3-xxxlarge typewrite">Welcome to Codiac.</a>
   </a>
@@ -161,19 +173,19 @@
 
 	</header>
 	<br><br>
-	<div class = "w3-full">
-
-		<div class = "w3-half w3-card-4 w3-light-grey">
+	<div class = "w3-full" id = "codiac">
+		<div class = "w3-half w3-card-4 w3-light-grey height">
 			<p class = "w3-text-red w3-xxlarge text">What is Codiac?</p>
 			<p class = "w3-text-black w3-xlarge text">Codiac is a comprehensive collection of basics of the programming language you wish to learn. It delivers concepts in a way that is easy to understand and grasp through interactive learning.
             <br> <br>
 With thousands of resources out there, it is pretty confusing to choose the right one.
 
 Codiac offers you exactly what you need as a beginner in coding.</p>
+
 		</div>
 
 
-		<div class = "w3-half">
+		<div class = "w3-half height">
 			<img src = "https://www.students4bestevidence.net/app/uploads/2014/03/confused-man.jpg" class = "image">
 		</div>
 
@@ -195,6 +207,7 @@ Codiac offers you exactly what you need as a beginner in coding.</p>
             <br><br>
 Here, at Codiac, you are taught all the basics starting from what variables are to pointers and structures.
 </p>
+
 		</div>
 		</div>
 
@@ -212,6 +225,7 @@ Python is being extensively used in data science, machine learning, information 
 <br>
 Here, at Codiac, you are taught all the basics starting from what variables are to some of the important libraries.
 </p>
+
 		</div>
 		</div>
 
@@ -223,7 +237,7 @@ Here, at Codiac, you are taught all the basics starting from what variables are 
 
 		<div class = "w3-full">
 
-		<div class = "w3-half">
+		<div class = "w3-half" id = "offer">
 			<img src = "https://botsify.com/blog/wp-content/uploads/2020/02/19.jpg" class = "image2">
 		</div>
 
@@ -234,6 +248,7 @@ Here, at Codiac, you are taught all the basics starting from what variables are 
             <br>        Codiac is specialized to teach you all the basic concepts and answer your queries. <br>
             <br>You are free to learn at your own pace with a personalized tutor handy at all time!
  </p>
+
 		</div>
 		</div>
 		</div>
