@@ -25,43 +25,68 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 	position: fixed;
 	overflow: auto;
 }
+.color{
+    background-color: #a82e3f;
+    color: #FFFFFF;
+}
+body {
+    background-color: #db5c77;
+}
+.hovering:hover {
+    background-color: #ffb6c1;
+    color: #000000;
+}
+.dec{
+    text-decoration: none;
+}
+.pad {
+    padding: 10px;
+    margin-top: 100px;
+}
 </style>
 </head>
-<body class="w3-light-grey">
+<body>
 <div class="w3-top ">
-<div class="w3-bar w3-pale-green w3-card">
-
+<div class="w3-bar color w3-card">
 <!-- Top fixed navigagtion bar -->
-<a href="{{ url_for('auth.logout') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-sign-out"></i>&nbsp;&nbsp;Log Out</a>
-<a href="{{ url_for ('auth.index') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-users"></i>&nbsp;&nbsp;Discussion Forum</a>
-<a href="" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;{{g.user["username"]}}</a>
-<a href="" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-envelope"></i>&nbsp;&nbsp;Email Us</a>
-<a href="{{ url_for ('auth.home') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right"><i class="fa fa-home"></i>&nbsp;&nbsp;HOME</a>
-<div class="w3-dropdown-hover w3-hide-small w3-right">
-<button class="w3-padding-large w3-button w3-hover-pale-dark-grey" title="More">Learn More&nbsp;&nbsp;<i class="fa fa-caret-down"></i></button>     
-<div class="w3-dropdown-content w3-bar-block w3-card-4">
-<a href="{{ url_for('auth.cpage') }}" class="w3-bar-item w3-button w3-hover-dark-grey ">C</a>
-</div>
-</div>
+<a href="{{ url_for('auth.logout') }}" class=" w3-bar-item dec  w3-padding-large hovering w3-right">&nbsp;<i class="fa fa-sign-out"></i>&nbsp;&nbsp;Log Out</a>
+<a href="mailto:learnwithcodiac@gmail.com" class=" w3-bar-item dec w3-padding-large hovering w3-right">&nbsp;<i class="fa fa-envelope"></i>&nbsp;&nbsp;Email Us</a>
+<a href="{{ url_for ('auth.index') }}" class=" w3-bar-item dec w3-padding-large hovering w3-right">&nbsp;<i class="fa fa-users"></i>&nbsp;&nbsp;Discussion Forum</a>
+<a href="{{ url_for ('auth.cpage') }}" class=" w3-bar-item dec w3-padding-large hovering w3-right"><i class="fa fa-code"></i>&nbsp;&nbsp;Learn C</a>
+<a href="{{ url_for ('auth.home') }}" class=" w3-bar-item dec w3-padding-large hovering w3-right"><i class="fa fa-home"></i>&nbsp;&nbsp;HOME</a>
+<a href="" class=" w3-bar-item dec w3-padding-large w3-right">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;{{g.user["username"]}}</a> 
 </div>
 </div>
 
 
 <!-- Left side Navigation for the page -->
-<nav class="w3-sidebar w3-pale-green w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:500px;font-weight:bold;overflow:auto" id="mySidebar"><br>  
+<nav class="w3-sidebar color  w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:500px;font-weight:bold;overflow:auto" id="mySidebar"><br>  
 <div class="w3-bar-block">
-<h2 class = "w3-xxxlarge w3-text-dark-grey w3-center">Learn Python</h2>
+<h2 class = "w3-xxxlarge w3-text-pale-red w3-center">Learn Python</h2>
 <br><br>
-<a href = "#aboutPython" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">About Python</a>
+<a href = "#aboutPython" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">About Python</a>
 <br><br>
-<a href = "#gettingstarted" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Getting Started</a>
+<a href = "#gettingstarted" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Getting Started</a>
 <br><br>
-<a href = "#variables" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Variables</a>
+<a href = "#variables" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Variables</a>
 <br><br>
-<a href = "#keywords" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Keywords</a>
+<a href = "#keywords" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Keywords</a>
 <br><br>
-<a href = "#datatypes" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Datatypes</a>
-<br><br><br><br>
+<a href = "#datatypes" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Datatypes</a>
+<br><br>
+<a href = "#loops" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Loops</a>
+<br><br>
+<a href = "#forloop" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">For loop</a>
+<br><br>
+<a href = "#whileloop" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">While loop</a>
+<br><br>
+<a href = "#firstprogramming" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">First step towards programming</a>
+<br><br>
+<a href = "#functions" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Functions</a>
+<br><br>
+<a href = "#arrays" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Arrays</a>
+<br><br>
+<br><br>
   </div>
 </nav>
 
@@ -81,7 +106,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 <div id = "aboutPython">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-pale-blue w3-margin-bottom">
+<div class = "w3-container w3-card w3-pale-red w3-margin-bottom">
 <h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;About Python</h2>
 <div class = "w3-container">
 <hr>
@@ -142,7 +167,7 @@ private. </li>
 </ul>
 </div>
 
-<h1 class = "w3-xxlarge w3-text-darkgrey"><i class="fa fa-check"></i>&nbsp;&nbsp;comments</h1>
+<h1 class = "w3-xxlarge w3-text-darkgrey"><i class="fa fa-check"></i>&nbsp;&nbsp;Comments</h1>
 <div>
 <br>
 <p class = "w3-large w3-text-dark-grey">Comments in Python start with the hash character, <span class = "w3-large w3-text-black w3-light-grey">&nbsp;&nbsp;&nbsp;#&nbsp;&nbsp;&nbsp;</span>, and extend to the end of the physical line. A comment may appear at the start of a line or following whitespace or code, but not within a string literal. A hash character within a string literal is just a hash character. Since comments are to clarify code and are not interpreted by Python, they may be omitted when typing in examples.</p>
@@ -151,7 +176,7 @@ private. </li>
 </ul>
 </div>
 
-<h1 class = "w3-xxlarge w3-text-darkgrey"><i class="fa fa-check"></i>&nbsp;&nbsp;  Lines and Indentation: </h1>
+<h1 class = "w3-xxlarge w3-text-darkgrey"><i class="fa fa-check"></i>&nbsp;&nbsp;Lines and Indentation: </h1>
 <div>
 <br>
 <p class = "w3-large w3-text-dark-grey">One of the first caveats programmers encounter when learning Python is the fact that there are no braces to indicate blocks of code for class and function definitions or flow control. Blocks of code are denoted by line indentation, which is rigidly enforced. 
@@ -177,7 +202,7 @@ Here is a sample snip using the semicolon:<br>
 <div id = "variables">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-pale-yellow">
+<div class = "w3-container w3-card w3-pale-red">
 <h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-check-circle"></i>&nbsp;&nbsp;Variables</h2>
 <hr><hr>
 <p class = "w3-large w3-text-dark-grey">A variable can be considered a storage container for data. Every variable has a name. Python has no command for declaring a variable. A variable is created the moment you first assign a value to it. In Python, assignment can be done by writing the variable name followed by the value separated by an equal = symbol. The skeleton or pseudo-code is</p>
@@ -225,7 +250,7 @@ Here is a sample snip using the semicolon:<br>
 <div id = "keywords">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-sand">
+<div class = "w3-container w3-card w3-pale-red">
 <h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-key"></i>&nbsp;&nbsp;Keywords</h2>
 <hr><hr>
 <p class = "w3-large w3-text-dark-grey">Keywords are the reserved words in Python. We cannot use a keyword as a <span class = "w3-text-blue">variable</span> name, <span class = "w3-text-blue">function</span> name or any other identifier. All the keywords except <span class = "w3-light-grey">&nbsp;&nbsp;&nbsp;True&nbsp;&nbsp;&nbsp;</span>, <span class = "w3-light-grey">&nbsp;&nbsp;&nbsp;False&nbsp;&nbsp;&nbsp;</span> and <span class = "w3-light-grey">&nbsp;&nbsp;&nbsp;None&nbsp;&nbsp;&nbsp;</span> are in lowercase and they must be written as they are. The list of all the keywords is given below.</p>
@@ -314,7 +339,7 @@ Here is a sample snip using the semicolon:<br>
 <div id = "datatypes">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-pale-light-grey">
+<div class = "w3-container w3-card w3-pale-red">
 <h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-table"></i>&nbsp;&nbsp;Data Types</h2>
 <hr><hr>
 <p class = "w3-large w3-text-dark-grey">There are three numeric types in Python: int for integers, float for decimal numbers, and complex for complex numbers. General mathematical operations such as addition, subtraction, and multiplication can be done on them. The integer numbers (e.g. 2, 4, 20) have type int, the ones with a fractional part (e.g. 5.0, 1.6) have type float. Operations when the type are the same: When the type of the input numbers are the same the result will be a number of the same class that the input numbers belong to. 
@@ -340,6 +365,637 @@ Here is a sample snip using the semicolon:<br>
 <hr><hr>
 </div>
 <br>
+
+
+<!-- LOOPS -->
+<div id = "loops">
+</div>
+<br><br><br>
+<div class = "w3-container w3-card w3-pale-red w3-margin-bottom">
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-spinner"></i>&nbsp;&nbsp;Loops</h2>
+<div class = "w3-container">
+<hr>
+<hr>
+<p class = "w3-large w3-text-dark-grey">Based on loop controls, here are examples of following types:</p>
+<ul>
+<li class = "w3-large w3-text-dark-grey">Condition Controlled Loop</li>
+<li class = "w3-large w3-text-dark-grey">Range Controlled loop</li>
+<li class = "w3-large w3-text-dark-grey">Collection Controlled loop</li>
+</ul>
+<hr><hr>
+</div>
+</div>
+<br>
+
+<!-- For Loop -->
+<div id = "forloop">
+</div>
+<br><br><br>
+<div class = "w3-container w3-card w3-pale-red w3-margin-bottom">
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-circle-o"></i>&nbsp;&nbsp;For Loop</h2>
+<div class = "w3-container">
+<hr>
+<hr>
+<p class = "w3-xlarge w3-text-dark-grey">How to Use For Loop in Python 3</p>
+<p class = "w3-large w3-text-dark-grey">For loops in Python are used for sequential iterations for a certain number of times, that is, the length of the sequence. Iterations on the sequences in Python are called traversals.</p>
+<p class = "w3-xlarge w3-text-dark-grey">Syntax of for loop in Python 3</p>
+<p class = "w3-large w3-text-dark-grey">Let us see the Python Syntax of For Loop with examples:<br>
+  for a in sequence: <br>
+  body of for<br>
+<img style = "height: 20 px, width:30x" src = "link">
+<p class = "w3-large w3-text-dark-grey">As depicted by the flowchart, the loop will continue to execute until the last item in the sequence is reached. The body of the for loop, like the body of the Python while loop, is indented from the rest of the code in the program.</p>
+<p class = "w3-xlarge w3-text-dark-grey">The range() Function In Python For Loop</p> 
+<p class = "w3-large w3-text-dark-grey">We can specify a particular range using an inbuilt Python function, named range(), to iterate the loop a specified number of times through that range.<br>
+  <br>
+  Example:<br>
+  range(10)<br>
+  <br>
+  Note: The range here is not from 1 to 10 but from 0 to 9 (10 numbers).<br>
+  Specifying start and stop points in the range() function:<br>
+  <br>
+  Example:<br>
+  range(3,7)<br>
+  <br>
+  Note: Here, in this example, the starting point is 3 and the ending point is 7. So, the list will be generated from 3 to 6 (4 numbers).
+  <br>
+  <br>
+  Using Python for loops with the range() function:<br>
+  Example:<br>
+  We can simply use Python for loop with the range() function as shown in the example below.<br>
+  For i in range(2,10):<br>
+  print(i)<br>
+  <br>
+  Output:<br>
+  2<br>
+  3<br>
+  4<br>
+  5<br>
+  6<br>
+  7<br>
+  8<br>
+  9<br>
+  <br>
+  By default, the increment in the range() function when used with loops is set to 1; however, we can change or specify a particular increment by including a third parameter in the range() function, as illustrated in the following <br>
+  Example:<br>
+  For i in range(2,10,2)<br>
+  print(i)<br>
+  <br> 
+  Output:<br>
+  2<br>
+  4<br>
+  6<br>
+  8<br>
+  <br>
+  <br>
+  The given end point is never part of the generated sequence. It is possible to let the range start at another number, or to specify a different increment (even negative; sometimes this is called the ‘step’):<br>
+  range(5, 10)<br>
+     5, 6, 7, 8, 9<br>
+     <br>
+  range(0, 10, 3)<br>
+     0, 3, 6, 9<br>
+     <br>
+  range(-10, -100, -30)<br>
+    -10, -40, -70<br>
+  how to get a list from a range?<br>
+  >>> list(range(4))<br>
+  [0, 1, 2, 3]<br>
+  </p>
+</p>
+<p class = "w3-xlarge w3-text-dark-grey">break and continue Statements, and else Clauses on Loops</p>
+<p class = "w3-large w3-text-dark-grey">The break statement, breaks out of the innermost enclosing for or while loop.
+  Loop statements may have an else clause; it is executed when the loop terminates through exhaustion of the iterable (with for) or when the condition becomes false (with while), but not when the loop is terminated by a break statement. <br>
+  <br>
+  >>> for n in range(2, 10):<br>
+  ...    for x in range(2, n):<br>
+  ...        if n % x == 0:<br>
+  ...            print(n, 'equals', x, '*', n//x)<br>
+  ...            break<br>
+  ...    else:<br>
+  ...        # loop fell through without finding a factor<br>
+  ...        print(n, 'is a prime number')<br>
+  ...<br>
+  <br>
+  2 is a prime number<br>
+  3 is a prime number<br>
+  4 equals 2 * 2<br>
+  5 is a prime number<br>
+  6 equals 2 * 3<br>
+  7 is a prime number<br>
+  8 equals 2 * 4<br>
+  9 equals 3 * 3<br>
+  <br>
+  the else clause belongs to the for loop, not the if statement<br>
+  <br><br>
+  The continue statement continues with the next iteration of the loop:<br>
+  >>><br>
+  >>> for num in range(2, 10):<br>
+  ...    if num % 2 == 0:<br>
+  ...        print("Found an even number", num)<br>
+  ...        continue<br>
+  ...    print("Found a number", num)<br>
+  <br>
+  Found an even number 2<br>
+  Found a number 3<br>
+  Found an even number 4<br>
+  Found a number 5<br>
+  Found an even number 6<br>
+  Found a number 7<br>
+  Found an even number 8<br>
+  Found a number 9<br>
+</p>  
+<p class = "w3-xlarge w3-text-dark-grey">  pass Statements</p>
+<p class = "w3-large w3-text-dark-grey">  The pass statement does nothing. It can be used when a statement is required syntactically but the program requires no action.<br>
+   For example:<br>
+  >>><br>
+  >>> while True:<br>
+  ...    pass  # Busy-wait for keyboard interrupt (Ctrl+C)<br>
+  ...<br>
+  <br>
+  "pass" is a type of null operation or null statement, when it executes nothing happens. It is used when you want do not want to write any code/statement to execute but syntactically a statement is required.<br>
+  Let’s consider the given example...<br>
+  Here, we are using "pass" statement in the function hello() definition - there is no statement in the function and if we do not use "pass", there will be an error.<br>
+  def hello():<br>
+      pass<br>
+      <br>
+  hello()<br>
+  <br>
+  Example 2:<br>
+  for i in range(1,11):<br>
+      if(i==6):<br>
+          continue<br>
+      else:<br>
+          pass<br>
+      print(i)<br>
+      <br>
+  Output<br>
+  1<br>
+  2<br>
+  3<br>
+  4<br>
+  5<br>
+  7<br>
+  8<br>
+  9<br>
+  10<br>
+      </p>
+      <hr><hr>
+    
+</div>
+</div>
+<br>
+
+
+<!-- While Loop -->
+<div id = "whileloop">
+</div>
+<br><br><br>
+<div class = "w3-container w3-card w3-pale-red w3-margin-bottom">
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-circle-o-notch"></i>&nbsp;&nbsp;While Loop</h2>
+<div class = "w3-container">
+<hr>
+<hr>
+</p>
+<p class = "w3-xlarge w3-text-dark-grey">What Is While Loop in Python?</p>
+<p class = "w3-large w3-text-dark-grey">While loop statements in Python are used to repeatedly execute a certain statement as long as the condition provided in the while loop statement stays true. While loops let the program control to iterate over a block of code.
+  The program first evaluates the while loop condition. If it’s true, then the program enters the loop and executes the body of the while loop. It continues to execute the body of the while loop as long as the condition is true. When it is false, the program comes out of the loop and stops repeating the body of the while loop.</p>
+<p class = "w3-xlarge w3-text-dark-grey">Syntax and Working</p>
+<p class = "w3-large w3-text-dark-grey">The format of a rudimentary while loop is shown below:<br>
+  while expr:<br>
+      statement(s)<br>
+      <br>
+  statement(s) represents the block to be repeatedly executed, often referred to as the body of the loop. This is denoted with indentation, just as in an if statement.<br>
+  The controlling expression, expr, typically involves one or more variables that are initialized prior to starting the loop and then modified somewhere in the loop body.<br>
+  When a while loop is encountered, expr is first evaluated in Boolean context. If it is true, the loop body is executed. Then expr is checked again, and if still true, the body is executed again.<br>
+  This continues until <expr> becomes false, at which point program execution proceeds to the first statement beyond the loop body.<br>
+  <br>>>> n = 5<br>
+   2 >>> while n > 0:<br>
+   3 ...    n -= 1<br>
+   4 ...    print(n)<br>
+   5 ...<br>
+   6 4<br>
+   7 3<br>
+   8 2<br>
+   9 1<br>
+  10 0<br>
+  <br>
+  Here’s what’s happening in this example:<br>
+  n is initially 5. The expression in the while statement header on line 2 is n > 0, which is true, so the loop body executes. Inside the loop body on line 3, n is decremented by 1 to 4, and then printed.<br>
+  When the body of the loop has finished, program execution returns to the top of the loop at line 2, and the expression is evaluated again. It is still true, so the body executes again, and 3 is printed.<br>
+  This continues until n becomes 0. At that point, when the expression is tested, it is false, and the loop terminates. Execution would resume at the first statement following the loop body, but there isn’t one in this case.<br>
+  Note that the controlling expression of the while loop is tested first, before anything else happens. If it’s false to start with, the loop body will never be executed at all.<br>
+  
+  <p class = "w3-xlarge w3-text-dark-grey">Infinite While Loop in Python</p>
+  <p class = "w3-large w3-text-dark-grey">Infinite while loop refers to a while loop where the while condition never becomes false. When a condition never becomes false, the program enters the loop and keeps repeating that same block of code over and over again, and the loop never ends.<br>
+  <br>The following example shows an infinite loop:<br>
+  a = 1<br>
+  while a==1:<br>
+  b = input(“what’s your name?”)<br>
+  print(“Hi”, b, “, Welcome to Intellipaat!”)<br>
+  <br>If we run the above code block, it will execute an infinite loop which will ask for our names again and again. The loop won’t break until we press ‘Ctrl+C’.<br>
+  <br>Output:<br>
+  what’s your name?<br>
+  Akanksha Rana #user input<br>
+  Hi Akanksha Rana , Welcome to Codiac!<br>
+  <br> 
+  <br>
+  what’s your name?<br>
+  Amrit #user input<br>
+  Hi Amrit , Welcome to Codiac!<br>
+  <br>
+  <br>
+  what’s your name?<br>
+  Shubham #user input<br>
+  Hi Shubham , Welcome to Codiac!<br>
+  <br>
+  what’s your name?<br>
+  Traceback (most recent call last): #Stopped the loop by entering CTRL+C<br>
+  File “”, line 2, in<br>
+  KeyboardInterrupt<br>
+</p>
+  <p class = "w3-xlarge w3-text-dark-grey">Else with the While Loop in Python</p>
+  <p class = "w3-large w3-text-dark-grey">In Python, we can also use the else statement with loops. When the else statement is used with the while loop, it is executed only if the condition becomes false.<br>
+    <br>a = 1<br>
+  while a<5:<br>
+  print(“condition is true”)<br>
+  a=a+1<br>
+  else:<br>
+  print(“condition is false now”)<br><br>
+  <br>The example illustrates how the else statement works with the while loop.<br>
+  <br>Output:<br>
+  condition is true<br>
+  condition is true<br>
+  condition is true<br>
+  condition is true<br>
+  condition is false now<br>
+  <br>In the above example, the program keeps executing the body of the while loop till the condition is true, meaning that till the value of a is less than 5. Since the initial value of a is 1 and every time the program entered the loop the value of a is increased by 1, the condition becomes false after the program enters the loop for the fourth time when the value of a is increased from 4 to 5.<br>
+  When the program checks the condition for the fifth time, it executes it as false and goes to the else block and executes the body of else, displaying, ‘condition is false now.’
+ </p>
+  <p class = "w3-xlarge w3-text-dark-grey">Python While Loop Interruptions<br> </p>
+  <p class = "w3-large w3-text-dark-grey">Python offers following two keywords which we can use to prematurely terminate a loop iteration.<br>
+  Break:The break keyword terminates the loop and transfers the control to the end of the loop.<br>
+  <br>Example:<br>
+  a = 1<br>
+  while a <5:<br>
+  a += 1<br>
+  if a == 3:<br>
+  break<br>
+  print(a)<br>
+  Output:<br>
+  2<br><br>
+  Continue:The continue keyword terminates the ongoing iteration and transfers the control to the top of the loop and the loop condition is evaluated again. If the condition is true, then the next iteration takes place.<br>
+  <br>Example:<br>
+  a = 1<br>
+  while a <5:v
+  a += 1<br>
+  if a == 3:<br>
+  continue<br>
+  print(a)<br>
+  <br>
+  <br>
+  Output:<br>
+  2<br>
+  4<br>
+  5<br>
+  </p>
+  <hr><hr>
+</div>
+</div>
+<br>
+
+
+
+<!-- First step towards programming-->
+<div id = "firstprogramming">
+</div>
+<br><br><br>
+<div class = "w3-container w3-card w3-pale-red w3-margin-bottom">
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-plus-circle"></i>&nbsp;&nbsp;First step towards programming</h2>
+<div class = "w3-container">
+<hr>
+<hr>
+<p class = "w3-xlarge w3-text-dark-grey">Fibonacci Series </p>
+<p class = "w3-xlarge w3-text-dark-grey"> 
+  ... # the sum of two elements defines the next<br>
+  ... a, b = 0, 1<br>
+  >>> while a < 10:<br>
+  ...    print(a)<br>
+  ...    a, b = b, a+b<br>
+  ...<br>
+  <br>
+  0<br>
+  1<br>
+  1<br>
+  2<br>
+  3<br>
+  5<br>
+  8<br>
+</p>
+<ul>
+<li class = "w3-large w3-text-dark-grey">The while loop executes as long as the condition (here: a < 10) remains true. In Python, any non-zero integer value is true; zero is false. The condition may also be a string or list value, in fact any sequence; anything with a non-zero length is true, empty sequences are false. The test used in the example is a simple comparison. </li>
+<li class = "w3-large w3-text-dark-grey">The first line contains a multiple assignment: the variables a and b simultaneously get the new values 0 and 1. On the last line this is used again, demonstrating that the expressions on the right-hand side are all evaluated first before any of the assignments take place. The right-hand side expressions are evaluated from the left to the right.</li>
+<li class = "w3-large w3-text-dark-grey">The body of the loop is indented: indentation is Python’s way of grouping statements. At the interactive prompt, you have to type a tab or space(s) for each indented line. Note that each line within a basic block must be indented by the same amount.</li>
+<li class = "w3-large w3-text-dark-grey">The print() function writes the value of the argument(s) it is given. It differs from just writing the expression you want to write (as we did earlier in the calculator examples) in the way it handles multiple arguments, floating point quantities, and strings. Strings are printed without quotes, and a space is inserted between items, so you can format things nicely</li>
+</ul>
+<hr><hr>
+</div>
+</div>
+<br>
+
+
+
+
+<!-- Functions -->
+<div id = "functions">
+</div>
+<br><br><br>
+<div class = "w3-container w3-card w3-pale-red w3-margin-bottom">
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-wrench"></i>&nbsp;&nbsp;Functions</h2>
+<div class = "w3-container">
+<hr>
+<hr>
+<p class = "w3-xlarge w3-text-dark-grey">What are Functions?</p>
+<p class = "w3-large w3-text-dark-grey">Functions are used to group together a certain number of related instructions. These are reusable blocks of codes written to carry out a specific task. A function might or might not require inputs. <br>
+Functions are only executed when they are specifically called. Depending on the task a function is supposed to carry out, it might or might not return a value.<br><br>
+Functions are a convenient way to divide your code into useful blocks, allowing us to order our code, make it more readable, reuse it and save some time. Also functions are a key way to define interfaces so programmers can share their code.<br>
+</p>
+<p class = "w3-xlarge w3-text-dark-grey">Defining a Function in Python</p>
+<p class = "w3-large w3-text-dark-grey"> While defining a function in Python, we need to follow the below set of rules:<br>
+  <ul>
+    <li class = "w3-large w3-text-dark-grey">The def keyword is used to start the function definition.</li>
+    <li class = "w3-large w3-text-dark-grey">The def keyword is followed by a function-name which is followed by parentheses containing the arguments passed by the user and a colon at the end.</li>
+    <li class = "w3-large w3-text-dark-grey">After adding the colon, the body of the function starts with an indented block in a new line.</li>
+    <li class = "w3-large w3-text-dark-grey">The return statement sends a result object back to the caller. A return statement with no argument is equivalent to return none statement.</li>
+  </ul>
+  </p>
+  <p class = "w3-xlarge w3-text-dark-grey">Syntax for writing a function in Python:</p>
+  <p class = "w3-large w3-text-dark-grey">def (arg1, arg2, … argN):<br>
+  return<br>
+</p> 
+<p class = "w3-xlarge w3-text-dark-grey"> Calling a Function In Python </p>
+<p class = "w3-large w3-text-dark-grey">Defining a function is not all we have to do in order to start using it in our program. Defining a function only structures the code blocks and gives the function a name. 
+  To execute a function, we have to call it. Only when it is specifically called, a function will execute and give the required output. Now, there are two ways in which we can call a function, after we have defined it. We can either call it from another function or we can call it from the Python prompt.<br>
+  <br>
+  Example:<br>
+  # defining a function<br>
+  def printOutput( str):<br>
+  <br>
+  <br>
+  #This function will print the passed string<br>
+  print (str)<br>
+  return;<br>
+  <br>
+  <br>
+  #calling a function<br>
+  printOutput(“Welcome to Intellipaat”)<br>
+  <br>
+  <br>
+  Output:<br>
+  Welcome to Codiac<br>
+  <br>
+  <p class = "w3-xlarge w3-text-dark-grey">Scope</p>
+  <p class = "w3-large w3-text-dark-grey">The scope of a variable is a part of the program where the variable is recognizable.<br>
+  As we have already discussed about local and global variables in the Python Variables module of this tutorial, we know that the variables defined inside a function only have a local scope. Meaning, the variable defined within a function is only recognizable inside that function.<br>
+  Lifetime of a variable is the time period till when the variable exists in the memory. Variables defined inside the function only exist as long as the function is being executed. So, the lifetime of a variable defined inside a function ends when we return from the function or when the control comes out of the function.<br>
+  <br>
+  Example with variables in Python Functions:<br>
+  def func():<br>
+  x = 5<br>
+  print(“value of x inside the function”, x)<br>
+  <br>
+  <br>
+  #calling the function<br>
+  x = 10<br>
+  func()<br>
+  print(“value of x outside the function”, x)<br>
+  <br>
+  Output:<br>
+  value of x inside the function 5<br>
+  value of x outside the function 10<br>
+  <br>
+  <br>
+  >>> def fib2(n):  # return Fibonacci series up to n<br>
+  ...    """Return a list containing the Fibonacci series up to n."""<br>
+  ...    result = []<br>
+  ...    a, b = 0, 1<br>
+  ...    while a < n:<br>
+  ...        result.append(a)    # see below<br>
+  ...        a, b = b, a+b<br>
+  ...    return result<br>
+  ...<br>
+  <br>
+  >>> f100 = fib2(100)    # call it<br>
+  >>> f100                # write the result<br>
+  [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]<br>
+  <br>
+  This example, as usual, demonstrates some new Python features:<br>
+  The return statement returns with a value from a function. return without an expression argument returns None. Falling off the end of a function also returns None.<br>
+  The statement result.append(a) calls a method of the list object result. A method is a function that ‘belongs’ to an object and is named obj.methodname, where obj is some object (this may be an expression), and methodname is the name of a method that is defined by the object’s type. Different types define different methods. Methods of different types may have the same name without causing ambiguity. (It is possible to define your own object types and methods, using classes, see Classes) The method append() shown in the example is defined for list objects; it adds a new element at the end of the list. In this example it is equivalent to result = result + [a], but more efficient.<br>
+  </p>
+  
+  <p class = "w3-xlarge w3-text-dark-grey">in keyword</p>
+  <p class = "w3-large w3-text-dark-grey">This tests whether or not a sequence contains a certain value.<br>
+   Adding two numbers in Python: Here, we are going to learn various ways to find the addition of two numbers in python.<br>
+    Take input of two numbers from the user and print their sum.<br>
+    <br>
+  Example:<br>
+    Input:<br>
+      A = 2, B = 3<br>
+      <br>
+    Output:<br>
+      Sum = 5<br>
+  </p>
+  <p class = "w3-xlarge w3-text-dark-grey">Addition of two numbers</p>
+  <p class = "w3-large w3-text-dark-grey">Here, we are implementing the program to find the addition of two numbers using 4 different ways.<br>
+   <br>
+  1) Simply take input from the user and typecast to an integer at the same time after that performing addition operation on the both number.<br>
+  if __name__ == "__main__" :<br>
+  <br>
+      # take input from user<br>
+      a = int(input())<br>
+      b = int(input())<br>
+      <br>
+      # addition operation perform<br>
+      sum_num = a + b<br>
+      <br>
+      print("sum of two number is: ",sum_num)<br>
+      <br>
+  Output<br>
+  10<br>
+  20<br>
+  sum of two number is:  30<br>
+  <br>
+  <br>
+  2) Using a user-defined function for doing the sum of two numbers.<br>
+  # define a function for performing <br>
+  # addition of number<br>
+  def sum_num(a,b) :<br>
+    return a + b<br>
+    <br>
+  # Main code<br>
+  if __name__ == "__main__" :<br>
+  <br>
+      a = int(input())<br>
+      b = int(input())<br>
+      <br>
+      print("sum of two number:",sum_num(a,b))<br>
+      <br>
+  Output<br>
+  10<br>
+  20<br>
+  sum of two number: 30<br>
+  <br>
+  <br>
+  3) We are taking the input from user in one line after that typecast into an integer and stored them in the list then use sum() inbuilt function which returns the sum of elements of the list.<br>
+  if __name__ == "__main__" :    <br>
+    # take input from the user in list<br>
+    a = list(map(int,input().split()))<br>
+    <br>
+    # sum function return sum of elements <br>
+    # present in the list<br>
+    print("sum of two number is:",sum(a))<br>
+    <br>
+  Output<br>
+  10 20<br>
+  sum of two number is: 30<br>
+  <br>
+  <br>
+  4) We are taking the input from user in one line and store them in two different variables then typecast both into an integer at the time of addition operation.<br>
+  if __name__ == "__main__" :<br>
+  <br>
+      # take input from the user in a and b variables<br>
+      a,b = input().split()<br>
+      <br>
+      # perform addition operation<br>
+      rslt = int(a) + int(b)<br>
+      <br>
+      print("sum of two number is:",rslt)<br>
+      <br>
+  Output<br>
+  10 20<br>
+  sum of two number is: 30<br>
+</p>
+<p class = "w3-xlarge w3-text-dark-grey"></p>
+<hr><hr>
+</div>
+</div>
+<br>
+
+
+
+
+<!-- Arrays -->
+<div id = "arrays">
+</div>
+<br><br><br>
+<div class = "w3-container w3-card w3-pale-red w3-margin-bottom">
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-tasks"></i>&nbsp;&nbsp;Arrays</h2>
+<div class = "w3-container">
+<hr>
+<hr>
+
+<p class = "w3-xlarge w3-text-dark-grey">What is an Array?</p>
+<p class = "w3-large w3-text-dark-grey">An array is a data structure that can contain or hold a fixed number of elements that are of the same Python data type. An array is composed of an element and an index. Index in an array is the location where an element resides. All elements have their respective indices. Index of an array always starts with 0.
+  Most of the data structures make use of arrays to implement their algorithms. Following are the important terms to understand the concept of Array.<br>
+  <ul>
+    <li class = "w3-large w3-text-dark-grey">Element− Each item stored in an array is called an element.</li>
+    <li class = "w3-large w3-text-dark-grey">Index − Each location of an element in an array has a numerical index, which is used to identify the element.</li>
+  </ul>
+</p>
+<p class = "w3-xlarge w3-text-dark-grey">Creating an Array</p>
+<p class = "w3-large w3-text-dark-grey">The array module supports numeric arrays in Python 3. So, to create an array in Python 3, we will have to import the array module.<br>
+  Following is the syntax for creating an array. Now to understand how to declare array in Python, let us take a look at the python array example given below:<br>
+  <br>
+  from array import *<br>
+  arraname = array(typecode, [Initializers])<br>
+  <br>
+  Here, typecode is what we use to define the type of the value that is going to be stored in the array.</p>
+<p class = "w3-xlarge w3-text-dark-grey">Accessing array element</p>
+<p class = "w3-large w3-text-dark-grey">We can access the elements of an array in Python using the respective indices of those elements, as shown in the following example.<br>
+  <br>
+  from array import*<br>
+  array_1 = array(‘i’, [1,2,3,4,5])<br>
+  print (array_1[0])<br>
+  print (array_1[3])<br>
+  1<br>
+  4<br>
+  <br>
+  The index of the array elements starts from 0. When we printed the value of array1[0], it displayed the first element.<br></p>
+<p class = "w3-xlarge w3-text-dark-grey">Basic Operations of Array</p>
+<p class = "w3-large w3-text-dark-grey">Following are some of the basic operations supported by array module in Python:<br>
+  <br>
+  1️⃣ Traverse of an Array in Python: Iterating between elements in an array is known as traversing. We can easily iterate through the elements of an array using Python for loop.<br>
+  <br>
+  Example:<br>
+  from array import *<br>
+  array_1 = array(‘i’, [1,2,3,4,5])<br>
+  for x in array_1:<br>
+  print (x)<br>
+  <br>
+  Output:<br>
+  1<br>
+  2<br>
+  3<br>
+  4<br>
+  5<br>
+  <br>
+  2️⃣ Insertion of Elements in an Array in Python:Using this operation, we can add one or more elements to any given index.<br>
+  <br>
+  Example:<br>
+  from array import *<br>
+  array_1 = array(‘i’, [1,2,3,4,5])<br>
+  array_1.insert(1,6)<br>
+  for x in array_1:<br>
+  print (x)<br>
+  <br>
+  Output:<br>
+  1<br>
+  6<br>
+  2<br>
+  3<br>
+  4<br>
+  5<br>
+  <br>
+  3️⃣ Deletion of Elements in an Array in Python:Using this operation, we can delete any element residing at a specified index. We can remove any element using the built in remove() method.<br>
+  <br>
+  Example:<br>
+  from array import *<br>
+  array_1 = array(‘i’, [1,2,3,4,5])<br>
+  array_1.remove(2)<br>
+  For x in array_1:<br>
+  print (x)<br>
+  <br>
+  Output:<br>
+  1<br>
+  3<br>
+  4<br>
+  5<br>
+  <br>
+  4️⃣ Searching Elements in an Array in Python:Using this operation, we can search for an element by its index or its value.<br>
+  <br>
+  Example:<br>
+  from array import *<br>
+  array_1 = array(‘i’, [1,2,3,4,5])<br>
+  print (array_1.index(3))<br>
+  <br>
+  Output:<br>
+  2<br>
+  <br>
+  5️⃣ Updating Elements in an Array in Python:Using this operation, we can update an element at a given index.<br>
+  <br>
+  Example:<br>
+  from array import *<br>
+  array_1 = array(‘i’, [1,2,3,4,5])<br>
+  array_1[2] = 100<br>
+  for x in array_1:<br>
+  print(x)<br>
+  </p>
+  <hr><hr>
+</div>
+</div>
+<br>
+</div>
+</div>
+
 
 </div>
 </div>
