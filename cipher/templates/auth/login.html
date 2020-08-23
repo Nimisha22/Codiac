@@ -124,13 +124,13 @@
 			<input type = "submit" class = "w3-center w3-xlarge submit" id="click" value = "Sign In">
 		</div>	<br>
 		</form>
-    </div>
 
-	<section class="w3-top mess">
+	<div class="w3-card-4">
 		{% for message in get_flashed_messages() %}
-			<div class="w3-center w3-xxxlarge fl">{{ message }}</div>
+			<div class="w3-center w3-xlarge fl">{{ message }}</div>
 		{% endfor %}
-	</section>
+	</div>
+    </div>
 
 	<div class = "w3-half w3-card-4 w3-text-white card back div2">
 		<br><br><br><br>

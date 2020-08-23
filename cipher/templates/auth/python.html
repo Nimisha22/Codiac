@@ -25,56 +25,66 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 	position: fixed;
 	overflow: auto;
 }
+.color{
+    background-color: #a82e3f;
+    color: #FFFFFF;
+}
+body {
+    background-color: #db5c77;
+}
+.hovering:hover {
+    background-color: #ffb6c1;
+    color: #000000;
+}
+.dec{
+    text-decoration: none;
+}
+.pad {
+    padding: 10px;
+    margin-top: 100px;
+}
 </style>
 </head>
-<body class="w3-light-grey">
+<body>
 <div class="w3-top ">
-<div class="w3-bar w3-pale-green w3-card">
-
+<div class="w3-bar color w3-card">
 <!-- Top fixed navigagtion bar -->
-<a href="{{ url_for('auth.logout') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-sign-out"></i>&nbsp;&nbsp;Log Out</a>
-<a href="{{ url_for ('auth.index') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-users"></i>&nbsp;&nbsp;Discussion Forum</a>
-<a href="" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;{{g.user["username"]}}</a>
-<a href="" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-envelope"></i>&nbsp;&nbsp;Email Us</a>
-<a href="{{ url_for ('auth.home') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right"><i class="fa fa-home"></i>&nbsp;&nbsp;HOME</a>
-<div class="w3-dropdown-hover w3-hide-small w3-right">
-<button class="w3-padding-large w3-button w3-hover-pale-dark-grey" title="More">Learn More&nbsp;&nbsp;<i class="fa fa-caret-down"></i></button>     
-<div class="w3-dropdown-content w3-bar-block w3-card-4">
-<a href="{{ url_for('auth.cpage') }}" class="w3-bar-item w3-button w3-hover-dark-grey ">C</a>
-</div>
-</div>
+<a href="{{ url_for('auth.logout') }}" class=" w3-bar-item dec  w3-padding-large hovering w3-right">&nbsp;<i class="fa fa-sign-out"></i>&nbsp;&nbsp;Log Out</a>
+<a href="mailto:learnwithcodiac@gmail.com" class=" w3-bar-item dec w3-padding-large hovering w3-right">&nbsp;<i class="fa fa-envelope"></i>&nbsp;&nbsp;Email Us</a>
+<a href="{{ url_for ('auth.index') }}" class=" w3-bar-item dec w3-padding-large hovering w3-right">&nbsp;<i class="fa fa-users"></i>&nbsp;&nbsp;Discussion Forum</a>
+<a href="{{ url_for ('auth.cpage') }}" class=" w3-bar-item dec w3-padding-large hovering w3-right"><i class="fa fa-code"></i>&nbsp;&nbsp;Learn C</a>
+<a href="{{ url_for ('auth.home') }}" class=" w3-bar-item dec w3-padding-large hovering w3-right"><i class="fa fa-home"></i>&nbsp;&nbsp;HOME</a>
+<a href="" class=" w3-bar-item dec w3-padding-large w3-right">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;{{g.user["username"]}}</a> 
 </div>
 </div>
 
 
 <!-- Left side Navigation for the page -->
-<nav class="w3-sidebar w3-pale-green w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:500px;font-weight:bold;overflow:auto" id="mySidebar"><br>  
+<nav class="w3-sidebar color  w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:500px;font-weight:bold;overflow:auto" id="mySidebar"><br>  
 <div class="w3-bar-block">
-<h2 class = "w3-xxxlarge w3-text-dark-grey w3-center">Learn Python</h2>
+<h2 class = "w3-xxxlarge w3-text-pale-red w3-center">Learn Python</h2>
 <br><br>
-<a href = "#aboutPython" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">About Python</a>
+<a href = "#aboutPython" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">About Python</a>
 <br><br>
-<a href = "#gettingstarted" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Getting Started</a>
+<a href = "#gettingstarted" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Getting Started</a>
 <br><br>
-<a href = "#variables" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Variables</a>
+<a href = "#variables" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Variables</a>
 <br><br>
-<a href = "#keywords" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Keywords</a>
+<a href = "#keywords" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Keywords</a>
 <br><br>
-<a href = "#datatypes" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Datatypes</a>
+<a href = "#datatypes" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Datatypes</a>
 <br><br>
-<a href = "#operators" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Operators</a>
+<a href = "#loops" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Loops</a>
 <br><br>
-<a href = "#Conditional Statements" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Conditional Statements</a>
+<a href = "#forloop" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">For loop</a>
 <br><br>
-<a href = "#for loop" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">For loop</a>
+<a href = "#whileloop" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">While loop</a>
 <br><br>
-<a href = "#while loop" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">While loop</a>
+<a href = "#firstprogramming" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">First step towards programming</a>
 <br><br>
-<a href = "#First step towards programming" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">First step towards programming</a>
+<a href = "#functions" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Functions</a>
 <br><br>
-<a href = "#Functions" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Functions</a>
-<br><br>
-<a href = "#Arrays" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Arrays</a>
+<a href = "#arrays" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Arrays</a>
 <br><br>
 <br><br>
   </div>
@@ -96,7 +106,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 <div id = "aboutPython">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-pale-blue w3-margin-bottom">
+<div class = "w3-container w3-card w3-pale-red w3-margin-bottom">
 <h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;About Python</h2>
 <div class = "w3-container">
 <hr>
@@ -192,7 +202,7 @@ Here is a sample snip using the semicolon:<br>
 <div id = "variables">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-pale-yellow">
+<div class = "w3-container w3-card w3-pale-red">
 <h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-check-circle"></i>&nbsp;&nbsp;Variables</h2>
 <hr><hr>
 <p class = "w3-large w3-text-dark-grey">A variable can be considered a storage container for data. Every variable has a name. Python has no command for declaring a variable. A variable is created the moment you first assign a value to it. In Python, assignment can be done by writing the variable name followed by the value separated by an equal = symbol. The skeleton or pseudo-code is</p>
@@ -240,7 +250,7 @@ Here is a sample snip using the semicolon:<br>
 <div id = "keywords">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-sand">
+<div class = "w3-container w3-card w3-pale-red">
 <h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-key"></i>&nbsp;&nbsp;Keywords</h2>
 <hr><hr>
 <p class = "w3-large w3-text-dark-grey">Keywords are the reserved words in Python. We cannot use a keyword as a <span class = "w3-text-blue">variable</span> name, <span class = "w3-text-blue">function</span> name or any other identifier. All the keywords except <span class = "w3-light-grey">&nbsp;&nbsp;&nbsp;True&nbsp;&nbsp;&nbsp;</span>, <span class = "w3-light-grey">&nbsp;&nbsp;&nbsp;False&nbsp;&nbsp;&nbsp;</span> and <span class = "w3-light-grey">&nbsp;&nbsp;&nbsp;None&nbsp;&nbsp;&nbsp;</span> are in lowercase and they must be written as they are. The list of all the keywords is given below.</p>
@@ -329,7 +339,7 @@ Here is a sample snip using the semicolon:<br>
 <div id = "datatypes">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-pale-light-grey">
+<div class = "w3-container w3-card w3-pale-red">
 <h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-table"></i>&nbsp;&nbsp;Data Types</h2>
 <hr><hr>
 <p class = "w3-large w3-text-dark-grey">There are three numeric types in Python: int for integers, float for decimal numbers, and complex for complex numbers. General mathematical operations such as addition, subtraction, and multiplication can be done on them. The integer numbers (e.g. 2, 4, 20) have type int, the ones with a fractional part (e.g. 5.0, 1.6) have type float. Operations when the type are the same: When the type of the input numbers are the same the result will be a number of the same class that the input numbers belong to. 
@@ -358,11 +368,12 @@ Here is a sample snip using the semicolon:<br>
 
 
 <!-- LOOPS -->
-<div id = "Loops">
+<div id = "loops">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-pale-blue w3-margin-bottom">
-<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;Loops</h2>
+<div class = "w3-container w3-card w3-pale-red w3-margin-bottom">
+<hr><hr>
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-spinner"></i>&nbsp;&nbsp;Loops</h2>
 <div class = "w3-container">
 <hr>
 <hr>
@@ -372,16 +383,18 @@ Here is a sample snip using the semicolon:<br>
 <li class = "w3-large w3-text-dark-grey">Range Controlled loop</li>
 <li class = "w3-large w3-text-dark-grey">Collection Controlled loop</li>
 </ul>
+<hr><hr>
 </div>
 </div>
 <br>
 
 <!-- For Loop -->
-<div id = "For Loop">
+<div id = "forloop">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-pale-blue w3-margin-bottom">
-<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;For Loop</h2>
+<div class = "w3-container w3-card w3-pale-red w3-margin-bottom">
+    <hr><hr>
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-circle-o"></i>&nbsp;&nbsp;For Loop</h2>
 <div class = "w3-container">
 <hr>
 <hr>
@@ -527,6 +540,7 @@ Here is a sample snip using the semicolon:<br>
   9<br>
   10<br>
       </p>
+      <hr><hr>
     
 </div>
 </div>
@@ -534,11 +548,12 @@ Here is a sample snip using the semicolon:<br>
 
 
 <!-- While Loop -->
-<div id = "While Loop">
+<div id = "whileloop">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-pale-blue w3-margin-bottom">
-<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;While Loop</h2>
+<div class = "w3-container w3-card w3-pale-red w3-margin-bottom">
+<hr><hr>
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-circle-o-notch"></i>&nbsp;&nbsp;While Loop</h2>
 <div class = "w3-container">
 <hr>
 <hr>
@@ -645,6 +660,7 @@ Here is a sample snip using the semicolon:<br>
   4<br>
   5<br>
   </p>
+  <hr><hr>
 </div>
 </div>
 <br>
@@ -652,11 +668,12 @@ Here is a sample snip using the semicolon:<br>
 
 
 <!-- First step towards programming-->
-<div id = "First step towards programming">
+<div id = "firstprogramming">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-pale-blue w3-margin-bottom">
-<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;First step towards programming</h2>
+<div class = "w3-container w3-card w3-pale-red w3-margin-bottom">
+    <hr><hr>
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-plus-circle"></i>&nbsp;&nbsp;First step towards programming</h2>
 <div class = "w3-container">
 <hr>
 <hr>
@@ -683,6 +700,7 @@ Here is a sample snip using the semicolon:<br>
 <li class = "w3-large w3-text-dark-grey">The body of the loop is indented: indentation is Python’s way of grouping statements. At the interactive prompt, you have to type a tab or space(s) for each indented line. Note that each line within a basic block must be indented by the same amount.</li>
 <li class = "w3-large w3-text-dark-grey">The print() function writes the value of the argument(s) it is given. It differs from just writing the expression you want to write (as we did earlier in the calculator examples) in the way it handles multiple arguments, floating point quantities, and strings. Strings are printed without quotes, and a space is inserted between items, so you can format things nicely</li>
 </ul>
+<hr><hr>
 </div>
 </div>
 <br>
@@ -691,11 +709,12 @@ Here is a sample snip using the semicolon:<br>
 
 
 <!-- Functions -->
-<div id = "Functions">
+<div id = "functions">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-pale-blue w3-margin-bottom">
-<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;Functions</h2>
+<div class = "w3-container w3-card w3-pale-red w3-margin-bottom">
+    <hr><hr>
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-wrench"></i>&nbsp;&nbsp;Functions</h2>
 <div class = "w3-container">
 <hr>
 <hr>
@@ -861,6 +880,7 @@ Functions are a convenient way to divide your code into useful blocks, allowing 
   sum of two number is: 30<br>
 </p>
 <p class = "w3-xlarge w3-text-dark-grey"></p>
+<hr><hr>
 </div>
 </div>
 <br>
@@ -869,11 +889,12 @@ Functions are a convenient way to divide your code into useful blocks, allowing 
 
 
 <!-- Arrays -->
-<div id = "Arrays">
+<div id = "arrays">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-pale-blue w3-margin-bottom">
-<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;Arrays</h2>
+<div class = "w3-container w3-card w3-pale-red w3-margin-bottom">
+    <hr><hr>
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-tasks"></i>&nbsp;&nbsp;Arrays</h2>
 <div class = "w3-container">
 <hr>
 <hr>
@@ -974,13 +995,10 @@ Functions are a convenient way to divide your code into useful blocks, allowing 
   for x in array_1:<br>
   print(x)<br>
   </p>
+  <hr><hr>
 </div>
 </div>
 <br>
-
-
-<hr>
-<hr>
 </div>
 </div>
 
