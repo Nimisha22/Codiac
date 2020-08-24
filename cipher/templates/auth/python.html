@@ -29,9 +29,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     background-color: #a82e3f;
     color: #FFFFFF;
 }
-body {
-    background-color: #db5c77;
-}
 .hovering:hover {
     background-color: #ffb6c1;
     color: #000000;
@@ -45,7 +42,7 @@ body {
 }
 </style>
 </head>
-<body>
+<body class = "w3-grey">
 <div class="w3-top ">
 <div class="w3-bar color w3-card">
 <!-- Top fixed navigagtion bar -->
@@ -60,35 +57,35 @@ body {
 
 
 <!-- Left side Navigation for the page -->
-<nav class="w3-sidebar color  w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:500px;font-weight:bold;overflow:auto" id="mySidebar"><br>  
+<nav class="w3-sidebar w3-grey w3-text-white  w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:500px;font-weight:bold;overflow:auto" id="mySidebar"><br>  
 <div class="w3-bar-block">
 <h2 class = "w3-xxxlarge w3-text-pale-red w3-center">Learn Python</h2>
 <br><br>
-<a href = "#aboutPython" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">About Python</a>
+<a href = "#aboutPython" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">About Python</a>
 <br><br>
-<a href = "#gettingstarted" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Getting Started</a>
+<a href = "#gettingstarted" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Getting Started</a>
 <br><br>
-<a href = "#variables" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Variables</a>
+<a href = "#variables" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Variables</a>
 <br><br>
-<a href = "#keywords" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Keywords</a>
+<a href = "#keywords" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Keywords</a>
 <br><br>
-<a href = "#datatypes" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Datatypes</a>
+<a href = "#datatypes" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Datatypes</a>
 <br><br>
-<a href = "#operators" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Operators</a>
+<a href = "#operators" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Operators</a>
 <br><br>
-<a href = "#conditional statements" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Conditional Statements</a>
+<a href = "#conditionalstatements" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Conditional Statements</a>
 <br><br>
-<a href = "#loops" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Loops</a>
+<a href = "#loops" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Loops</a>
 <br><br>
-<a href = "#forloop" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">For loop</a>
+<a href = "#forloop" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">For loop</a>
 <br><br>
-<a href = "#whileloop" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">While loop</a>
+<a href = "#whileloop" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">While loop</a>
 <br><br>
-<a href = "#firstprogramming" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">First step towards programming</a>
+<a href = "#firstprogramming" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">First step towards programming</a>
 <br><br>
-<a href = "#functions" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Functions</a>
+<a href = "#functions" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Functions</a>
 <br><br>
-<a href = "#arrays" class="w3-button w3-white w3-round-xxlarge" style = "width: 100%">Arrays</a>
+<a href = "#arrays" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Arrays</a>
 <br><br>
 <br><br>
   </div>
@@ -343,7 +340,7 @@ Here is a sample snip using the semicolon:<br>
 <div id = "datatypes">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-pale-light-grey">
+<div class = "w3-container w3-card w3-pale-red">
 <h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-table"></i>&nbsp;&nbsp;Data Types</h2>
 <hr><hr>
 <ul>
@@ -691,11 +688,11 @@ You can also use for/in to work on a string. The string acts like a list of its 
 
 
 <!-- Operators-->
-<div id = "Operators">
+<div id = "operators">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-pale-blue w3-margin-bottom">
-<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;Operators</h2>
+<div class = "w3-container w3-card w3-pale-red w3-margin-bottom">
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-gears"></i>&nbsp;&nbsp;Operators</h2>
 <div class = "w3-container">
 <hr>
 <hr>
@@ -786,11 +783,11 @@ You can also use for/in to work on a string. The string acts like a list of its 
 
 
 <!-- Conditional Statements -->
-<div id = "Conditional Statements">
+<div id = "conditionalstatements">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-pale-blue w3-margin-bottom">
-<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;Conditional Statements</h2>
+<div class = "w3-container w3-card w3-pale-red w3-margin-bottom">
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-question"></i>&nbsp;&nbsp;Conditional Statements</h2>
 <div class = "w3-container">
 <hr>
 <hr>

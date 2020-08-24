@@ -7,7 +7,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style>
 		.back {
-			height: 300px;
       		background-repeat: no-repeat;
             background-position: center;
             background-attachment: fixed;
@@ -35,26 +34,106 @@
 		.navigation {
 			background-color: #C71585;
 		}
+        .color {
+            background-color: #C71585;
+            color: #FFFFFF;
+        }
+        #image {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+        }
+        .st {
+            display: inline-block;
+        }     
+        .dimension{
+            margin: 12%;
+            height: 400px;
+            padding: 4%;
+            padding-top: 25%;
+
+        }
+        .footlink {
+                      font-size: 50px;
+                                   display: inline-block;
+                                      transition: transform .01s;
+                                         margin: 2%
+                                          }
+         .whats:hover{
+                   color: #25D366;
+                       transform: scale(2.5);
+                         }
+           .face:hover{
+                     color: #3b5998;
+                         transform: scale(2.5);
+                           }
+             .insta:hover{
+                       color: #E1306C;
+                           transform: scale(2.5);
+                             }
+               .tele:hover{
+                         color: #0088cc;
+                             transform: scale(2.5);
+                               }
+                 .enve:hover{
+                           color: #D44638;
+                               transform: scale(2.5);
+                                 }
+                   .mobi:hover{
+                             color: #833AB4;
+                                 transform: scale(2.5);
+                                   }
 	</style>
 </head>
 <body>
 	<br><br><br><br>
 	<div class = "w3-top navigation">
-		<p class = "w3-xlarge w3-center w3-left plinks"><a href = "#" class = "linkstop">&nbsp;&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp;&nbsp;Codiac</a></p>
+        <p class = "w3-xlarge w3-center w3-left plinks"><a href = "#" class = "linkstop">&nbsp;&nbsp;&nbsp;<img src = "{{ url_for('static', filename='logo.jpeg') }}" id = "image">&nbsp;&nbsp;Codiac</a></p>
         <p class = "w3-xlarge w3-center w3-right plinks"><a href = "{{ url_for('auth.logout') }}" class = "linkstop">&nbsp;&nbsp;&nbsp;<i class="fa fa-sign-out"></i>&nbsp;&nbsp;<span class = "hovering">Sign Out</span>&nbsp;&nbsp;&nbsp;</a></p>
         <p class = "w3-xlarge w3-center w3-right plinks"><a href = "#" class = "linkstop">&nbsp;&nbsp;&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;Welcome {{g.user["username"]}}&nbsp;&nbsp;&nbsp;</a></p>
 	</div>
-	<div class = "w3-full w3-card-4 back w3-indigo">
+
+
+	<div class = "w3-third w3-center st">
 		<br><br><br>
-		<p class = "w3-xxxlarge w3-center"><a href = "{{ url_for ('auth.cpage') }}" class = "links"><i class="fa fa-code"></i>&nbsp;&nbsp;C</a></p>
+        <div class = "w3-center w3-card-4 w3-indigo back dimension">
+        <a href = "{{ url_for ('auth.cpage') }}" class = "links">
+        <p class = "w3-xxlarge w3-center">
+        <i class="fa fa-code"></i>&nbsp;&nbsp;C</p></a>
+        </div>
 	</div>
-	<div class = "w3-full w3-card-4 back w3-yellow">
+
+	<div class = "w3-third w3-center st">
 		<br><br><br>
-		<p class = "w3-xxxlarge w3-center w3-text-white"><a href = "{{ url_for ('auth.python') }}" class = "links"><i class="fa fa-code"></i>&nbsp;&nbsp;Python</a></p>
+        <div class = "w3-card-4 w3-yellow back w3-center dimension">
+        <a href = "{{ url_for ('auth.python') }}" class = "links">
+		<p class = "w3-xxlarge w3-center w3-text-white">
+        <i class="fa fa-code"></i>&nbsp;&nbsp;Python</p></a>
+        </div>
 	</div>
-	<div class = "w3-full w3-card-4 back w3-blue-grey">
-		<br><br><br>
-		<p class = "w3-xxxlarge w3-center"><a href = "{{ url_for ('auth.index') }}" class = "links"><i class="fa fa-users"></i>&nbsp;&nbsp;Discussion Forum</a></p>
+
+    <div class = "w3-third w3-center st">
+        <br><br><br>
+	<div class = "w3-card-4 w3-grey back w3-center dimension">
+        <a href = "{{ url_for ('auth.index') }}" class = "links">
+		<p class = "w3-xxlarge w3-center w3-text-white">
+        <i class="fa fa-users"></i>&nbsp;&nbsp;Discussion Forum</p></a>
 	</div>
+    </div>
+
+    <p class = "w3-xxxlarge w3-center"><span class = "foot">&nbsp;&nbsp;</span></p>
+    <div class = "color">
+        <br><br>
+        <p class = "w3-xxxlarge w3-center"><span class = "foot">Contact Us</span></p>
+        <div class = "w3-xxxlarge w3-center">
+            <div class = "w3-center footlink whats"><a href = "" style = "text-decoration: none"><i class = "fa fa-whatsapp"></i></a></div>
+            <div class = "w3-center footlink face"><a href = "" style = "text-decoration: none"><i class = "fa fa-facebook"></i></a></div>
+            <div class = "w3-center footlink enve"><a href = "mailto:[learnwithcodiac@gmail.com]" style = "text-decoration: none"><i class = "fa fa-envelope"></i></a></div>
+            <div class = "w3-center footlink tele"><a href = "" style = "text-decoration: none"><i class = "fa fa-telegram"></i></a></div>
+            <div class = "w3-center footlink insta"><a href = "" style = "text-decoration: none"><i class = "fa fa-instagram"></i></a></div>
+            <div class = "w3-center footlink mobi"><a href = "tel:+919593369403" style = "text-decoration: none"><i class = "fa fa-mobile"></i></a></div>
+        </div>
+    </div>
+    </div>
 </html>
 
