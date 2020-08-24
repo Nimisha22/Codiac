@@ -44,7 +44,7 @@ Codiac offers you exactly what you need as a beginner in coding.
 
 
 ## Topics we aim to cover
-
+`
 1. Algorithm  
 2. About the Language (Who made it, what are the key features, why it is used)  
 3. Getting started (Absolute beginner level guide to get started)  
@@ -57,6 +57,7 @@ Codiac offers you exactly what you need as a beginner in coding.
 10. Arrays
 11. Functions
 12. Language specific basics 
+`
 
 ## What else ?
 
