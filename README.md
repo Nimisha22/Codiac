@@ -1,5 +1,5 @@
 # Codiac
-![Codiac Logo](codiac/logos/logo.jpeg =100x20)
+![Codiac Logo]('./codiac/logos/logo.jpeg')
 
 ## Target Audience - Beginners in Coding
 
