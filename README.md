@@ -37,7 +37,7 @@ Codiac offers you exactly what you need as a beginner in coding.
 # Python
 
 <hr>
-<img src="./codiac/logos/python.png" alt="C Logo" width="300"/>
+<img src="./codiac/logos/python.png" alt="Python Logo" width="300"/>
 <hr>
 <br>
 
@@ -60,6 +60,11 @@ Codiac offers you exactly what you need as a beginner in coding.
 ```
 
 ## What else ?
+
+<hr>
+<img src="./codiac/logos/bot.jpg" alt="Bot" width="200"/>
+<hr>
+<br>
 
 We offer you interactive learning through our bot, Codiac.
 
