@@ -1,5 +1,5 @@
 # Codiac
-
+<img src = "./codiac/static/logo.jpeg" alt = "Codiac Logo">
 
 ## Target Audience - Beginners in Coding
 
