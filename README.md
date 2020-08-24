@@ -1,5 +1,5 @@
 # Codiac
-<img src="./codiac/logos/logo.jpeg" alt="Codiac Logo" width="200"/>
+<img src="./codiac/logos/logo.jpeg" alt="Codiac Logo" width="500"/>
 
 
 ## Target Audience - Beginners in Coding
