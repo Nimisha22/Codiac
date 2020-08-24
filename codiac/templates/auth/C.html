@@ -26,61 +26,72 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 	position: fixed;
 	overflow: auto;
 }
+.color {
+    background-color:  #a82e3f;
+    color: #FFFFFF;
+}
+.hovering:hover {
+    background-color: #ffb6c1;
+    color: #000000;
+}
+.dec {
+    text-decoration: none;
+}
+.pad {
+    padding: 10px;
+    margin-top: 100px;
+}
 </style>
 </head>
-<body class="w3-light-grey">
+<body class = "w3-grey">
 <div class="w3-top ">
-<div class="w3-bar w3-pale-green w3-card">
+<div class="w3-bar color w3-card">
 
 <!-- Top fixed navigagtion bar -->
-<a href="{{ url_for('auth.logout') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-sign-out"></i>&nbsp;&nbsp;Log Out</a>
-<a href="{{ url_for ('auth.index') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-users"></i>&nbsp;&nbsp;Discussion Forum</a>
-<a href="" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;{{g.user["username"]}}</a>
-<a href="" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right">&nbsp;<i class="fa fa-envelope"></i>&nbsp;&nbsp;Email Us</a>
-<a href="{{ url_for ('auth.home') }}" class=" w3-bar-item w3-button w3-padding-large w3-hover-dark-grey w3-right"><i class="fa fa-home"></i>&nbsp;&nbsp;HOME</a>
-<div class="w3-dropdown-hover w3-hide-small w3-right">
-<button class="w3-padding-large w3-button w3-hover-pale-dark-grey" title="More">Learn More&nbsp;&nbsp;<i class="fa fa-caret-down"></i></button>     
-<div class="w3-dropdown-content w3-bar-block w3-card-4">
-<a href="{{ url_for('auth.python') }}" class="w3-bar-item w3-button w3-hover-dark-grey ">Python</a>
-</div>
+<a href="{{ url_for('auth.logout') }}" class=" w3-bar-item dec  w3-padding-large hovering w3-right">&nbsp;<i class="fa fa-sign-out"></i>&nbsp;&nbsp;Log Out</a>
+<a href="mailto:learnwithcodiac@gmail.com" class=" w3-bar-item dec w3-padding-large hovering w3-right">&nbsp;<i class="fa fa-envelope"></i>&nbsp;&nbsp;Email Us</a>
+<a href="{{ url_for ('auth.index') }}" class=" w3-bar-item dec w3-padding-large hovering w3-right">&nbsp;<i class="fa fa-users"></i>&nbsp;&nbsp;Discussion Forum</a>
+<a href="{{ url_for ('auth.python') }}" class=" w3-bar-item dec w3-padding-large hovering w3-right"><i class="fa fa-code"></i>&nbsp;&nbsp;Learn Python</a>
+<a href="{{ url_for ('auth.home') }}" class=" w3-bar-item dec w3-padding-large hovering w3-right"><i class="fa fa-home"></i>&nbsp;&nbsp;HOME</a> 
+<a href="" class=" w3-bar-item dec w3-padding-large w3-right">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;{{g.user["username"]}}</a>
 </div>
 </div>
 </div>
 
 
 <!-- Left side Navigation for the page -->
-<nav class="w3-sidebar w3-pale-green w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:500px;font-weight:bold;overflow:auto" id="mySidebar"><br>  
+<nav class="w3-sidebar w3-grey w3-text-white w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:500px;font-weight:bold;overflow:auto" id="mySidebar"><br>  
 <div class="w3-bar-block">
-<h2 class = "w3-xxxlarge w3-text-dark-grey w3-center">Learn C</h2>
+<h2 class = "w3-xxxlarge w3-text-pale-red w3-center">Learn C</h2>
 <br><br>
-<a href = "#aboutC" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">About C</a>
+<a href = "#aboutC" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">About C</a>
 <br><br>
-<a href = "#algorithm" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Algorithm</a><br><br>
-<a href = "#gettingstarted" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Getting Started</a>
+<a href = "#algorithm" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Algorithm</a><br><br>
+<a href = "#gettingstarted" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Getting Started</a>
 <br><br>
-<a href = "#variables" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Variables</a>
+<a href = "#variables" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Variables</a>
 <br><br>
-<a href = "#constants" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Constants</a>
+<a href = "#constants" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Constants</a>
 <br><br>
-<a href = "#keywords" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Keywords</a>
+<a href = "#keywords" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Keywords</a>
 <br><br>
-<a href = "#datatypes" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Datatypes</a>
+<a href = "#datatypes" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Datatypes</a>
 <br><br>
-<a href = "#operators" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Operators </a>
+<a href = "#operators" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Operators </a>
 <br><br>
-<a href = "#firstprogram" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Writing your first C Program</a>
+<a href = "#firstprogram" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Writing your first C Program</a>
 <br><br>
-<a href = "#descioncontrol" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Descion Control Structure</a>
+<a href = "#descioncontrol" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Descion Control Structure</a>
 <br><br>
-<a href = "#casecontrol" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Case Control Structure</a>
+<a href = "#casecontrol" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Case Control Structure</a>
 <br><br>
-<a href = "#loopcontrol" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Loop Control Structure</a>
+<a href = "#loopcontrol" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Loop Control Structure</a>
 <br><br>
-<a href = "#jump" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Jump Statements</a>
+<a href = "#jump" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Jump Statements</a>
 <br><br>
-<a href = "#functions" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Functions</a>
+<a href = "#functions" class= "w3-button  w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Functions</a>
 <br><br>
-<a href = "#arrays" class="w3-button w3-white w3-round-xxlarge w3-hover-dark-grey" style = "width: 100%">Arrays</a>
+<a href = "#arrays" class="w3-button w3-white w3-round-xxlarge w3-hover-pink w3-hover-text-white" style = "width: 100%">Arrays</a>
 <br><br><br><br>
   </div>
 </nav>
@@ -101,7 +112,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 <div id = "aboutC">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-pale-blue w3-margin-bottom">
+<div class = "w3-container w3-card w3-pale-red w3-margin-bottom">
 <h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;About C</h2>
 <div class = "w3-container">
 <hr>
@@ -199,7 +210,7 @@ subroutines/procedures - functions</p>
 <div id = "gettingstarted">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-pale-yellow">
+<div class = "w3-container w3-card w3-pale-red">
 <h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-play"></i>&nbsp;&nbsp;Getting Started</h2>
 <hr><hr>
 <h1 class = "w3-text-darkgrey">Steps in learning C are :</h1>
@@ -272,7 +283,7 @@ represent information. Valid alphabets, numbers and special symbols allowed in C
 <div id = "variables">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-sand">
+<div class = "w3-container w3-card w3-pale-red">
 <h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-check-circle"></i>&nbsp;&nbsp;Variables</h2>
 <hr><hr>
 <p class = "w3-xlarge w3-text-dark-grey">1️⃣ Description</p>
@@ -305,7 +316,7 @@ represent information. Valid alphabets, numbers and special symbols allowed in C
 <div id = "constants">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-light-grey">
+<div class = "w3-container w3-card w3-pale-red">
 <h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-stop"></i>&nbsp;&nbsp;Constants</h2>
 <hr><hr>
 <p class = "w3-large w3-text-dark-grey">Constants are often called literals because their value never changes. Constants are of two types:</p>
@@ -353,7 +364,7 @@ represent information. Valid alphabets, numbers and special symbols allowed in C
 <div id = "keywords">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-pale-blue">
+<div class = "w3-container w3-card w3-pale-red">
 <h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-key"></i>&nbsp;&nbsp;Keywords</h2>
 <hr><hr>
 <p class = "w3-large w3-text-dark-grey">Keywords are the words whose meaning has already been explained to the C compiler. The keywords cannot be used as variable names because if we do so we are trying to assign a new meaning to the keyword, which is not allowed by the computer.</p>
@@ -443,7 +454,7 @@ In C programming language, a character variable does not contain a character val
 <div id = "operators">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-pale-yellow">
+<div class = "w3-container w3-card w3-pale-red">
 <h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-cogs"></i>&nbsp;&nbsp;Operators</h2>
 <hr><hr>
 <p class = "w3-large w3-text-dark-grey">As its name suggests, an operator performs an operation. An operator operates on operands. Consider an expression, a + b -> Here, a and b are operands while + is an operator.</p>
@@ -544,7 +555,7 @@ If you use the ++ operator as a postfix like: var++. The original value of var i
 <div id = "firstprogram">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-sand">
+<div class = "w3-container w3-card w3-pale-red">
 <h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-code"></i>&nbsp;&nbsp;Writing Your First C Program</h2>
 <hr><hr>
 <p class = "w3-xlarge w3-text-dark-grey">Before we begin with our first C program do remember the
@@ -654,7 +665,7 @@ statement terminator.</p>
 <div id = "descioncontrol">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-light-grey">
+<div class = "w3-container w3-card w3-pale-red">
 <h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;Descion Control Structure</h2>
 <hr><hr>
 <p class = "w3-large w3-text-dark-grey">The descion control structure controls the flow of the program to specific parts depending on the logical descion.</p>
@@ -790,7 +801,7 @@ statement terminator.</p>
 <div id = "casecontrol">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-pale-blue">
+<div class = "w3-container w3-card w3-pale-red">
 <h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-arrow-down"></i>&nbsp;&nbsp;Case Control Structure</h2>
 <hr><hr>
 <p class = "w3-xlarge w3-text-dark-grey">Switch case statement:</p>
@@ -1445,7 +1456,7 @@ The condition is tested at the end of the loop, the statements are executed at l
 <div id = "jump">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-pale-yellow">
+<div class = "w3-container w3-card w3-pale-red">
 <h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-refresh"></i>&nbsp;&nbsp;Jump Statements</h2>
 <hr><hr>
 <p class = "w3-xxlarge w3-text-dark-grey">JUMPING STATEMENTS IN LOOPS:</p>
@@ -1699,7 +1710,7 @@ The condition is tested at the end of the loop, the statements are executed at l
 <div id = "functions">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-sand">
+<div class = "w3-container w3-card w3-pale-red">
 <h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-wrench"></i>&nbsp;&nbsp;Functions</h2>
 <hr><hr>
 <p class = "w3-xlarge w3-text-dark-grey">A function is a self-contained block of statements that perform a
@@ -1905,7 +1916,7 @@ Let's see a simple example of C function that returns int value from the functio
 <div id = "arrays">
 </div>
 <br><br><br>
-<div class = "w3-container w3-card w3-light-grey">
+<div class = "w3-container w3-card w3-pale-red">
 <h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-th"></i>&nbsp;&nbsp;Arrays</h2>
 <hr><hr>
 <p class = "w3-xlarge w3-text-dark-grey">Arrays</p>

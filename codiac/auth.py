@@ -12,7 +12,7 @@ from werkzeug.security import check_password_hash
 from werkzeug.exceptions import abort
 from werkzeug.security import generate_password_hash
 
-from cipher.db import get_db
+from codiac.db import get_db
 
 bp = Blueprint("auth", __name__, url_prefix="/auth")
 
@@ -247,7 +247,7 @@ def delete(topic_id):
     """
     get_post(topic_id)
     db = get_db()
-    db.execute("DELETE FROM post WHERE id = ?", (topic_id,))
+    db.execute("DELETE FROM post WHERE topic_id = ?", (topic_id,))
     db.commit()
     return redirect(url_for("auth.index"))
 
