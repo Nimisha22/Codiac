@@ -23,7 +23,7 @@ Everything you need to get started with !!
 > Someone has just started to code but ze finds a big word somewhere "RECURSION". 
 > Ze has no idea how to implement it or use it to write his own code.
 > Ze visits our website and  tells our bot that ze wants to know about "RECURSION". 
-> Our bot quickly teaches zir the basics of "RECURSION". 
+> Our bot quickly teaches ze the basics of "RECURSION". 
 
 ## The languages to be covered initially
 
@@ -82,13 +82,14 @@ def power(x: int, n: int) -> int:
 2) About the Language (Who made it, what are the key features, why it is used)  
 3) Getting started (Absolute beginner level guide to get started)  
 4) Variables (What are variables? How to use them?)
-5) Keywords 
+5) Constants
+6) Keywords 
 6) Datatypes 
 7) Operators
 8) Conditional Statements
-9) Loop
+9) Different Loops
 10) Getting started with your first ever program
-11) Functions (A little about functions to get started)
+11) Functions 
 12) Arrays
 ```
 
