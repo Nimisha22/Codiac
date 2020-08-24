@@ -33,7 +33,9 @@ Codiac offers you exactly what you need as a beginner in coding.
 <img src="./codiac/logos/c.png" alt="C Logo" width="300"/>
 <hr>
 <br>
+
 # Python
+
 <hr>
 <img src="./codiac/logos/python.png" alt="C Logo" width="300"/>
 <hr>
