@@ -87,6 +87,11 @@
         .height {
             height: 500px;
         }
+        #logo {
+            display: inline-block;
+            height: 400px;
+            width: 600px;
+        }
     </style>
 </head>
 <body>
@@ -185,7 +190,7 @@ Codiac offers you exactly what you need as a beginner in coding.</p>
 
 
 		<div class = "w3-half height">
-			<img src = "https://www.students4bestevidence.net/app/uploads/2014/03/confused-man.jpg" class = "image">
+            <img src = "https://www.students4bestevidence.net/app/uploads/2014/03/confused-man.jpg" class = "image">
 		</div>
 
 	</div>
@@ -272,7 +277,10 @@ Here, at Codiac, you are taught all the basics starting from variables to some i
 	
 	<p class = "w3-xxxlarge w3-center"><span class = "foot">&nbsp;&nbsp;</span></p>
 <div class = "w3-pale-red">
-	<br><br>
+    <div class = "w3-center w3-card-4 w3-white" style = "padding: 20px; margin: 50px">
+    <img src = "{{ url_for('static', filename='logo.jpeg') }}" id = "logo" class = "w3-center">
+    </div>
+  	<br><br>
 	<p class = "w3-xxxlarge w3-center"><span class = "foot">Contact Us</span></p>
 	<div class = "w3-xxxlarge w3-center">
 	<div class = "w3-center footlink whats"><a href = "" style = "text-decoration: none"><i class = "fa fa-whatsapp"></i></a></div>
