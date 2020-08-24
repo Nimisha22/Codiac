@@ -1,5 +1,5 @@
 # Codiac
-<img src = "./codiac/static/logo.jpeg" alt = "Codiac Logo">
+<img src = "./codiac/logos/logo.jpeg" alt = "Codiac Logo">
 
 ## Target Audience - Beginners in Coding
 
@@ -27,8 +27,11 @@ Codiac offers you exactly what you need as a beginner in coding.
 
 ## Programming Languages taught
 
-C
-Python
+<bold>C</bold>
+<img src = "./codiac/logos/c.png">
+<br>
+<bold>Python</bold>
+<img src = "./codiac/logos/python.png">
 
 
 
