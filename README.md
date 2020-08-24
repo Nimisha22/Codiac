@@ -1,5 +1,5 @@
 # Codiac
-<img src = "./codiac/logos/logo.jpeg" alt = "Codiac Logo">
+<img src = "./codiac/logos/logo.jpeg" alt = "Codiac Logo" style = "height: 100px; widht: 100px;">
 
 ## Target Audience - Beginners in Coding
 
