@@ -40,7 +40,7 @@
 
 </style>
 <body> 
-    <div class = "w3-card-4 w3-pale-red width">
+    <div class = "w3-card-4 w3-white width">
 {% extends 'base.html' %}
 
 {% block header %}
@@ -55,7 +55,7 @@
       <header>
         <div>
             <p class = "w3-xlarge te">&nbsp;&nbsp;<i class = "fa fa-square"></i>   &nbsp;&nbsp;{{ post['body'] }}</p>
-<a class="l" href="{{ url_for('auth.comments', topic_id=post['topic_id']) }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class = "fa fa-microphone"></i>&nbsp;&nbsp;<span class = "hov">Comment</span></a>
+<a class="l" href="{{ url_for('auth.comments', topic_id=post['topic_id']) }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class = "fa fa-microphone"></i>&nbsp;&nbsp;<span class = "hov">Add Comment</span></a>
         </div>
     </article>
     <h1 class = "w3-pink w3-center">
@@ -66,7 +66,7 @@
     <article class="po">
       <header>
         <div>
-            <p><span style = "font-size: 30px">&nbsp;&nbsp;&nbsp;{{ postcom['comments'] }}</span>
+            <p><span style = "font-size: 30px">&nbsp;&nbsp;&nbsp;<i class = "fa fa-square"></i>&nbsp;&nbsp;{{ postcom['comments'] }}</span>
               <span class = "w3-right"> &nbsp;&nbsp;&nbsp;&nbsp; <i class = "fa fa-circle"></i>&nbsp;&nbsp;   by {{postcom['username']}} on {{postcom['created'].strftime('%Y-%m-%d') }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
           <br><br>
         </div>

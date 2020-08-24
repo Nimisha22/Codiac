@@ -28,6 +28,10 @@
     color: #db5c77;
     font-size: 20px;
 }
+.body {
+    color: #db5c77;
+    font-size: 20px;
+}
 </style>
 </head>
 <body>
@@ -41,6 +45,7 @@
   <h1 class= "w3-text-pink w3-right top hover" > <a class = "dec" href="{{ url_for('auth.create') }}"><i class="fa fa-star"></i>&nbsp;<span class = "hov">New</span>&nbsp;&nbsp;&nbsp;</a></h1>
   <br><br><br><br>
   <hr class = "bar">
+</div>
   {% endif %}
 {% endblock %}
 
@@ -53,16 +58,17 @@
 <h1><span class = "head">&nbsp;&nbsp;<i class="fa fa-check"></i>&nbsp;&nbsp;{{ post['title'] }}<span>&nbsp;&nbsp;
 <span class = "w3-right post">&nbsp;&nbsp;<i class="fa fa-circle"></i>&nbsp;&nbsp; by {{ post['username']     }} on {{ post['created'].strftime('%Y-%m-%d') }}<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h1>
         </div>
-        {% if g.user['id'] == post['author_id'] %}
         <div class = "w3-right">
+        {% if g.user['id'] == post['author_id'] %}
         <a class="dec" href="{{ url_for('auth.update', topic_id=post['topic_id'])}}">&nbsp;&nbsp;&nbsp;<i class="fa fa-pencil"></i>&nbsp;&nbsp;<span class = "hov">Edit</span></a>
         {% endif %}
-        <a class="dec" href="{{ url_for('auth.commentsindex', topic_id=post['topic_id']) }}">&nbsp;&nbsp;<i class="fa fa-eye"></i>&nbsp;&nbsp;<span class = "hov">Comment</span></a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="dec" href="{{ url_for('auth.commentsindex', topic_id=post['topic_id']) }}">&nbsp;&nbsp;<i class="fa fa-eye"></i>&nbsp;&nbsp;<span class = "hov">Comment</span> &nbsp;&nbsp;&nbsp;</a>
         </div>
-      </header>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <p class="body">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-square"></i>&nbsp;&nbsp;{{ post['body'] }}</p>
       <br>
+  </div>
+      </header>
     </article>
     {% if not loop.last %}
       <hr class = "bar">

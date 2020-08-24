@@ -25,7 +25,8 @@ text-decoration: underline;
     <h1 class = "w3-left top">&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp;&nbsp;CODIAC</h1>
       {% if g.user %}
       <h1 class = "w3-right top">
-    <a class = "links" href="{{ url_for('auth.home') }}">&nbsp;&nbsp;<i class="fa fa-home"></i>&nbsp;&nbsp;<span class = "link">Home</span></a>
+          <a class = "links" href="{{ url_for('auth.home') }}">&nbsp;&nbsp;<i class="fa fa-home"></i>&nbsp;&nbsp;<span c lass = "link">Home</span></a>
+          <a class = "links" href="{{ url_for('auth.index') }}">&nbsp;&nbsp;<i class="fa fa-users"></i>&nbsp;&nbsp;<span class = "link">Discussions</span></a>
           <a class = "links" href="{{ url_for('auth.logout') }}">&nbsp;&nbsp;<i class="fa fa-sign-out"></i>&nbsp;&nbsp;<span class = "link">Log out</span>&nbsp;&nbsp;</a></h1>
       <h1 class = "w3-right top">&nbsp;&nbsp;<i class="fa fa-user"></i>&nbsp;{{ g.user['username'] }}&nbsp;&nbsp;</span></h1>&nbsp;&nbsp;
     {% else %}
