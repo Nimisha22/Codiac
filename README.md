@@ -1,5 +1,5 @@
 # Codiac
-<img src = "./codiac/logos/logo.jpeg" alt = "Codiac Logo" style = "height: 50px; widht: 50px;">
+![Codiac Logo](./codiac/logos/logo.jpeg =100x20)
 
 ## Target Audience - Beginners in Coding
 
@@ -27,11 +27,11 @@ Codiac offers you exactly what you need as a beginner in coding.
 
 ## Programming Languages taught
 
-<h1>C</h1>
+# C
 <hr>
 <img src = "./codiac/logos/c.png" alt = "C Logo" style = "height: 50px; widht: 50px;">
 <br>
-<h1>Python</h1>
+# Python
 <hr>
 <img src = "./codiac/logos/python.png" alt = "Python Logo" style = "height: 50px; widht: 50px;">
 
