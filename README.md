@@ -25,16 +25,15 @@ Codiac offers you exactly what you need as a beginner in coding.
 > Ze visits our website and  tells our bot that ze wants to know about that particular topic. 
 > Our bot quickly teaches ze the basics of the topic. 
 
-## The languages to be covered initially
+## Programming Languages taught
 
 C
 Python
 
-```
 
-# General Topics we aim to cover
 
-```
+## Topics we aim to cover
+
 1. Algorithm  
 2. About the Language (Who made it, what are the key features, why it is used)  
 3. Getting started (Absolute beginner level guide to get started)  
@@ -48,9 +47,7 @@ Python
 11. Functions
 12. Language specific basics 
 
-```
-
-# What else ?
+## What else ?
 
 We offer you interactive learning through our bot, Codiac.
 
