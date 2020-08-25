@@ -14,7 +14,7 @@ from werkzeug.security import generate_password_hash
 
 from codiac.db import get_db
 
-bp = Blueprint("auth", __name__, url_prefix="/auth")
+bp = Blueprint("codiac", __name__, url_prefix="/codiac")
 
 
 def login_required(view):
@@ -23,7 +23,7 @@ def login_required(view):
     @functools.wraps(view)
     def wrapped_view(**kwargs):
         if g.user is None:
-            return redirect(url_for("auth.login"))
+            return redirect(url_for("codiac.login"))
 
         return view(**kwargs)
 
@@ -82,7 +82,7 @@ def register():
                 (username, generate_password_hash(password)),
             )
             db.commit()
-            return redirect(url_for("auth.login"))
+            return redirect(url_for("codiac.login"))
 
         flash(error)
 
@@ -110,7 +110,7 @@ def login():
             # store the user id in a new session and return to the index
             session.clear()
             session["user_id"] = user["id"]
-            return redirect(url_for("auth.home"))
+            return redirect(url_for("codiac.home"))
 
         flash(error)
 
@@ -124,11 +124,7 @@ def welcome():
 def logout():
     """Clear the current session, including the stored user id."""
     session.clear()
-    return redirect(url_for("auth.welcome"))
-
-@bp.route('/contact')
-def contact():
-    return render_template('auth/contact2.html')
+    return redirect(url_for("codiac.welcome"))
 
 @bp.route('/home')
 def home():
@@ -206,7 +202,7 @@ def create():
                 (title, body, g.user["id"]),
             )
             db.commit()
-            return redirect(url_for("auth.index"))
+            return redirect(url_for("codiac.index"))
 
     return render_template("blog/create.html")
 
@@ -233,7 +229,7 @@ def update(topic_id):
                 "UPDATE post SET title = ?, body = ? WHERE topic_id = ?", (title, body, topic_id)
             )
             db.commit()
-            return redirect(url_for("auth.index"))
+            return redirect(url_for("codiac.index"))
 
     return render_template("blog/update.html", post=post)
 
@@ -249,7 +245,7 @@ def delete(topic_id):
     db = get_db()
     db.execute("DELETE FROM post WHERE topic_id = ?", (topic_id,))
     db.commit()
-    return redirect(url_for("auth.index"))
+    return redirect(url_for("codiac.index"))
 
 @bp.route("/<int:topic_id>/addcomments", methods=("GET", "POST"))
 @login_required
@@ -268,7 +264,7 @@ def comments(topic_id):
                 (comments, g.user["id"], topic_id),
         )
         db.commit()
-        return redirect(url_for("auth.commentsindex", topic_id=post['topic_id']))
+        return redirect(url_for("codiac.commentsindex", topic_id=post['topic_id']))
 
     return render_template("blog/comments.html", postcoms=postcoms, post=post)
 
@@ -287,6 +283,6 @@ def commentsindex(topic_id):
 def query_db(query, args=(), one=False):
     db = get_db()
     cur = db.execute(query, args)
-    rv = [dict((cur.description[idx][0], value)
+    comms = [dict((cur.description[idx][0], value)
         for idx, value in enumerate(row)) for row in cur.fetchall()[::-1]]
-    return (rv[0] if rv else None) if one else rv
+    return (comms[0] if comms else None) if one else comms
