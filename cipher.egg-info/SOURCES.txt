@@ -11,7 +11,6 @@ cipher.egg-info/dependency_links.txt
 cipher.egg-info/not-zip-safe
 cipher.egg-info/requires.txt
 cipher.egg-info/top_level.txt
-cipher/static/style1.css
 cipher/templates/base.html
 cipher/templates/home.html
 cipher/templates/auth/C.html
