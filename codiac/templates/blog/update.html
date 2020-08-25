@@ -77,7 +77,7 @@
     <br><br>
     </div>
   </form>
-  <form action="{{ url_for('auth.delete', topic_id=post['topic_id']) }}" method="post">
+  <form action="{{ url_for('codiac.delete', topic_id=post['topic_id']) }}" method="post">
       <div class = "w3-center">
     <input class="but w3-center danger" type="submit"  value="Delete" onclick="return confirm('Are you sure?');">
       </div>
