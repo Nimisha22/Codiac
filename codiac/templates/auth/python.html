@@ -46,11 +46,11 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 <div class="w3-top ">
 <div class="w3-bar color w3-card">
 <!-- Top fixed navigagtion bar -->
-<a href="{{ url_for('auth.logout') }}" class=" w3-bar-item dec  w3-padding-large hovering w3-right">&nbsp;<i class="fa fa-sign-out"></i>&nbsp;&nbsp;Log Out</a>
+<a href="{{ url_for('codiac.logout') }}" class=" w3-bar-item dec  w3-padding-large hovering w3-right">&nbsp;<i class="fa fa-sign-out"></i>&nbsp;&nbsp;Log Out</a>
 <a href="mailto:learnwithcodiac@gmail.com" class=" w3-bar-item dec w3-padding-large hovering w3-right">&nbsp;<i class="fa fa-envelope"></i>&nbsp;&nbsp;Email Us</a>
-<a href="{{ url_for ('auth.index') }}" class=" w3-bar-item dec w3-padding-large hovering w3-right">&nbsp;<i class="fa fa-users"></i>&nbsp;&nbsp;Discussion Forum</a>
-<a href="{{ url_for ('auth.cpage') }}" class=" w3-bar-item dec w3-padding-large hovering w3-right"><i class="fa fa-code"></i>&nbsp;&nbsp;Learn C</a>
-<a href="{{ url_for ('auth.home') }}" class=" w3-bar-item dec w3-padding-large hovering w3-right"><i class="fa fa-home"></i>&nbsp;&nbsp;HOME</a>
+<a href="{{ url_for ('codiac.index') }}" class=" w3-bar-item dec w3-padding-large hovering w3-right">&nbsp;<i class="fa fa-users"></i>&nbsp;&nbsp;Discussion Forum</a>
+<a href="{{ url_for ('codiac.cpage') }}" class=" w3-bar-item dec w3-padding-large hovering w3-right"><i class="fa fa-code"></i>&nbsp;&nbsp;Learn C</a>
+<a href="{{ url_for ('codiac.home') }}" class=" w3-bar-item dec w3-padding-large hovering w3-right"><i class="fa fa-home"></i>&nbsp;&nbsp;HOME</a>
 <a href="" class=" w3-bar-item dec w3-padding-large w3-right">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;{{g.user["username"]}}</a> 
 </div>
 </div>
