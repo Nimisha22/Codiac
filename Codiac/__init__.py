@@ -25,13 +25,14 @@ def create_app(test_config=None):
     def home():
         return render_template('auth/home.html')
 
-    from codiac import db
+    from Codiac import db
     db.init_app(app)
 
-    from codiac import codiac
+    from Codiac import codiac
     app.register_blueprint(codiac.bp)
     
     return app
+app = create_app()
 if __name__ == '__main__':
     app.run(threaded=True, port = 5000)
 
