@@ -1,5 +1,5 @@
 # Codiac
-<img src="./codiac/logos/logo.jpeg" alt="Codiac Logo" width="500"/>
+<img src="./Codiac/logos/logo.jpeg" alt="Codiac Logo" width="500"/>
 
 
 ## Target Audience - Beginners in Coding
@@ -30,14 +30,14 @@ Codiac offers you exactly what you need as a beginner in coding.
 
 # C
 <hr>
-<img src="./codiac/logos/c.png" alt="C Logo" width="300"/>
+<img src="./Codiac/logos/c.png" alt="C Logo" width="300"/>
 <hr>
 <br>
 
 # Python
 
 <hr>
-<img src="./codiac/logos/python.png" alt="Python Logo" width="300"/>
+<img src="./Codiac/logos/python.png" alt="Python Logo" width="300"/>
 <hr>
 <br>
 
@@ -62,7 +62,7 @@ Codiac offers you exactly what you need as a beginner in coding.
 ## What else ?
 
 <hr>
-<img src="./codiac/logos/bot.jpg" alt="Bot" width="200"/>
+<img src="./Codiac/logos/bot.jpg" alt="Bot" width="200"/>
 <hr>
 <br>
 
