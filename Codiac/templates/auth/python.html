@@ -1423,19 +1423,47 @@ Functions are a convenient way to divide your code into useful blocks, allowing 
 <p class = "w3-large w3-text-dark-grey">The array module supports numeric arrays in Python 3. So, to create an array in Python 3, we will have to import the array module.<br>
   Following is the syntax for creating an array. Now to understand how to declare array in Python, let us take a look at the python array example given below:<br>
   <br>
-  from array import *<br>
-  arraname = array(typecode, [Initializers])<br>
+  <span style = "color: #4B0082">from</span> 
+  <span style = "color: #808080">array</span>
+  <span style = "color: #4B0082">import</span> 
+  <span style = "color: #808080">*</span>
+  <br>
+  <span style = "color: #808080">arraname = array(typecode, [Initializers])</span>
+  <br>
   <br>
   Here, typecode is what we use to define the type of the value that is going to be stored in the array.</p>
 <p class = "w3-xlarge w3-text-dark-grey">Accessing array element</p>
 <p class = "w3-large w3-text-dark-grey">We can access the elements of an array in Python using the respective indices of those elements, as shown in the following example.<br>
   <br>
-  from array import*<br>
-  array_1 = array(‘i’, [1,2,3,4,5])<br>
-  print (array_1[0])<br>
-  print (array_1[3])<br>
-  1<br>
-  4<br>
+
+  <span style = "color: #4B0082">from</span> 
+  <span style = "color: #808080">array</span> 
+  <span style = "color: #4B0082">import</span> 
+  <span style = "color: #808080">*</span>
+  
+  <br>
+  <span style = "color: #808080">array_1</span> 
+  <span style = "color: #808080">=</span> 
+  <span style = "color: #808080">array</span>
+  <span style = "color: #808080">(</span>
+  <span style = "color: #BF0000">‘i’</span>
+  <span style = "color: #808080">,</span> 
+  <span style = "color: #BF0000">[1,2,3,4,5]</span>
+  <span style = "color: #808080">)</span>
+  <br>
+  <span style = "color: #00BDBB">print</span> 
+  <span style = "color: #808080">(array_1[0])</span>
+  <br>
+  <span style = "color: #00BDBB">print</span> 
+  <span style = "color: #808080">(array_1[3])</span>
+  <br>
+  <p class = "w3-xlarge w3-text-dark-grey">Output: </p>
+  <div class = "w3-black w3-text-white" style = "width: 35%">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4
+  <br>
+  </div>
   <br>
   The index of the array elements starts from 0. When we printed the value of array1[0], it displayed the first element.<br></p>
 <p class = "w3-xlarge w3-text-dark-grey">Basic Operations of Array</p>
