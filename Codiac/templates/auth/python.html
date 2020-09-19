@@ -1246,65 +1246,149 @@ Functions are a convenient way to divide your code into useful blocks, allowing 
   </ul>
   </p>
   <p class = "w3-xlarge w3-text-dark-grey">Syntax for writing a function in Python:</p>
-  <p class = "w3-large w3-text-dark-grey">def (arg1, arg2, … argN):<br>
-  return<br>
+  <div class = "w3-white" style = "width: 40%">
+    <br>
+  <p class = "w3-large w3-text-dark-grey">
+  <span style = "color: #FFAE42">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def</span> 
+  <span style = "color: #808080">(arg1, arg2, … argN):</span>
+  <br>
+  <span style = "color: #FFAE42">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return<br>
+</p>
+<br>
+</div>
 </p> 
 <p class = "w3-xlarge w3-text-dark-grey"> Calling a Function In Python </p>
 <p class = "w3-large w3-text-dark-grey">Defining a function is not all we have to do in order to start using it in our program. Defining a function only structures the code blocks and gives the function a name. 
   To execute a function, we have to call it. Only when it is specifically called, a function will execute and give the required output. Now, there are two ways in which we can call a function, after we have defined it. We can either call it from another function or we can call it from the Python prompt.<br>
   <br>
-  Example:<br>
-  # defining a function<br>
-  def printOutput( str):<br>
+
+  <p class = "w3-xlarge">Example:</p>
+  <div class = "w3-white" style = "width: 40%">
   <br>
   <br>
-  #This function will print the passed string<br>
-  print (str)<br>
-  return;<br>
+  <span style = "color: #000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#defining a function</span>
+  <br>
+  <span style = "color: #FFAE42">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def</span>
+    <span style = "color: #00BDBB">printOutput</span>
+    <span style = "color: #808080">(str):</span>
+  <br>
+  <span style = "color: #000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#This function will print the passed string</span>
+  <br>
+  <span style = "color: #00BDBB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print </span>
+<span style = "color: #808080">(str)</span>
+  <br>
+  <span style = "color: #00BDBB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return;</span>
+  <br>
+  <span style = "color: #000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#calling a function</span>
+  <br>
+  <span style = "color: #00BDBB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printOutput</span>
+    <span style = "color: #808080">(</span>
+    <span style = "color: #228B22">“Welcome to Codiac”</span>
+    <span style = "color: #808080">)</span>
   <br>
   <br>
-  #calling a function<br>
-  printOutput(“Welcome to Intellipaat”)<br>
+  <br>
+</div>
+<p class = "w3-xlarge">Output: </p>
+<div class = "w3-black w3-text-white" style = "width: 40%">
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to Codiac
   <br>
   <br>
-  Output:<br>
-  Welcome to Codiac<br>
-  <br>
+</div>
   <p class = "w3-xlarge w3-text-dark-grey">Scope</p>
   <p class = "w3-large w3-text-dark-grey">The scope of a variable is a part of the program where the variable is recognizable.<br>
   As we have already discussed about local and global variables in the Python Variables module of this tutorial, we know that the variables defined inside a function only have a local scope. Meaning, the variable defined within a function is only recognizable inside that function.<br>
   Lifetime of a variable is the time period till when the variable exists in the memory. Variables defined inside the function only exist as long as the function is being executed. So, the lifetime of a variable defined inside a function ends when we return from the function or when the control comes out of the function.<br>
   <br>
-  Example with variables in Python Functions:<br>
-  def func():<br>
-  x = 5<br>
-  print(“value of x inside the function”, x)<br>
+  <p class = "w3-xlarge">Example with variables in Python Functions:</p>
+  <div class = "w3-white" style = "width: 40%">
+  <br>
+  <span style = "color: #FF4500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def</span> 
+  <span style = "color: #808080">func():</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x = 5</span><br>
+ <span style = "color: #00BDBB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print</span>
+<span style = "color: #808080">(</span>
+  <span style = "color: #228B22">“value of x inside the function”</span>
+  <span style = "color: #808080">, x)</span>
   <br>
   <br>
-  #calling the function<br>
-  x = 10<br>
-  func()<br>
-  print(“value of x outside the function”, x)<br>
   <br>
-  Output:<br>
-  value of x inside the function 5<br>
-  value of x outside the function 10<br>
+  <span style = "color: #000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#calling the function</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x = 10</span>
+  <br>
+  <span style = "color: #00BDBB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func</span>
+  <span style = "color: #808080">()</span>
+<br>
+  <span style = "color: #00BDBB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print</span>
+<span style = "color: #808080">(</span>
+  <span style = "color: #228B22">“value of x outside the function”</span>
+  <span style = "color: #808080">, x)</span><br>
+  <br>
+</div>
+<br>
+<p class = "w3-xlarge">Output:</p>
+<div class = "w3-black w3-text-white" style = "width: 40%">
+<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value of x inside the function 5<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value of x outside the function 10<br>
+  <br>
+</div>
+<br><br>
+<div class = "w3-white" style = "width: 40%">
+    <br>
+  <span style = "color: #D2691E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>></span> 
+  <span style = "color: #FFAE42">def</span> 
+  <span style = "color: #808080">fib2(n):</span>  
+  <span style = "color: #000099">#return Fibonacci series up to n</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span>    
+    &nbsp;&nbsp;&nbsp;
+    <span style = "color: #228B22">"""Return a list containing the Fibonacci &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;series up to n."""</span>
+    <br>
+    <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span>    
+    &nbsp;&nbsp;&nbsp;
+    <span style = "color: #808080">result = []</span>
+    <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a, b = 0, 1</span>
+    <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  <span style = "color: #FF4500">while </span>
+  <span style = "color: #808080">a < n:</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result.</span>
+  <span style = "color: #00BDBB">append</span>
+  <span style = "color: #808080">(a)</span>    
+  <span style = "color: #000099"># see below</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a, b = b, a+b</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  <span style = "color: #FFAE42">return </span>
+  <span style = "color: #808080">result</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <br>
+  <br>
+  <span style = "color: #D2691E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>></span> 
+  <span style = "color: #808080">f100 =</span> 
+  <span style = "color: #00BDBB">fib2</span>
+  <span style = "color: #808080">(100)</span>    
+  <span style = "color: #000099"># call it</span>
+  <br>
+  <span style = "color: #D2691E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>></span> 
+    <span style = "color: #808080">f100 </span>               
+    <span style = "color: #000099"># write the result</span>
+    <br>
+    <span style = "color: #D2691E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]</span>
   <br>
   <br>
-  >>> def fib2(n):  # return Fibonacci series up to n<br>
-  ...    """Return a list containing the Fibonacci series up to n."""<br>
-  ...    result = []<br>
-  ...    a, b = 0, 1<br>
-  ...    while a < n:<br>
-  ...        result.append(a)    # see below<br>
-  ...        a, b = b, a+b<br>
-  ...    return result<br>
-  ...<br>
-  <br>
-  >>> f100 = fib2(100)    # call it<br>
-  >>> f100                # write the result<br>
-  [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]<br>
-  <br>
+</div>
+<br>
   This example, as usual, demonstrates some new Python features:<br>
   The return statement returns with a value from a function. return without an expression argument returns None. Falling off the end of a function also returns None.<br>
   The statement result.append(a) calls a method of the list object result. A method is a function that ‘belongs’ to an object and is named obj.methodname, where obj is some object (this may be an expression), and methodname is the name of a method that is defined by the object’s type. Different types define different methods. Methods of different types may have the same name without causing ambiguity. (It is possible to define your own object types and methods, using classes, see Classes) The method append() shown in the example is defined for list objects; it adds a new element at the end of the list. In this example it is equivalent to result = result + [a], but more efficient.<br>
@@ -1315,6 +1399,7 @@ Functions are a convenient way to divide your code into useful blocks, allowing 
    Adding two numbers in Python: Here, we are going to learn various ways to find the addition of two numbers in python.<br>
     Take input of two numbers from the user and print their sum.<br>
     <br>
+    <p class = "w3-xlarge w3-text-red">
   Example:<br>
     Input:<br>
       A = 2, B = 3<br>
@@ -1325,72 +1410,193 @@ Functions are a convenient way to divide your code into useful blocks, allowing 
   <p class = "w3-xlarge w3-text-dark-grey">Addition of two numbers</p>
   <p class = "w3-large w3-text-dark-grey">Here, we are implementing the program to find the addition of two numbers using 4 different ways.<br>
    <br>
-  1) Simply take input from the user and typecast to an integer at the same time after that performing addition operation on the both number.<br>
-  if __name__ == "__main__" :<br>
+  1) Simply take input from the user and typecast to an integer at the same time after that performing addition operation on the both number.
   <br>
-      # take input from user<br>
-      a = int(input())<br>
-      b = int(input())<br>
-      <br>
-      # addition operation perform<br>
-      sum_num = a + b<br>
-      <br>
-      print("sum of two number is: ",sum_num)<br>
-      <br>
-  Output<br>
-  10<br>
-  20<br>
-  sum of two number is:  30<br>
-  <br>
-  <br>
-  2) Using a user-defined function for doing the sum of two numbers.<br>
-  # define a function for performing <br>
-  # addition of number<br>
-  def sum_num(a,b) :<br>
-    return a + b<br>
+  <div class = "w3-white" style = "width: 40%">
     <br>
-  # Main code<br>
-  if __name__ == "__main__" :<br>
+  <span style = "color: #FFAE42">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if </span>
+  <span style = "color: #808080">__name__ == </span>
+  <span style = "color: #228B22">"__main__" </span>
+  <span style = "color: #808080">:</span>
   <br>
-      a = int(input())<br>
-      b = int(input())<br>
+  <br>
+      <span style = "color: #000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# take input from user</span>
       <br>
-      print("sum of two number:",sum_num(a,b))<br>
+      <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a = </span>
+      <span style = "color: #00BDBB">int</span>
+      <span style = "color: #808080">(</span>
+      <span style = "color: #00BDBB">input</span>
+      <span style = "color: #808080">())</span>
       <br>
-  Output<br>
-  10<br>
-  20<br>
-  sum of two number: 30<br>
+      <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b = </span>
+      <span style = "color: #00BDBB">int</span>
+      <span style = "color: #808080">(</span>
+      <span style = "color: #00BDBB">input</span>
+      <span style = "color: #808080">())</span>
+      <br>
+      <br>
+      <span style = "color: #000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# addition operation perform</span>
+      <br>
+      <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum_num = a + b</span>
+      <br>
+      <br>
+      <span style = "color: #00BDBB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print</span>
+      <span style = "color: #808080">(</span>
+      <span style = "color: #228B22">"sum of two number is: "</span>
+      <span style = "color: #808080">,sum_num)</span>
+      <br>
+      <br>
+  </div>
+  <br>
+
+  <p class = "w3-xlarge">Output:</p>
+  <div class = "w3-black w3-text-white" style = "width: 40%">
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum of two number is:  30
   <br>
   <br>
-  3) We are taking the input from user in one line after that typecast into an integer and stored them in the list then use sum() inbuilt function which returns the sum of elements of the list.<br>
-  if __name__ == "__main__" :    <br>
-    # take input from the user in list<br>
-    a = list(map(int,input().split()))<br>
+</div>
+  <br>
+  <br>
+
+  2) Using a user-defined function for doing the sum of two numbers.
+  <br><br>
+  <div class = "w3-white" style = "width: 40%">
+  <br>
+  <span style = "color: #000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# define a function for performing</span> 
+  <br>
+  <span style = "color: #000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# addition of number</span>
     <br>
-    # sum function return sum of elements <br>
-    # present in the list<br>
-    print("sum of two number is:",sum(a))<br>
+  <span style = "color: #FFAE42">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def </span>
+  <span style = "color: #00BDBB">sum_num</span>
+  <span style = "color: #808080">(a,b) :</span><br>
+    <span style = "color: #FFAE42">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return</span> 
+    <span style = "color: #808080">a + b</span><br>
     <br>
-  Output<br>
-  10 20<br>
-  sum of two number is: 30<br>
+  <span style = "color: #000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Main code</span><br>
+  <span style = "color: #FF4500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if</span> 
+  <span style = "color: #808080">__name__ ==</span> 
+  <span style = "color: #228B22">"__main__"</span> 
+  <span style = "color: #808080">:</span>
+    <br>
+  <br>
+      <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a = </span>
+      <span style = "color: #00BDBB">int</span>
+      <span style = "color: #808080">(</span>
+      <span style = "color: #00BDBB">input</span>
+      <span style = "color: #808080">())</span><br>
+      <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b = </span>
+      <span style = "color: #00BDBB">int</span>
+      <span style = "color: #808080">(</span>
+      <span style = "color: #00BDBB">input</span>
+      <span style = "color: #808080">())</span><br>
+      <br>
+      <span style = "color: #00BDBB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print</span>
+      <span style = "color: #808080">(</span>
+      <span style = "color: #228B22">"sum of two number:"</span>
+      <span style = "color: #808080">,</span>
+      <span style = "color: #00BDBB">sum_num</span>
+      <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(a,b))</span><br>
+      <br>
+  </div>
+    <p class = "w3-xlarge">Output:</p>
+    
+    <div class = "w3-black w3-text-white" style = "width: 40%">
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum of two number: 30
+    <br>
+    <br>
+    </div>
+
   <br>
   <br>
-  4) We are taking the input from user in one line and store them in two different variables then typecast both into an integer at the time of addition operation.<br>
-  if __name__ == "__main__" :<br>
+  3) We are taking the input from user in one line after that typecast into an integer and stored them in the list then use sum() inbuilt function which returns the sum of elements of the list.
   <br>
-      # take input from the user in a and b variables<br>
-      a,b = input().split()<br>
+  <div class = "w3-white" style = "width: 40%">
+    <br>
+  <span style = "color: #FF4500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if </span>
+    <span style = "color: #808080">__name__ == </span>
+    <span style = "color: #228B22">"__main__" </span>
+    <span style = "color: #808080">:   </span> <br>
+    <span style = "color: #000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# take input from the user in list</span><br>
+    <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a =</span> 
+        <span style = "color: #00BDBB">list</span>
+        <span style = "color: #808080">(</span>
+        <span style = "color: #00BDBB">map</span>
+        <span style = "color: #808080">(</span>
+        <span style = "color: #00BDBB">int</span>
+        <span style = "color: #808080">,</span>
+        <span style = "color: #00BDBB">input</span>
+        <span style = "color: #808080">().</span>
+        <span style = "color: #00BDBB">split</span>
+        <span style = "color: #808080">()))</span><br>
+    <br>
+    <span style = "color: #000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# sum function return sum of elements</span> <br>
+    <span style = "color: #000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# present in the list</span><br>
+    <span style = "color: #00BDBB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print</span>
+        <span style = "color: #808080">(</span>
+        <span style = "color: #228B22">"sum of two number is:"</span>
+        <span style = "color: #808080">,</span>
+        <span style = "color: #00BDBB">sum</span>
+        <span style = "color: #808080">(a))</span>
+            <br>
+    <br>
+</div>
+  <p class = "w3-xlarge">Output:</p>
+  <div class = "w3-black w3-text-white" style = "width: 40%">
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 20<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum of two number is: 30
+  <br><br>
+</div>
+  <br>
+  <br>
+  4) We are taking the input from user in one line and store them in two different variables then typecast both into an integer at the time of addition operation.
+  <br>
+  <div class = "w3-white" style = "width: 40%">
+    <br>
+  <span style = "color: #FF4500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if </span>
+     <span style = "color: #808080">__name__ == </span>
+     <span style = "color: #228B22">"__main__" </span>
+     <span style = "color: #808080">:</span>
+<br>
+  <br>
+      <span style = "color: #000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# take input from the user in a and b &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;variables</span><br>
+      <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a,b </span>
+         <span style = "color: #808080">= </span>
+         <span style = "color: #00BDBB">input</span>
+         <span style = "color: #808080">().</span>
+         <span style = "color: #00BDBB">split</span>
+         <span style = "color: #808080">()</span><br>
       <br>
-      # perform addition operation<br>
-      rslt = int(a) + int(b)<br>
+      <span style = "color: #000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# perform addition operation</span><br>
+      <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = </span>
+         <span style = "color: #00BDBB">int</span>
+         <span style = "color: #808080">(a) +</span> 
+         <span style = "color: #00BDBB">int</span>
+         <span style = "color: #808080">(b)</span><br>
       <br>
-      print("sum of two number is:",rslt)<br>
+      <span style = "color: #00BDBB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print</span>
+         <span style = "color: #808080">(</span>
+         <span style = "color: #228B22">"sum of two number is:"</span>
+         <span style = "color: #808080">,result)</span><br>
       <br>
-  Output<br>
-  10 20<br>
-  sum of two number is: 30<br>
+  </div>
+  <p class = "w3-xlarge">Output:</p>
+  <div class = "w3-black w3-text-white" style = "width: 40%">
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 20<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum of two number is: 30
+  <br><br>
+</div>
 </p>
 <p class = "w3-xlarge w3-text-dark-grey"></p>
 <hr><hr>
