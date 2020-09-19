@@ -1192,22 +1192,51 @@ You can also use for/in to work on a string. The string acts like a list of its 
 <hr>
 <hr>
 <p class = "w3-xlarge w3-text-dark-grey">Fibonacci Series </p>
-<p class = "w3-xlarge w3-text-dark-grey"> 
-  ... # the sum of two elements defines the next<br>
-  ... a, b = 0, 1<br>
-  >>> while a < 10:<br>
-  ...    print(a)<br>
-  ...    a, b = b, a+b<br>
-  ...<br>
+<div class = "w3-white" style = "width: 40%">
+    <br><br>
+  <span style = "color: #D2691E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>></span> 
+  <span style = "color: #000099"># the sum of two elements defines the next</span>
   <br>
-  0<br>
-  1<br>
-  1<br>
-  2<br>
-  3<br>
-  5<br>
-  8<br>
-</p>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+  <span style = "color: #808080">a, b = 0, 1</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+   <span style = "color: #FF4500">while </span>
+  <span style = "color: #808080">a < 10:</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </span>  
+  <span style = "color: #00BDBB">print</span>
+  <span style = "color: #808080">(a)</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   </span>
+  <span style = "color: #808080"> a, b = b, a+b</span>
+   <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span>
+  <br>
+  <br>
+</div>
+
+  <p class = "w3-xlarge">Output:</p>
+
+  <div class = "w3-black w3-text-white" style = "width: 40%">
+  <br> 
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8
+  <br>
+  <br>
+  </div>
 <ul>
 <li class = "w3-large w3-text-dark-grey">The while loop executes as long as the condition (here: a < 10) remains true. In Python, any non-zero integer value is true; zero is false. The condition may also be a string or list value, in fact any sequence; anything with a non-zero length is true, empty sequences are false. The test used in the example is a simple comparison. </li>
 <li class = "w3-large w3-text-dark-grey">The first line contains a multiple assignment: the variables a and b simultaneously get the new values 0 and 1. On the last line this is used again, demonstrating that the expressions on the right-hand side are all evaluated first before any of the assignments take place. The right-hand side expressions are evaluated from the left to the right.</li>
