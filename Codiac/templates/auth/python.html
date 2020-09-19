@@ -1078,24 +1078,56 @@ You can also use for/in to work on a string. The string acts like a list of its 
   The program first evaluates the while loop condition. If it’s true, then the program enters the loop and executes the body of the while loop. It continues to execute the body of the while loop as long as the condition is true. When it is false, the program comes out of the loop and stops repeating the body of the while loop.</p>
 <p class = "w3-xlarge w3-text-dark-grey">Syntax and Working</p>
 <p class = "w3-large w3-text-dark-grey">The format of a rudimentary while loop is shown below:<br>
-  while expr:<br>
-      statement(s)<br>
+<br><br>
+    <div class = "w3-white" style = "width: 40%">
+        <br>
+  <span style = "color: #FF4500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while</span> 
+  <span style = "color: #808080">expr:</span>
+  <br>
+      <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;statement(s)</span>
+        <br>
       <br>
+  </div>
+  <br><br>
   statement(s) represents the block to be repeatedly executed, often referred to as the body of the loop. This is denoted with indentation, just as in an if statement.<br>
   The controlling expression, expr, typically involves one or more variables that are initialized prior to starting the loop and then modified somewhere in the loop body.<br>
   When a while loop is encountered, expr is first evaluated in Boolean context. If it is true, the loop body is executed. Then expr is checked again, and if still true, the body is executed again.<br>
-  This continues until <expr> becomes false, at which point program execution proceeds to the first statement beyond the loop body.<br>
-  <br>>>> n = 5<br>
-   2 >>> while n > 0:<br>
-   3 ...    n -= 1<br>
-   4 ...    print(n)<br>
-   5 ...<br>
-   6 4<br>
-   7 3<br>
-   8 2<br>
-   9 1<br>
-  10 0<br>
+  This continues until <expr> becomes false, at which point program execution proceeds to the first statement beyond the loop body.
   <br>
+  <br>
+  <div class = "w3-white w3-text-black" style = "width: 40%">
+    <br><br>
+  <span style = "color: #D2691E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> 
+  <span style = "color: #808080">n = 5</span>
+  <br>
+  <span style = "color: #D2691E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>></span> 
+  <span style = "color: #FF4500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while</span> 
+  <span style = "color: #808080">n > 0:</span>
+  <br>
+   <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>    
+   <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n -= 1</span>
+   <br>
+   <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>   
+   <span style = "color: #00BDBB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print</span>
+   <span style = "color: #808080">(n)</span>
+   <br>
+   <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+   <br>
+   <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4</span>
+   <br>
+   <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3</span>
+   <br>
+   <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2</span>
+   <br>
+   <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1</span>
+   <br>
+   <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</span>
+   <br>
+   <span style = "color: #D2691E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>></span>
+  <br>
+  <br>
+</div>
+<br><br><br>
   Here’s what’s happening in this example:<br>
   n is initially 5. The expression in the while statement header on line 2 is n > 0, which is true, so the loop body executes. Inside the loop body on line 3, n is decremented by 1 to 4, and then printed.<br>
   When the body of the loop has finished, program execution returns to the top of the loop at line 2, and the expression is evaluated again. It is still true, so the body executes again, and 3 is printed.<br>
@@ -1104,77 +1136,199 @@ You can also use for/in to work on a string. The string acts like a list of its 
   
   <p class = "w3-xlarge w3-text-dark-grey">Infinite While Loop in Python</p>
   <p class = "w3-large w3-text-dark-grey">Infinite while loop refers to a while loop where the while condition never becomes false. When a condition never becomes false, the program enters the loop and keeps repeating that same block of code over and over again, and the loop never ends.<br>
-  <br>The following example shows an infinite loop:<br>
-  a = 1<br>
-  while a==1:<br>
-  b = input(“what’s your name?”)<br>
-  print(“Hi”, b, “, Welcome to Intellipaat!”)<br>
-  <br>If we run the above code block, it will execute an infinite loop which will ask for our names again and again. The loop won’t break until we press ‘Ctrl+C’.<br>
-  <br>Output:<br>
-  what’s your name?<br>
-  Akanksha Rana #user input<br>
-  Hi Akanksha Rana , Welcome to Codiac!<br>
+  <br>
+  The following example shows an infinite loop:
+  <br>
+  <div class = "w3-white w3-text-black" style = "width: 40%">
+    <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a = 1</span>
+  <br>
+    <span style = "color: #FF4500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while</span> 
+    <span style = "color: #808080">a == 1:</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b = </span>
+  <span style = "color: #00BDBB">input</span>
+  <span style = "color: #808080">(</span>
+  <span style = "color: #228B22">“what’s your name?”</span>
+  <span style = "color: #808080">)</span>
+  <br>
+
+  <span style = "color: #00BDBB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print</span>
+  <span style = "color: #808080">(</span>
+  <span style = "color: #228B22">“Hi”</span>
+  <span style = "color: #808080">, b,</span> 
+  <span style = "color: #228B22">“, Welcome to Codiac!”</span>
+  <span style = "color: #808080">)</span>
+
+  <br>
+  <br>
+</div>
+  <br>
+  <p class = "w3-text-red w3-xlarge">&nbsp;<i class = "fa fa-exclamation"></i><i class = "fa fa-exclamation"></i>&nbsp;&nbsp;If we run the above code block, it will execute an infinite loop which will ask for our names again and again. The loop won’t break until we press ‘Ctrl+C’.
+</p><br>
+  <br>
+  <p class = "w3-xlarge">Output:</p>
+  <div class = "w3-black w3-text-white" style = "width: 40%">
+  <br>
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;what’s your name?<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Akanksha Rana
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <span class = "w3-white w3-text-black" style = "width: 50%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#user input&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hi Akanksha Rana , Welcome to Codiac!<br>
   <br> 
   <br>
-  what’s your name?<br>
-  Amrit #user input<br>
-  Hi Amrit , Welcome to Codiac!<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;what’s your name?<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Amrit 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <span class = "w3-white w3-text-black" style = "width: 50%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#user input&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hi Amrit , Welcome to Codiac!<br>
   <br>
   <br>
-  what’s your name?<br>
-  Shubham #user input<br>
-  Hi Shubham , Welcome to Codiac!<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;what’s your name?<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shubham 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <span class = "w3-white w3-text-black" style = "width: 50%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#user input&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
   <br>
-  what’s your name?<br>
-  Traceback (most recent call last): #Stopped the loop by entering CTRL+C<br>
-  File “”, line 2, in<br>
-  KeyboardInterrupt<br>
-</p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hi Shubham , Welcome to Codiac!<br>
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;what’s your name?
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Traceback (most recent call last): #Stopped the 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loop by entering CTRL+C<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File “”, line 2, in
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KeyboardInterrupt
+  <br>
+  <br>
+</div>
   <p class = "w3-xlarge w3-text-dark-grey">Else with the While Loop in Python</p>
   <p class = "w3-large w3-text-dark-grey">In Python, we can also use the else statement with loops. When the else statement is used with the while loop, it is executed only if the condition becomes false.<br>
-    <br>a = 1<br>
-  while a<5:<br>
-  print(“condition is true”)<br>
-  a=a+1<br>
-  else:<br>
-  print(“condition is false now”)<br><br>
+    <br>
+   
+    <br>
+    <div class = "w3-white w3-text-black" style = "width: 40%">
+    <br>
+     <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a = 1</span>
+     <br>
+  <span style = "color: #FF4500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while</span> 
+  <span style = "color: #808080">a < 5:</span>
+  <br>
+  <span style = "color: #00BDBB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print</span>
+  <span style = "color: #808080">(</span>
+  <span style = "color: #228B22">“condition is true”</span>
+  <span style = "color: #808080">)</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a = a + 1</span>
+  <br>
+  <span style = "color: #FF4500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:</span> 
+  <br>
+  <span style = "color: #00BDBB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print</span>  
+  <span style = "color: #808080">(</span>
+  <span style = "color: #228B22">“condition is false now”</span>
+  <span style = "color: #808080">)</span>
+  <br>
+  <br>
+</div>
+<br><br>
   <br>The example illustrates how the else statement works with the while loop.<br>
-  <br>Output:<br>
-  condition is true<br>
-  condition is true<br>
-  condition is true<br>
-  condition is true<br>
-  condition is false now<br>
-  <br>In the above example, the program keeps executing the body of the while loop till the condition is true, meaning that till the value of a is less than 5. Since the initial value of a is 1 and every time the program entered the loop the value of a is increased by 1, the condition becomes false after the program enters the loop for the fourth time when the value of a is increased from 4 to 5.<br>
+  <br>
+  <p class = "w3-xlarge">Output:</p>
+  <div class = "w3-black w3-text-white" style = "width: 40%">
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;condition is true
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;condition is true
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;condition is true
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;condition is true
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;condition is false now
+  <br>
+  <br>
+</div>
+<br><br>
+
+  In the above example, the program keeps executing the body of the while loop till the condition is true, meaning that till the value of a is less than 5. Since the initial value of a is 1 and every time the program entered the loop the value of a is increased by 1, the condition becomes false after the program enters the loop for the fourth time when the value of a is increased from 4 to 5.<br>
   When the program checks the condition for the fifth time, it executes it as false and goes to the else block and executes the body of else, displaying, ‘condition is false now.’
  </p>
-  <p class = "w3-xlarge w3-text-dark-grey">Python While Loop Interruptions<br> </p>
-  <p class = "w3-large w3-text-dark-grey">Python offers following two keywords which we can use to prematurely terminate a loop iteration.<br>
-  Break:The break keyword terminates the loop and transfers the control to the end of the loop.<br>
-  <br>Example:<br>
-  a = 1<br>
-  while a <5:<br>
-  a += 1<br>
-  if a == 3:<br>
-  break<br>
-  print(a)<br>
-  Output:<br>
-  2<br><br>
+  <p class = "w3-xlarge w3-text-dark-grey">Python While Loop Interruptions</p>
+  <br>
+  <p class = "w3-large w3-text-dark-grey">Python offers following two keywords which we can use to prematurely terminate a loop iteration.</p>
+  <br>
+  Break: The break keyword terminates the loop and transfers the control to the end of the loop.<br>
+  <br>
+  <p class = "w3-xlarge">Example:</p>
+  <br>
+  <div class = "w3-white w3-text-black" style = "width: 40%">
+    <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a = 1</span>
+  <br>
+  <span style = "color: #FF4500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while</span> 
+  <span style = "color: #808080">a < 5:</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a += 1</span>
+  <br>
+  <span style = "color: #FF4500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if</span> 
+  <span style = "color: #808080">a == 3:</span>
+  <br>
+  <span style = "color: #FFAE42">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break</span>
+  <br>
+  <span style = "color: #00BDBB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print</span>
+  <span style = "color: #808080">(a)</span>
+  <br>
+  <br>
+</div>
+<br><br>
+  <p class = "w3-xlarge">Output:</p>
+  <div class = "w3-black w3-text-white" style = "width: 40%">
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2
+  <br><br>
+</div>
+<br><br>
+
   Continue:The continue keyword terminates the ongoing iteration and transfers the control to the top of the loop and the loop condition is evaluated again. If the condition is true, then the next iteration takes place.<br>
-  <br>Example:<br>
-  a = 1<br>
-  while a <5:v
-  a += 1<br>
-  if a == 3:<br>
-  continue<br>
-  print(a)<br>
+  <br>
+  <p class = "w3-xlarge">Example:</p>
+  <div class = "w3-white w3-text-black" style = "width: 40%">
   <br>
   <br>
-  Output:<br>
-  2<br>
-  4<br>
-  5<br>
-  </p>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a = 1</span>
+  <br>
+  <span style = "color: #FF4500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while</span> 
+  <span style = "color: #808080">a < 5:</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a += 1</span>
+  <br>
+  <span style = "color: #FF4500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if</span> 
+  <span style = "color: #808080">a == 3:</span>
+  <br>
+  <span style = "color: #FFAE42">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue</span>
+  <br>
+  <span style = "color: #00BDBB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print</span>
+  <span style = "color: #808080">(a)</span>
+  <br>
+  <br>
+  <br>
+</div>
+<br><br>
+  <p class = "w3-xlarge">Output:</p>
+  <div class = "w3-black w3-text-white" style = "width: 40%">
+  <br>
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5
+  <br>
+  <br>
+</div>
+
   <hr><hr>
 </div>
 </div>
