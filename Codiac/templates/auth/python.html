@@ -818,11 +818,21 @@ You can also use for/in to work on a string. The string acts like a list of its 
   If statement in Python tells the program what to do if the condition is true. In case the condition is false, the program just goes on to execute what comes after if statements. In situations where we want the program to execute some statement if the condition is true and some other statement only if the condition is false, then we use if else in Python.<br>
   The else statement is an optional statement and there could be at most only one else statement following if.<br> 
   </p>
-<p class = "w3-large w3-text-dark-grey">Syntax of the if else in Python:<br>
-  if test expression:<br>
-     Body of if <br>
-  else:<br>
-     Body of else<br>
+<p class = "w3-large w3-text-dark-grey">Syntax of the if else in Python:</p>
+    <br>
+<div class = "w3-text-black w3-white" style = "width: 40%">
+    <br><br>
+  <span style = "color: #BF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if</span> 
+  <span style = "color: #808080">test expression:</span>
+  <br>
+    <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Body of if</span> 
+     <br>
+  <span style = "color: #BF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:</span>
+  <br>
+ <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Body of else</span>
+     <br><br>
+ </div>
+ <br><br>
   As depicted by the flowchart above, the Python program first evaluates the test expression. It is basically the condition in the if statement. If the condition is met or if the condition is true, then only the statement(s) in the body of the if statement is(are) executed. If the condition is not true, then the statement in the body of the else statement is executed. <br>
   The body of if and else statements start with indentation.
   </p>
@@ -833,49 +843,136 @@ You can also use for/in to work on a string. The string acts like a list of its 
   When there is more than just two if conditions in if elif else statements, then it is referred to as if elif else ladder, as it resembles the structure of a ladder in terms of if statements. If one of the if conditions turns out to be true, then the rest of the ladder is just bypassed and the body of that particular if block is executed. <br>
   If all the if conditions turn out to be false, then the body of the last else block is executed.
   </p>
-<p class = "w3-large w3-text-dark-grey">Syntax of the if elif else in Python<br>
-  if test expression:<br>
-     Body of if<br>
-  elif test expression:<br>
-     Body of elif<br>
-  else:<br>
-     Body of else<br>
+<p class = "w3-large w3-text-dark-grey">Syntax of the if elif else in Python:</p>
+<br>
+<div class = "w3-text-black w3-white" style = "width: 40%">
+    <br><br>
+  <span style = "color: #BF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if</span> 
+  <span style = "color: #808080">test expression:</span>
+  <br>
+    <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Body of if</span> 
+  <br>
+  <span style = "color: #BF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif</span> 
+  <span style = "color: #808080">test expression:</span>
+  <br>
+    <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Body of elif</span> 
+     <br>
+  <span style = "color: #BF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:</span>
+  <br>
+ <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Body of else</span>
+     <br><br>
+ </div>
+ <br><br>
   We can put as many elif statements as our program requires before the last else statements, making it an if elif else ladder<br>
   </p>
 <p class = "w3-large w3-text-dark-grey">nested if statements <br>
   As the name suggests, nested if statements are nested inside other if statements. That is, a nested if statement is the body of another if statement. <br>
   We use nested if statements when we need to check secondary conditions only if the first condition executes as true.
   </p>
-<p class = "w3-large w3-text-dark-grey">Syntax of nested if in Python:<br>
-  if test expression 1:<br>
-     # Executes when condition 1 is true<br>
-     body of if statement<br>
-     <br>  
-     if test expression 2:<br>
-        # Executes when condition 2 is true<br>
-        Body of nested if<br>
-        <br>
-     else:<br>
-         body of nested if<br>
-         <br>
-  else:<br>
-     body of if else statement<br>
+<p class = "w3-large w3-text-dark-grey">Syntax of nested if in Python:</p>
+<br>
+<div class = "w3-white w3-text-black" style = "width: 40%">
+    <br>
+  <span style = "color: #BF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if</span> 
+  <span style = "color: #808080">test expression 1:</span>
+  <br>
+     <span style = "color: #000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Executes when condition 1 is true</span>
      <br>
-  For example:<br>
-  >>><br>
-  >>> x = int(input("Please enter an integer: "))<br>
-  Please enter an integer: 42<br>
-  >>> if x < 0:<br>
-  ...    x = 0<br>
-  ...    print('Negative changed to zero')<br>
-  ... elif x == 0:<br>
-  ...    print('Zero')<br>
-  ... elif x == 1:<br>
-  ...    print('Single')<br>
-  ... else:<br>
-  ...    print('More')<br>
-  ...<br>
-  More<br>
+     <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body of if statement</span>
+     <br>
+     <br>  
+     <span style = "color: #BF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if</span> 
+     <span style = "color: #808080">test expression 2:</span>
+     <br>
+    <span style = "color: #000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Executes when condition 2 is true</span>
+        <br>
+        <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Body of nested if</span>
+        <br>
+        <br>
+     <span style = "color: #BF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:</span>
+     <br>
+         <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body of nested if</span>
+         <br>
+         <br>
+  <span style = "color: #BF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:</span>
+  <br>
+     <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body of if else statement</span>
+     <br>
+     <br>
+</div>
+     <br><br>
+  <p class = "w3-xlarge w3-text-darlgrey">For example:</p>
+  <br><br>
+  <div class = "w3-white w3-text-black" style = "width: 40%">
+    <br><br>
+  <span style = "color: #D2691E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>>&nbsp;&nbsp;</span>
+  <br>
+  <span style = "color: #D2691E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>>&nbsp;&nbsp;</span>
+  <span style = "color: #808080">x = </span>
+  <span style = "color: #00BDBB">int</span>
+  <span style = "color: #808080">(</span>
+  <span style = "color: #00BDBB">input</span>
+  <span style = "color: #808080">(</span>
+  <span style = "color: #228B22">"Please enter an integer: "</span>
+  <span style = "color: #808080">))</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;</span> 
+  <span style = "color: #808080">Please enter an integer:</span> 
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;</span> 
+  <span style = "color: #808080">42</span>
+  <br>
+  <span style = "color: #D2691E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>>&nbsp;&nbsp;</span>
+  <span style = "color: #BF0000">if</span> 
+  <span style = "color: #808080">x < 0:</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;</span>    
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x = 0</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;</span>     
+  <span style = "color: #00BDBB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print</span>
+  <span style = "color: #808080">(</span>
+  <span style = "color: #228B22">'Negative changed to zero'</span>
+  <span style = "color: #808080">)</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;</span>  
+  <span style = "color: #BF0000">&nbsp;&nbsp;elif</span> 
+  <span style = "color: #808080">x == 0:</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;</span>     
+  <span style = "color: #00BDBB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print</span>
+  <span style = "color: #808080">(</span>
+  <span style = "color: #228B22">'Zero'</span>
+  <span style = "color: #808080">)</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;</span>  
+   <span style = "color: #BF0000">&nbsp;&nbsp;elif</span> 
+  <span style = "color: #808080">x == 1:</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;</span>     
+  <span style = "color: #00BDBB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print</span>
+  <span style = "color: #808080">(</span>
+  <span style = "color: #228B22">'Single'</span>
+  <span style = "color: #808080">)</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;</span>  
+   <span style = "color: #BF0000">&nbsp;&nbsp;else</span> 
+   <span style = "color: #808080">:</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;</span>     
+  <span style = "color: #00BDBB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print</span>
+  <span style = "color: #808080">(</span>
+  <span style = "color: #228B22">'More'</span>
+  <span style = "color: #808080">)</span>
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;</span> 
+  <br>
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;</span> 
+  <span style = "color: #808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More&nbsp;&nbsp;</span> 
+  <br><br>
+</div>
+
+  <p class = "w3-large w3-text-dark-grey">
   There can be zero or more elif parts, and the else part is optional. The keyword ‘elif’ is short for ‘else if’, and is useful to avoid excessive indentation. An if … elif … elif … sequence is a substitute for the switch or case statements found in other languages.
   </p>
 
