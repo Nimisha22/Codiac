@@ -14,6 +14,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \definecolor{dr}{rgb}{30, 0, 0}
+\definecolor{w}{rgb}{255, 255, 255}
 
 \begin{document}
 
@@ -29,12 +30,37 @@
     \frametitle{About Us}
     \noindent
     {\color{pink} \rule {\linewidth}{0.7mm}}
-    \begin{itemize}
-      \item [] \includegraphics[width=1in, height=1in]{./Codiac/logos/rushali.jpeg}\hspace{1cm} \includegraphics[width=1in, height=1in]{./Codiac/logos/sudha.jpeg}\hspace{1cm} \includegraphics[width=1in, height=1in]{./Codiac/logos/nimisha.jpg}\hspace{1cm} \\
-      \item [] Rushali\hspace{2cm} Sai Sudha\hspace{1.8cm} Nimisha\\
-      \item [] \small CGEC\hspace{2.5cm} \small GPREC \hspace{2.4cm} \small VU\\
-      \item [] \small CoochBehar\hspace{1.5cm} \small Kurnool \hspace{2.2cm} \small Pune\\
-    \end{itemize}
+    \begin{columns}
+        \begin{column}{0.2\textwidth}
+            \begin{figure}[htbp]
+            \centerline{\includegraphics[width=1in, height=1in]{./Codiac/logos/rushali.jpeg}}
+            \end{figure}
+               \begin{spacing}{0.5}
+          \centerline {\tiny Rushali Sarkar} 
+           \centerline {\tiny Cooch Behar Government} 
+           \centerline {\tiny Engineering College} 
+               \end{spacing}
+        \end{column}
+        \begin{column}{0.2\textwidth}
+            \begin{figure}[htbp]
+            \centerline{\includegraphics[width=1in, height=1in]{./Codiac/logos/sudha.jpeg}}
+            \end{figure}
+             \begin{spacing}{0.5}
+                \centerline {\tiny Sai Sudha Kothacheruvu}
+                 \centerline {\tiny G Pulla Reddy}
+                  \centerline {\tiny Engineering College}
+                  \end{spacing}
+        \end{column}
+        \begin{column}{0.2\textwidth}
+            \begin{figure}[htbp]
+            \centerline{\includegraphics[width=1in, height=1in]{./Codiac/logos/nimisha.jpg}}
+            \end{figure}
+             \begin{spacing}{0.5}
+              \centerline {\tiny Nimisha Doshi}
+               \centerline {\tiny Vishwakarma University}
+              \end{spacing}
+        \end{column}
+    \end{columns}
     \noindent
     {\color{pink} \rule{\linewidth}{0.7mm}}
 \end{frame}
@@ -214,5 +240,9 @@
     {\color{pink} \rule{\linewidth}{0.7mm}}
 \end{frame}
 
+\begin{frame}
+    \centerline {\huge \color{dr}Thank you.}
+    \centerline {\huge \color{dr}Comments and Questions.}
+\end{frame}
 \end{document}
 
